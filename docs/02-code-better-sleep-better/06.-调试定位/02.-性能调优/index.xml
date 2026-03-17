@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>性能调优 on My Docs</title>
+    <link>http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/</link>
+    <description>Recent content in 性能调优 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Perf</title>
+      <link>http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/perf/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/perf/</guid>
+      <description>&lt;h1 id=&#34;1-常用命令&#34;&gt;1. 常用命令&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-采样&#34;&gt;1.1. 采样&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;对一个正在运行的程序进行采样：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame is-terminal not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;perf record -p PID -g -- sleep &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;全新执行一个进程，并进行采样&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame is-terminal not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;perf record -F &lt;span class=&#34;m&#34;&gt;99&lt;/span&gt; -g ./test -- sleep &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h2 id=&#34;12-转换火焰图&#34;&gt;1.2. 转换火焰图&lt;/h2&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//将采样的perf.data 文件&#xA;perf script -i perf.data &amp;amp;&amp;gt; perf.unfold&#xA;&#xA;//将采样的perf.data 文件转换成火焰图&#xA;// 依赖：https://github.com/brendangregg/FlameGraph.git&#xA;&#xA;./FlameGraph/stackcollapse-perf.pl perf.unfold &amp;amp;&amp;gt; perf.folded&#xA;&#xA;./FlameGraph/flamegraph.pl perf.folded &amp;gt; perf.svg&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h1 id=&#34;2&#34;&gt;2.&lt;/h1&gt;</description>
+    </item>
+    <item>
+      <title>Unixbench</title>
+      <link>http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/unixbench/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/unixbench/</guid>
+      <description>&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame is-terminal not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/kdlucas/byte-unixbench.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; byte-unixbench&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; UnixBench&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./Run&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>导图</title>
+      <link>http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/%E5%AF%BC%E5%9B%BE/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/02.-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/%E5%AF%BC%E5%9B%BE/</guid>
+      <description>&lt;h1 id=&#34;1-工具&#34;&gt;1. 工具&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;perf&lt;/li&gt;&#xA;&lt;li&gt;pidstat&lt;/li&gt;&#xA;&lt;li&gt;prof&lt;/li&gt;&#xA;&lt;li&gt;top&lt;/li&gt;&#xA;&lt;li&gt;stat&lt;/li&gt;&#xA;&lt;li&gt;bcc-tools&lt;/li&gt;&#xA;&lt;li&gt;bpftrace&lt;/li&gt;&#xA;&lt;li&gt;nmon&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;11-11跑分工具&#34;&gt;1.1. 1.1.跑分工具&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;UnixBench&lt;/li&gt;&#xA;&lt;li&gt;GeekBach&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

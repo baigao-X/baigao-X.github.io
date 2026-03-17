@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>术语 on My Docs</title>
+    <link>http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/</link>
+    <description>Recent content in 术语 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>继承深度(Dit)</title>
+      <link>http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/%E7%BB%A7%E6%89%BF%E6%B7%B1%E5%BA%A6dit/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/%E7%BB%A7%E6%89%BF%E6%B7%B1%E5%BA%A6dit/</guid>
+      <description>&lt;p&gt;继承深度基于三个基本假设 &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://learn.microsoft.com/zh-cn/visualstudio/code-quality/code-metrics-depth-of-inheritance?view=vs-2022#ck&#34; rel=&#34;external&#34;&gt;CK&lt;/a&gt;：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;层次结构中的类越深，它可能继承的方法数量就越多，这使得预测其行为变得更加困难。&lt;/li&gt;&#xA;&lt;li&gt;由于涉及到更多的类和方法，因此更深的树具有更大的设计复杂性。&lt;/li&gt;&#xA;&lt;li&gt;树中更深的类更有可能重用继承方法。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;DIT 的高值意味着错误率也更高，低值表示错误率也更低。&#xA;DIT 的高值表示通过继承重用代码的可能性更大，低值表示通过继承重用代码的可能性更低。&#xA;由于缺乏足够的数据，目前没有公认的 DIT 值标准。 即使是最近进行的研究，也没有找到足够的数据来确定可用作该度量标准数字的有效数字 &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://learn.microsoft.com/zh-cn/visualstudio/code-quality/code-metrics-depth-of-inheritance?view=vs-2022#shatnawi&#34; rel=&#34;external&#34;&gt;Shatnawi&lt;/a&gt;。 虽然没有实证为其佐证，但有一些资源表明 DIT 值的上限约为 5 或 6。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>圈复杂度</title>
+      <link>http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
+      <description>&lt;p&gt;圈复杂度定义为测量“源代码函数中的决策逻辑数量”&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://learn.microsoft.com/zh-cn/visualstudio/code-quality/code-metrics-cyclomatic-complexity?view=vs-2022#nist235&#34; rel=&#34;external&#34;&gt;NIST235&lt;/a&gt;。 简而言之，在代码中要做出的决策就多，就越复杂。&lt;/p&gt;&#xA;&lt;p&gt;每增加一个嵌套或每增加一个分支条件，复杂度+1。&lt;/p&gt;&#xA;&lt;p&gt;与此行业中的许多度量一样，圈复杂度对所有组织均不存在限制。 但 &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://learn.microsoft.com/zh-cn/visualstudio/code-quality/code-metrics-cyclomatic-complexity?view=vs-2022#nist235&#34; rel=&#34;external&#34;&gt;NIST235&lt;/a&gt; 确实表示限制为 10 是理想起点：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>扇出</title>
+      <link>http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/%E6%89%87%E5%87%BA/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/%E6%89%87%E5%87%BA/</guid>
+      <description>&lt;p&gt;扇出：&#xA;&lt;strong&gt;是指该模块直接调用的下级模块的个数&lt;/strong&gt;。&#xA;扇出大表示模块的复杂度高，需要控制和协调过多的下级模块；扇出过大一般是因为缺乏中间层次，应该适当增加中间层次的模块。&#xA;但扇出过小（例如总是1）也不好。扇出太小时可以把下级模块进一步分解成若干个子功能模块，或者合并到它的上级模块中去。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

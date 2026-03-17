@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on My Docs</title>
+    <link>http://localhost:37385/blog/</link>
+    <description>Recent content in Blog on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Mon, 16 Feb 2026 16:31:38 +0100</lastBuildDate>
+    <atom:link href="http://localhost:37385/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Post</title>
+      <link>http://localhost:37385/blog/example-post/</link>
+      <pubDate>Mon, 16 Feb 2026 16:31:32 +0100</pubDate>
+      <guid>http://localhost:37385/blog/example-post/</guid>
+      <description>Use blog posts to communicate product updates and new features in a clear and consistent format.</description>
+    </item>
+  </channel>
+</rss>

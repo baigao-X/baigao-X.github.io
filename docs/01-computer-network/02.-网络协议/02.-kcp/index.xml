@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KCP on My Docs</title>
+    <link>http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/</link>
+    <description>Recent content in KCP on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kcp</title>
+      <link>http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/kcp/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/kcp/</guid>
+      <description>&lt;h1 id=&#34;流模式&#34;&gt;流模式&lt;/h1&gt;</description>
+    </item>
+  </channel>
+</rss>

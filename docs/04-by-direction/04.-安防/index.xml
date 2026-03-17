@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安防 on My Docs</title>
+    <link>http://localhost:37385/docs/04-by-direction/04.-%E5%AE%89%E9%98%B2/</link>
+    <description>Recent content in 安防 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/04-by-direction/04.-%E5%AE%89%E9%98%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>报警主机</title>
+      <link>http://localhost:37385/docs/04-by-direction/04.-%E5%AE%89%E9%98%B2/%E6%8A%A5%E8%AD%A6%E4%B8%BB%E6%9C%BA/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/04-by-direction/04.-%E5%AE%89%E9%98%B2/%E6%8A%A5%E8%AD%A6%E4%B8%BB%E6%9C%BA/</guid>
+      <description>&lt;p&gt;Contact ID协议&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

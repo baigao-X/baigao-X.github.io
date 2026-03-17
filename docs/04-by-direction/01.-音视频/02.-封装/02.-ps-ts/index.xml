@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PS-TS on My Docs</title>
+    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/</link>
+    <description>Recent content in PS-TS on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ps Ts流协议解读</title>
+      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;h1 id=&#34;1-mpeg2-ps&#34;&gt;1. MPEG2-PS&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;Program Stream(节目流) &#xA;一种多路复用数字音视频等的封装容器。PS是Program Stream(程序流或节目流)的简称。PS流由PS包组成，而一个PS包又由若干个PES包组成，它是为可靠稳定的储存媒介如光盘而设计的。&#xA;PS包的包头中包含了同步信息与时钟恢复信息。一个PS包最多可包含具有同一时钟基准的16个视频PES包和32个音频PES包。&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;11-ps流结构&#34;&gt;1.1. PS流结构&lt;/h2&gt;&#xA;&lt;p&gt;![[Pasted image 20231213173912.png]]&lt;/p&gt;&#xA;&lt;h3 id=&#34;111-pshprogram-stream-pack-header&#34;&gt;1.1.1. PSH：Program Stream pack Header&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;是PS包的包头&#xA;主要包含时间戳、最大比特率、帧号信息&#xA;若当前码流类型为音频流，则可选择是否包含PSH头部&#xA;若当前码流类型为视频流，且当前帧的第一个NALU则包含PSH头部。&#xA;&#x9;若为I帧，PSH头部长度为44字节&#xA;&#x9;&#x9;**PS system header**：Partial system header，系统头；&#xA;&#x9;若为P/B帧，PSH头部长度为20字节&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;字节号&lt;/th&gt;&#xA;          &lt;th&gt;字段名&lt;/th&gt;&#xA;          &lt;th&gt;含义&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;0-3&lt;/td&gt;&#xA;          &lt;td&gt;sync bytes&lt;/td&gt;&#xA;          &lt;td&gt;0x000001BA, PSH头部起始码&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4-8&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;含有当前帧时间戳&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;10-12&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;当前设置的最大比特率&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;16-19&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;当set_frame_end_flg置为1，则16-19中存放当前帧帧号&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;I帧附加信息(PS system header)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;20-23&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;0x000001BB,I帧附加信息起始码&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;24-25&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;为18，等于I帧附件信息长度-2&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;26-28&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;表示当前设置的最大比特率&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;![[Pasted image 20231214094334.png]]&#xA;![[Pasted image 20231214094742.png]]&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

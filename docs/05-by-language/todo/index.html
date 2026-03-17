@@ -1,0 +1,1312 @@
+<!doctype html>
+<html lang="zh-CN" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=37261&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:37261/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:37261/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:37261/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.5c1949ea57ce2075eb442a32bb404b638413499fe06b4610198b84697a0d2a89.js"
+  integrity="sha256-XBlJ6lfOIHXrRCoyu0BLY4QTSZ/ga0YQGYuEaXoNKok=">
+</script>
+
+
+<link rel="stylesheet" href="/main.19600983e5ae8fa82236e066dd225cbc20862127d09947c2a69f305203133d4c51fc56ee9735bdcca8bea86ab5836a50ffe065769406fd24e47c2347f1e7d2db.css" integrity="sha512-GWAJg&#43;Wuj6giNuBm3SJcvCCGISfQmUfCpp8wUgMTPUxR/FbulzW9zKi&#43;qGq1g2pQ/&#43;BldpQG/STkfCNH8efS2w==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:37261/docs/05-by-language/todo/">
+
+  <link rel="canonical" href="http://localhost:37261/docs/05-by-language/todo/">
+<link rel="alternate" type="text/markdown" href="http://localhost:37261/docs/05-by-language/todo/index.md" title="Todo | My Docs">
+
+<title>Todo | My Docs</title>
+<meta name="description" content=" 我们使用快速的、存储 于内存的字符串对象,其类型为std::ostringstream
+semaphore
+sched_get_priority_min
+atomic .load
+pthread_setschedparam /pthread_setaffinity_np
+CPU_SET 、 CPU_ZERO
+EBO(empty base optimization) 空气类
+">
+
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:37261/docs/05-by-language/todo/">
+  <meta property="og:site_name" content="My Docs">
+  <meta property="og:title" content="Todo">
+  <meta property="og:description" content="我们使用快速的、存储 于内存的字符串对象,其类型为std::ostringstream
+semaphore
+sched_get_priority_min
+atomic .load
+pthread_setschedparam /pthread_setaffinity_np
+CPU_SET 、 CPU_ZERO
+EBO(empty base optimization) 空气类">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2026-03-17T00:27:27+08:00">
+    <meta property="article:modified_time" content="2026-03-17T00:27:27+08:00">
+    <meta property="og:image" content="http://localhost:37261/cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:37261/cover.png">
+  <meta name="twitter:title" content="Todo">
+  <meta name="twitter:description" content="我们使用快速的、存储 于内存的字符串对象,其类型为std::ostringstream
+semaphore
+sched_get_priority_min
+atomic .load
+pthread_setschedparam /pthread_setaffinity_np
+CPU_SET 、 CPU_ZERO
+EBO(empty base optimization) 空气类">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:37261/",
+       "name": "Baigao's Blog",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:37261/docs/",
+       "name": "Docs",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:37261/docs/05-by-language/",
+       "name": "按语言",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Todo",
+       "position": 4
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/">My Docs</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled"><li><details open><summary>Blog</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/blog/example-post/">Example Post</a></li></ul>
+      </details></li><li><details open><summary>Docs</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>Code Better Sleep Better</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/02-code-better-sleep-better/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">01 . Gmock 遇到的问题与解决方案</a></li><li><a href="/docs/02-code-better-sleep-better/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">0X.  桥接模式</a></li><li><a href="/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/">Mikado重构法</a></li><li><a href="/docs/02-code-better-sleep-better/perf/">Perf</a></li><li><a href="/docs/02-code-better-sleep-better/unixbench/">Unixbench</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/">单一责任原则(Single Responsibility Principle,Srp)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%AF%BC%E5%9B%BE/">导图</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%AE%BA/">概论</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%BF%B0/">概述</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%BB%A7%E6%89%BF%E6%B7%B1%E5%BA%A6dit/">继承深度(Dit)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%88%97%E8%A1%A8/">列表</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/">圈复杂度</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%89%87%E5%87%BA/">扇出</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/">算法之路</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%B9%A0%E9%A2%98%E5%86%8C/">习题册</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/">性能领域</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/">依赖倒置原则(Dependency Inversion Principle)</a></li></ul>
+      </details></li><li><a href="/docs/08-vibe-code/">Vibe Code</a></li><li><details><summary>按方向</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/">01 工具集合</a></li><li><a href="/docs/04-by-direction/aac/">Aac</a></li><li><a href="/docs/04-by-direction/c-%E5%BC%80%E6%BA%90%E5%BA%93%E5%AE%9E%E7%8E%B0/">C&#43;&#43; 开源库实现</a></li><li><a href="/docs/04-by-direction/cef-%E6%A1%86%E6%9E%B6/">Cef 框架</a></li><li><a href="/docs/04-by-direction/coturn/">Coturn</a></li><li><a href="/docs/04-by-direction/g.711/">G.711</a></li><li><a href="/docs/04-by-direction/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Gb28181 Rtp 协议解读</a></li><li><a href="/docs/04-by-direction/h264-avc/">H264 Avc</a></li><li><a href="/docs/04-by-direction/h265-hevc/">H265 Hevc</a></li><li><a href="/docs/04-by-direction/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Hls（M3U8） 协议解读</a></li><li><a href="/docs/04-by-direction/ice/">Ice</a></li><li><a href="/docs/04-by-direction/mp3/">Mp3</a></li><li><a href="/docs/04-by-direction/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">Nat (Network Address Translation) 网络地址转换</a></li><li><a href="/docs/04-by-direction/nsi-%E8%84%9A%E6%9C%AC/">Nsi 脚本</a></li><li><a href="/docs/04-by-direction/onvif-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Onvif 协议解读</a></li><li><a href="/docs/04-by-direction/pcm/">Pcm</a></li><li><a href="/docs/04-by-direction/ply/">Ply</a></li><li><a href="/docs/04-by-direction/qos/">Qos</a></li><li><a href="/docs/04-by-direction/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtmp 协议解读</a></li><li><a href="/docs/04-by-direction/rtsp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtsp协议解读</a></li><li><a href="/docs/04-by-direction/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sdp协议解读</a></li><li><a href="/docs/04-by-direction/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sip 协议解读</a></li><li><a href="/docs/04-by-direction/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Srt 协议解读</a></li><li><a href="/docs/04-by-direction/v-sync-%E5%9E%82%E7%9B%B4%E5%90%8C%E6%AD%A5/">V Sync 垂直同步</a></li><li><a href="/docs/04-by-direction/wav/">Wav</a></li><li><a href="/docs/04-by-direction/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Webrtc 协议解读</a></li><li><a href="/docs/04-by-direction/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Websocekt协议解读</a></li><li><a href="/docs/04-by-direction/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/">Xx. 流行开源组件</a></li><li><a href="/docs/04-by-direction/yuv/">Yuv</a></li><li><a href="/docs/04-by-direction/%E6%8A%A5%E8%AD%A6%E4%B8%BB%E6%9C%BA/">报警主机</a></li><li><a href="/docs/04-by-direction/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/">常用音频编码类型</a></li><li><a href="/docs/04-by-direction/%E5%B0%81%E8%A3%85%E6%80%BB%E8%A7%88/">封装总览</a></li><li><a href="/docs/04-by-direction/%E5%B7%A5%E5%85%B7/">工具</a></li><li><a href="/docs/04-by-direction/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">开发关键技术</a></li><li><a href="/docs/04-by-direction/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/04-by-direction/%E5%9B%BE%E5%83%8F/">图像</a></li><li><a href="/docs/04-by-direction/%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1/">威胁建模</a></li><li><a href="/docs/04-by-direction/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/">物理硬件接口</a></li><li><a href="/docs/04-by-direction/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/">消息机制</a></li><li><a href="/docs/04-by-direction/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/">协议总览</a></li><li><a href="/docs/04-by-direction/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/">延时专题</a></li><li><a href="/docs/04-by-direction/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/">音视频通识</a></li><li><a href="/docs/04-by-direction/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/">硬件编解码Api</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/">主流插件</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/">主流流媒体框架</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E8%A6%81%E7%B1%BB/">主要类</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/">字体配置</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/">字体设计</a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li></ul>
+      </details></li><li><details open><summary>按语言</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/05-by-language/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">00 Markdown基础语法</a></li><li><a href="/docs/05-by-language/c-20-%E5%8D%8F%E7%A8%8B%E5%AE%9E%E7%8E%B0-coroutine/">C&#43;&#43; 20 协程实现 Coroutine</a></li><li><a href="/docs/05-by-language/c-%E7%89%88%E6%9C%AC%E5%8F%B7%E7%89%B9%E6%80%A7/">C&#43;&#43; 版本号特性</a></li><li><a href="/docs/05-by-language/configure/">Configure</a></li><li><a href="/docs/05-by-language/cxa-demangle/">Cxa Demangle</a></li><li><a href="/docs/05-by-language/emscripten/">Emscripten</a></li><li><a href="/docs/05-by-language/enable-shared-from-this/">Enable Shared From This</a></li><li><a href="/docs/05-by-language/go-mod/">Go Mod</a></li><li><a href="/docs/05-by-language/jamfile/">Jamfile</a></li><li><a href="/docs/05-by-language/jni/">Jni</a></li><li><a href="/docs/05-by-language/lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Lambda 表达式</a></li><li><a href="/docs/05-by-language/libgo/">Libgo</a></li><li><a href="/docs/05-by-language/mage/">Mage</a></li><li><a href="/docs/05-by-language/python3/">Python3</a></li><li><a href="/docs/05-by-language/stl/">Stl</a></li><li><a href="/docs/05-by-language/thread/">Thread</a></li><li class="active" ><a aria-current="page" href="/docs/05-by-language/todo/">Todo</a></li><li><a href="/docs/05-by-language/todo-%E6%A8%A1%E6%9D%BF%E8%90%83%E5%8F%96/">Todo 模板萃取</a></li><li><a href="/docs/05-by-language/%E6%88%90%E6%9E%9C%E7%89%A9%E6%96%87%E4%BB%B6/">成果物文件</a></li><li><a href="/docs/05-by-language/%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/">对象模型</a></li><li><a href="/docs/05-by-language/%E7%AC%A6%E5%8F%B7%E4%B8%8E%E9%93%BE%E6%8E%A5/">符号与链接</a></li><li><a href="/docs/05-by-language/%E5%B7%A5%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">工程配置文件</a></li><li><a href="/docs/05-by-language/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">交叉编译器的命名规则</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E7%B1%BB%E5%9B%BE-class-diagram/">类图 Class Diagram</a></li><li><a href="/docs/05-by-language/%E6%A8%A1%E6%9D%BF/">模板</a></li><li><a href="/docs/05-by-language/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/05-by-language/%E7%8E%B0%E4%BB%A3cmake%E7%9A%84%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">现代Cmake的推荐使用方法</a></li><li><a href="/docs/05-by-language/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8rvalue-references/">右值引用(Rvalue References)</a></li><li><a href="/docs/05-by-language/%E8%AF%AD%E6%B3%95/">语法</a></li><li><a href="/docs/05-by-language/%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7-doxygen/">注释工具 Doxygen</a></li></ul>
+      </details></li><li><details><summary>操作系统</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>计算机网络</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><a href="/docs/01-computer-network/iproute2/">Iproute2</a></li><li><a href="/docs/01-computer-network/kcp/">Kcp</a></li><li><a href="/docs/01-computer-network/ngtcp2/">Ngtcp2</a></li><li><a href="/docs/01-computer-network/ntp%E5%8D%8F%E8%AE%AE/">Ntp协议</a></li><li><a href="/docs/01-computer-network/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/">几种Udp可靠传输的协议对比</a></li><li><a href="/docs/01-computer-network/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6-traffic-control-tc/">流量控制 （Traffic Control, Tc）</a></li><li><a href="/docs/01-computer-network/%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC/">内核版本</a></li><li><a href="/docs/01-computer-network/%E5%BC%B1%E7%BD%91/">弱网</a></li><li><a href="/docs/01-computer-network/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3linux%E5%86%85%E6%A0%B8%E7%BD%91%E7%BB%9C%E5%86%85%E5%B9%95/">深入理解Linux内核网络内幕</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/">网络拥塞控制</a></li><li><a href="/docs/01-computer-network/%E6%9C%AA%E5%91%BD%E5%90%8D/">未命名</a></li><li><a href="/docs/01-computer-network/"></a></li></ul>
+      </details></li><li><details><summary>数据库</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/">Orm(Object Relational Mapping) 对象映射关系</a></li><li><a href="/docs/06-database/sql/">Sql</a></li></ul>
+      </details></li><li><details><summary>运维</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><a href="/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li></ul>
+      </details></li><li><a href="/docs/guides/">Guides</a></li><li><details><summary>Code Better Sleep Better</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/02-code-better-sleep-better/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">01 . Gmock 遇到的问题与解决方案</a></li><li><a href="/docs/02-code-better-sleep-better/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">0X.  桥接模式</a></li><li><a href="/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/">Mikado重构法</a></li><li><a href="/docs/02-code-better-sleep-better/perf/">Perf</a></li><li><a href="/docs/02-code-better-sleep-better/unixbench/">Unixbench</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/">单一责任原则(Single Responsibility Principle,Srp)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%AF%BC%E5%9B%BE/">导图</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%AE%BA/">概论</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%BF%B0/">概述</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%BB%A7%E6%89%BF%E6%B7%B1%E5%BA%A6dit/">继承深度(Dit)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%88%97%E8%A1%A8/">列表</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/">圈复杂度</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%89%87%E5%87%BA/">扇出</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/">算法之路</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%B9%A0%E9%A2%98%E5%86%8C/">习题册</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/">性能领域</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/">依赖倒置原则(Dependency Inversion Principle)</a></li></ul>
+      </details></li><li><a href="/docs/08-vibe-code/">Vibe Code</a></li><li><details><summary>按方向</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/">01 工具集合</a></li><li><a href="/docs/04-by-direction/aac/">Aac</a></li><li><a href="/docs/04-by-direction/c-%E5%BC%80%E6%BA%90%E5%BA%93%E5%AE%9E%E7%8E%B0/">C&#43;&#43; 开源库实现</a></li><li><a href="/docs/04-by-direction/cef-%E6%A1%86%E6%9E%B6/">Cef 框架</a></li><li><a href="/docs/04-by-direction/coturn/">Coturn</a></li><li><a href="/docs/04-by-direction/g.711/">G.711</a></li><li><a href="/docs/04-by-direction/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Gb28181 Rtp 协议解读</a></li><li><a href="/docs/04-by-direction/h264-avc/">H264 Avc</a></li><li><a href="/docs/04-by-direction/h265-hevc/">H265 Hevc</a></li><li><a href="/docs/04-by-direction/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Hls（M3U8） 协议解读</a></li><li><a href="/docs/04-by-direction/ice/">Ice</a></li><li><a href="/docs/04-by-direction/mp3/">Mp3</a></li><li><a href="/docs/04-by-direction/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">Nat (Network Address Translation) 网络地址转换</a></li><li><a href="/docs/04-by-direction/nsi-%E8%84%9A%E6%9C%AC/">Nsi 脚本</a></li><li><a href="/docs/04-by-direction/onvif-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Onvif 协议解读</a></li><li><a href="/docs/04-by-direction/pcm/">Pcm</a></li><li><a href="/docs/04-by-direction/ply/">Ply</a></li><li><a href="/docs/04-by-direction/qos/">Qos</a></li><li><a href="/docs/04-by-direction/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtmp 协议解读</a></li><li><a href="/docs/04-by-direction/rtsp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtsp协议解读</a></li><li><a href="/docs/04-by-direction/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sdp协议解读</a></li><li><a href="/docs/04-by-direction/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sip 协议解读</a></li><li><a href="/docs/04-by-direction/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Srt 协议解读</a></li><li><a href="/docs/04-by-direction/v-sync-%E5%9E%82%E7%9B%B4%E5%90%8C%E6%AD%A5/">V Sync 垂直同步</a></li><li><a href="/docs/04-by-direction/wav/">Wav</a></li><li><a href="/docs/04-by-direction/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Webrtc 协议解读</a></li><li><a href="/docs/04-by-direction/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Websocekt协议解读</a></li><li><a href="/docs/04-by-direction/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/">Xx. 流行开源组件</a></li><li><a href="/docs/04-by-direction/yuv/">Yuv</a></li><li><a href="/docs/04-by-direction/%E6%8A%A5%E8%AD%A6%E4%B8%BB%E6%9C%BA/">报警主机</a></li><li><a href="/docs/04-by-direction/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/">常用音频编码类型</a></li><li><a href="/docs/04-by-direction/%E5%B0%81%E8%A3%85%E6%80%BB%E8%A7%88/">封装总览</a></li><li><a href="/docs/04-by-direction/%E5%B7%A5%E5%85%B7/">工具</a></li><li><a href="/docs/04-by-direction/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">开发关键技术</a></li><li><a href="/docs/04-by-direction/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/04-by-direction/%E5%9B%BE%E5%83%8F/">图像</a></li><li><a href="/docs/04-by-direction/%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1/">威胁建模</a></li><li><a href="/docs/04-by-direction/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/">物理硬件接口</a></li><li><a href="/docs/04-by-direction/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/">消息机制</a></li><li><a href="/docs/04-by-direction/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/">协议总览</a></li><li><a href="/docs/04-by-direction/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/">延时专题</a></li><li><a href="/docs/04-by-direction/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/">音视频通识</a></li><li><a href="/docs/04-by-direction/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/">硬件编解码Api</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/">主流插件</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/">主流流媒体框架</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E8%A6%81%E7%B1%BB/">主要类</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/">字体配置</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/">字体设计</a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li></ul>
+      </details></li><li><details open><summary>按语言</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/05-by-language/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">00 Markdown基础语法</a></li><li><a href="/docs/05-by-language/c-20-%E5%8D%8F%E7%A8%8B%E5%AE%9E%E7%8E%B0-coroutine/">C&#43;&#43; 20 协程实现 Coroutine</a></li><li><a href="/docs/05-by-language/c-%E7%89%88%E6%9C%AC%E5%8F%B7%E7%89%B9%E6%80%A7/">C&#43;&#43; 版本号特性</a></li><li><a href="/docs/05-by-language/configure/">Configure</a></li><li><a href="/docs/05-by-language/cxa-demangle/">Cxa Demangle</a></li><li><a href="/docs/05-by-language/emscripten/">Emscripten</a></li><li><a href="/docs/05-by-language/enable-shared-from-this/">Enable Shared From This</a></li><li><a href="/docs/05-by-language/go-mod/">Go Mod</a></li><li><a href="/docs/05-by-language/jamfile/">Jamfile</a></li><li><a href="/docs/05-by-language/jni/">Jni</a></li><li><a href="/docs/05-by-language/lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Lambda 表达式</a></li><li><a href="/docs/05-by-language/libgo/">Libgo</a></li><li><a href="/docs/05-by-language/mage/">Mage</a></li><li><a href="/docs/05-by-language/python3/">Python3</a></li><li><a href="/docs/05-by-language/stl/">Stl</a></li><li><a href="/docs/05-by-language/thread/">Thread</a></li><li class="active" ><a aria-current="page" href="/docs/05-by-language/todo/">Todo</a></li><li><a href="/docs/05-by-language/todo-%E6%A8%A1%E6%9D%BF%E8%90%83%E5%8F%96/">Todo 模板萃取</a></li><li><a href="/docs/05-by-language/%E6%88%90%E6%9E%9C%E7%89%A9%E6%96%87%E4%BB%B6/">成果物文件</a></li><li><a href="/docs/05-by-language/%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/">对象模型</a></li><li><a href="/docs/05-by-language/%E7%AC%A6%E5%8F%B7%E4%B8%8E%E9%93%BE%E6%8E%A5/">符号与链接</a></li><li><a href="/docs/05-by-language/%E5%B7%A5%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">工程配置文件</a></li><li><a href="/docs/05-by-language/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">交叉编译器的命名规则</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E7%B1%BB%E5%9B%BE-class-diagram/">类图 Class Diagram</a></li><li><a href="/docs/05-by-language/%E6%A8%A1%E6%9D%BF/">模板</a></li><li><a href="/docs/05-by-language/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/05-by-language/%E7%8E%B0%E4%BB%A3cmake%E7%9A%84%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">现代Cmake的推荐使用方法</a></li><li><a href="/docs/05-by-language/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8rvalue-references/">右值引用(Rvalue References)</a></li><li><a href="/docs/05-by-language/%E8%AF%AD%E6%B3%95/">语法</a></li><li><a href="/docs/05-by-language/%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7-doxygen/">注释工具 Doxygen</a></li></ul>
+      </details></li><li><details><summary>操作系统</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>计算机网络</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><a href="/docs/01-computer-network/iproute2/">Iproute2</a></li><li><a href="/docs/01-computer-network/kcp/">Kcp</a></li><li><a href="/docs/01-computer-network/ngtcp2/">Ngtcp2</a></li><li><a href="/docs/01-computer-network/ntp%E5%8D%8F%E8%AE%AE/">Ntp协议</a></li><li><a href="/docs/01-computer-network/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/">几种Udp可靠传输的协议对比</a></li><li><a href="/docs/01-computer-network/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6-traffic-control-tc/">流量控制 （Traffic Control, Tc）</a></li><li><a href="/docs/01-computer-network/%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC/">内核版本</a></li><li><a href="/docs/01-computer-network/%E5%BC%B1%E7%BD%91/">弱网</a></li><li><a href="/docs/01-computer-network/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3linux%E5%86%85%E6%A0%B8%E7%BD%91%E7%BB%9C%E5%86%85%E5%B9%95/">深入理解Linux内核网络内幕</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/">网络拥塞控制</a></li><li><a href="/docs/01-computer-network/%E6%9C%AA%E5%91%BD%E5%90%8D/">未命名</a></li><li><a href="/docs/01-computer-network/"></a></li></ul>
+      </details></li><li><details><summary>数据库</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/">Orm(Object Relational Mapping) 对象映射关系</a></li><li><a href="/docs/06-database/sql/">Sql</a></li></ul>
+      </details></li><li><details><summary>运维</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><a href="/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li></ul>
+      </details></li></ul>
+      </details></li>
+  </ul>
+</nav>
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">My Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link active" href="http://localhost:37261/docs/guides/" aria-current="true">Docs</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:37261/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link nav-link mt-3 mt-lg-0 p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/baigao-X"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 visually-hidden" id="searchModalLabel"></h2>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden"></label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="" aria-label="" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center"></p>
+        <p class="search-no-recent message d-none mt-3 text-center"></p>
+        <p class="search-no-results message d-none mt-3 text-center"> for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date" datetime="1970-01-01T08:00:00&#43;08:00">1970-01-01T08:00:00&#43;08:00</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-fluid" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled"><li><details open><summary>Blog</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/blog/example-post/">Example Post</a></li></ul>
+      </details></li><li><details open><summary>Docs</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>Code Better Sleep Better</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/02-code-better-sleep-better/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">01 . Gmock 遇到的问题与解决方案</a></li><li><a href="/docs/02-code-better-sleep-better/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">0X.  桥接模式</a></li><li><a href="/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/">Mikado重构法</a></li><li><a href="/docs/02-code-better-sleep-better/perf/">Perf</a></li><li><a href="/docs/02-code-better-sleep-better/unixbench/">Unixbench</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/">单一责任原则(Single Responsibility Principle,Srp)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%AF%BC%E5%9B%BE/">导图</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%AE%BA/">概论</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%BF%B0/">概述</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%BB%A7%E6%89%BF%E6%B7%B1%E5%BA%A6dit/">继承深度(Dit)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%88%97%E8%A1%A8/">列表</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/">圈复杂度</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%89%87%E5%87%BA/">扇出</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/">算法之路</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%B9%A0%E9%A2%98%E5%86%8C/">习题册</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/">性能领域</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/">依赖倒置原则(Dependency Inversion Principle)</a></li></ul>
+      </details></li><li><a href="/docs/08-vibe-code/">Vibe Code</a></li><li><details><summary>按方向</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/">01 工具集合</a></li><li><a href="/docs/04-by-direction/aac/">Aac</a></li><li><a href="/docs/04-by-direction/c-%E5%BC%80%E6%BA%90%E5%BA%93%E5%AE%9E%E7%8E%B0/">C&#43;&#43; 开源库实现</a></li><li><a href="/docs/04-by-direction/cef-%E6%A1%86%E6%9E%B6/">Cef 框架</a></li><li><a href="/docs/04-by-direction/coturn/">Coturn</a></li><li><a href="/docs/04-by-direction/g.711/">G.711</a></li><li><a href="/docs/04-by-direction/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Gb28181 Rtp 协议解读</a></li><li><a href="/docs/04-by-direction/h264-avc/">H264 Avc</a></li><li><a href="/docs/04-by-direction/h265-hevc/">H265 Hevc</a></li><li><a href="/docs/04-by-direction/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Hls（M3U8） 协议解读</a></li><li><a href="/docs/04-by-direction/ice/">Ice</a></li><li><a href="/docs/04-by-direction/mp3/">Mp3</a></li><li><a href="/docs/04-by-direction/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">Nat (Network Address Translation) 网络地址转换</a></li><li><a href="/docs/04-by-direction/nsi-%E8%84%9A%E6%9C%AC/">Nsi 脚本</a></li><li><a href="/docs/04-by-direction/onvif-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Onvif 协议解读</a></li><li><a href="/docs/04-by-direction/pcm/">Pcm</a></li><li><a href="/docs/04-by-direction/ply/">Ply</a></li><li><a href="/docs/04-by-direction/qos/">Qos</a></li><li><a href="/docs/04-by-direction/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtmp 协议解读</a></li><li><a href="/docs/04-by-direction/rtsp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtsp协议解读</a></li><li><a href="/docs/04-by-direction/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sdp协议解读</a></li><li><a href="/docs/04-by-direction/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sip 协议解读</a></li><li><a href="/docs/04-by-direction/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Srt 协议解读</a></li><li><a href="/docs/04-by-direction/v-sync-%E5%9E%82%E7%9B%B4%E5%90%8C%E6%AD%A5/">V Sync 垂直同步</a></li><li><a href="/docs/04-by-direction/wav/">Wav</a></li><li><a href="/docs/04-by-direction/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Webrtc 协议解读</a></li><li><a href="/docs/04-by-direction/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Websocekt协议解读</a></li><li><a href="/docs/04-by-direction/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/">Xx. 流行开源组件</a></li><li><a href="/docs/04-by-direction/yuv/">Yuv</a></li><li><a href="/docs/04-by-direction/%E6%8A%A5%E8%AD%A6%E4%B8%BB%E6%9C%BA/">报警主机</a></li><li><a href="/docs/04-by-direction/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/">常用音频编码类型</a></li><li><a href="/docs/04-by-direction/%E5%B0%81%E8%A3%85%E6%80%BB%E8%A7%88/">封装总览</a></li><li><a href="/docs/04-by-direction/%E5%B7%A5%E5%85%B7/">工具</a></li><li><a href="/docs/04-by-direction/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">开发关键技术</a></li><li><a href="/docs/04-by-direction/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/04-by-direction/%E5%9B%BE%E5%83%8F/">图像</a></li><li><a href="/docs/04-by-direction/%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1/">威胁建模</a></li><li><a href="/docs/04-by-direction/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/">物理硬件接口</a></li><li><a href="/docs/04-by-direction/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/">消息机制</a></li><li><a href="/docs/04-by-direction/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/">协议总览</a></li><li><a href="/docs/04-by-direction/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/">延时专题</a></li><li><a href="/docs/04-by-direction/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/">音视频通识</a></li><li><a href="/docs/04-by-direction/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/">硬件编解码Api</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/">主流插件</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/">主流流媒体框架</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E8%A6%81%E7%B1%BB/">主要类</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/">字体配置</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/">字体设计</a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li></ul>
+      </details></li><li><details open><summary>按语言</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/05-by-language/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">00 Markdown基础语法</a></li><li><a href="/docs/05-by-language/c-20-%E5%8D%8F%E7%A8%8B%E5%AE%9E%E7%8E%B0-coroutine/">C&#43;&#43; 20 协程实现 Coroutine</a></li><li><a href="/docs/05-by-language/c-%E7%89%88%E6%9C%AC%E5%8F%B7%E7%89%B9%E6%80%A7/">C&#43;&#43; 版本号特性</a></li><li><a href="/docs/05-by-language/configure/">Configure</a></li><li><a href="/docs/05-by-language/cxa-demangle/">Cxa Demangle</a></li><li><a href="/docs/05-by-language/emscripten/">Emscripten</a></li><li><a href="/docs/05-by-language/enable-shared-from-this/">Enable Shared From This</a></li><li><a href="/docs/05-by-language/go-mod/">Go Mod</a></li><li><a href="/docs/05-by-language/jamfile/">Jamfile</a></li><li><a href="/docs/05-by-language/jni/">Jni</a></li><li><a href="/docs/05-by-language/lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Lambda 表达式</a></li><li><a href="/docs/05-by-language/libgo/">Libgo</a></li><li><a href="/docs/05-by-language/mage/">Mage</a></li><li><a href="/docs/05-by-language/python3/">Python3</a></li><li><a href="/docs/05-by-language/stl/">Stl</a></li><li><a href="/docs/05-by-language/thread/">Thread</a></li><li class="active" ><a aria-current="page" href="/docs/05-by-language/todo/">Todo</a></li><li><a href="/docs/05-by-language/todo-%E6%A8%A1%E6%9D%BF%E8%90%83%E5%8F%96/">Todo 模板萃取</a></li><li><a href="/docs/05-by-language/%E6%88%90%E6%9E%9C%E7%89%A9%E6%96%87%E4%BB%B6/">成果物文件</a></li><li><a href="/docs/05-by-language/%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/">对象模型</a></li><li><a href="/docs/05-by-language/%E7%AC%A6%E5%8F%B7%E4%B8%8E%E9%93%BE%E6%8E%A5/">符号与链接</a></li><li><a href="/docs/05-by-language/%E5%B7%A5%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">工程配置文件</a></li><li><a href="/docs/05-by-language/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">交叉编译器的命名规则</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E7%B1%BB%E5%9B%BE-class-diagram/">类图 Class Diagram</a></li><li><a href="/docs/05-by-language/%E6%A8%A1%E6%9D%BF/">模板</a></li><li><a href="/docs/05-by-language/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/05-by-language/%E7%8E%B0%E4%BB%A3cmake%E7%9A%84%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">现代Cmake的推荐使用方法</a></li><li><a href="/docs/05-by-language/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8rvalue-references/">右值引用(Rvalue References)</a></li><li><a href="/docs/05-by-language/%E8%AF%AD%E6%B3%95/">语法</a></li><li><a href="/docs/05-by-language/%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7-doxygen/">注释工具 Doxygen</a></li></ul>
+      </details></li><li><details><summary>操作系统</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>计算机网络</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><a href="/docs/01-computer-network/iproute2/">Iproute2</a></li><li><a href="/docs/01-computer-network/kcp/">Kcp</a></li><li><a href="/docs/01-computer-network/ngtcp2/">Ngtcp2</a></li><li><a href="/docs/01-computer-network/ntp%E5%8D%8F%E8%AE%AE/">Ntp协议</a></li><li><a href="/docs/01-computer-network/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/">几种Udp可靠传输的协议对比</a></li><li><a href="/docs/01-computer-network/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6-traffic-control-tc/">流量控制 （Traffic Control, Tc）</a></li><li><a href="/docs/01-computer-network/%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC/">内核版本</a></li><li><a href="/docs/01-computer-network/%E5%BC%B1%E7%BD%91/">弱网</a></li><li><a href="/docs/01-computer-network/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3linux%E5%86%85%E6%A0%B8%E7%BD%91%E7%BB%9C%E5%86%85%E5%B9%95/">深入理解Linux内核网络内幕</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/">网络拥塞控制</a></li><li><a href="/docs/01-computer-network/%E6%9C%AA%E5%91%BD%E5%90%8D/">未命名</a></li><li><a href="/docs/01-computer-network/"></a></li></ul>
+      </details></li><li><details><summary>数据库</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/">Orm(Object Relational Mapping) 对象映射关系</a></li><li><a href="/docs/06-database/sql/">Sql</a></li></ul>
+      </details></li><li><details><summary>运维</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><a href="/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li></ul>
+      </details></li><li><a href="/docs/guides/">Guides</a></li><li><details><summary>Code Better Sleep Better</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/02-code-better-sleep-better/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">01 . Gmock 遇到的问题与解决方案</a></li><li><a href="/docs/02-code-better-sleep-better/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">0X.  桥接模式</a></li><li><a href="/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/">Mikado重构法</a></li><li><a href="/docs/02-code-better-sleep-better/perf/">Perf</a></li><li><a href="/docs/02-code-better-sleep-better/unixbench/">Unixbench</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/">单一责任原则(Single Responsibility Principle,Srp)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%AF%BC%E5%9B%BE/">导图</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%AE%BA/">概论</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%A6%82%E8%BF%B0/">概述</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%BB%A7%E6%89%BF%E6%B7%B1%E5%BA%A6dit/">继承深度(Dit)</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%88%97%E8%A1%A8/">列表</a></li><li><a href="/docs/02-code-better-sleep-better/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/">圈复杂度</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%89%87%E5%87%BA/">扇出</a></li><li><a href="/docs/02-code-better-sleep-better/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/">算法之路</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%B9%A0%E9%A2%98%E5%86%8C/">习题册</a></li><li><a href="/docs/02-code-better-sleep-better/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/">性能领域</a></li><li><a href="/docs/02-code-better-sleep-better/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/">依赖倒置原则(Dependency Inversion Principle)</a></li></ul>
+      </details></li><li><a href="/docs/08-vibe-code/">Vibe Code</a></li><li><details><summary>按方向</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><details><summary>FLV</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Flv  标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/">Http Flv &amp; Websocket Flv</a></li></ul>
+      </details></li><li><details><summary>MP4</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Fmp4标准解读</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/">Http Fmp4 &amp; Websocket Fmp4</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/">Mp4标准解读</a></li></ul>
+      </details></li><li><details><summary>PS-TS</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/02.-ps-ts/ps-ts%E6%B5%81%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Ps Ts流协议解读</a></li></ul>
+      </details></li><li><details><summary>RTP</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li><li><details><summary>rtcp</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/">Rtcp包结构</a></li></ul>
+      </details></li><li><details><summary>rtp</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><details><summary>rtp-载荷</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/">Rtp 载荷 Aac</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/rtp-%E5%8C%85%E7%BB%93%E6%9E%84/">Rtp 包结构</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>图形</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><details><summary>DirectX</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/">Dxgi</a></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">关键数据结构</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/webgpu/">Webgpu</a></li></ul>
+      </details></li><li><a href="/docs/04-by-direction/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/">01 工具集合</a></li><li><a href="/docs/04-by-direction/aac/">Aac</a></li><li><a href="/docs/04-by-direction/c-%E5%BC%80%E6%BA%90%E5%BA%93%E5%AE%9E%E7%8E%B0/">C&#43;&#43; 开源库实现</a></li><li><a href="/docs/04-by-direction/cef-%E6%A1%86%E6%9E%B6/">Cef 框架</a></li><li><a href="/docs/04-by-direction/coturn/">Coturn</a></li><li><a href="/docs/04-by-direction/g.711/">G.711</a></li><li><a href="/docs/04-by-direction/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Gb28181 Rtp 协议解读</a></li><li><a href="/docs/04-by-direction/h264-avc/">H264 Avc</a></li><li><a href="/docs/04-by-direction/h265-hevc/">H265 Hevc</a></li><li><a href="/docs/04-by-direction/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Hls（M3U8） 协议解读</a></li><li><a href="/docs/04-by-direction/ice/">Ice</a></li><li><a href="/docs/04-by-direction/mp3/">Mp3</a></li><li><a href="/docs/04-by-direction/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">Nat (Network Address Translation) 网络地址转换</a></li><li><a href="/docs/04-by-direction/nsi-%E8%84%9A%E6%9C%AC/">Nsi 脚本</a></li><li><a href="/docs/04-by-direction/onvif-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Onvif 协议解读</a></li><li><a href="/docs/04-by-direction/pcm/">Pcm</a></li><li><a href="/docs/04-by-direction/ply/">Ply</a></li><li><a href="/docs/04-by-direction/qos/">Qos</a></li><li><a href="/docs/04-by-direction/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtmp 协议解读</a></li><li><a href="/docs/04-by-direction/rtsp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Rtsp协议解读</a></li><li><a href="/docs/04-by-direction/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sdp协议解读</a></li><li><a href="/docs/04-by-direction/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Sip 协议解读</a></li><li><a href="/docs/04-by-direction/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Srt 协议解读</a></li><li><a href="/docs/04-by-direction/v-sync-%E5%9E%82%E7%9B%B4%E5%90%8C%E6%AD%A5/">V Sync 垂直同步</a></li><li><a href="/docs/04-by-direction/wav/">Wav</a></li><li><a href="/docs/04-by-direction/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Webrtc 协议解读</a></li><li><a href="/docs/04-by-direction/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/">Websocekt协议解读</a></li><li><a href="/docs/04-by-direction/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/">Xx. 流行开源组件</a></li><li><a href="/docs/04-by-direction/yuv/">Yuv</a></li><li><a href="/docs/04-by-direction/%E6%8A%A5%E8%AD%A6%E4%B8%BB%E6%9C%BA/">报警主机</a></li><li><a href="/docs/04-by-direction/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/">常用音频编码类型</a></li><li><a href="/docs/04-by-direction/%E5%B0%81%E8%A3%85%E6%80%BB%E8%A7%88/">封装总览</a></li><li><a href="/docs/04-by-direction/%E5%B7%A5%E5%85%B7/">工具</a></li><li><a href="/docs/04-by-direction/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">开发关键技术</a></li><li><a href="/docs/04-by-direction/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/04-by-direction/%E5%9B%BE%E5%83%8F/">图像</a></li><li><a href="/docs/04-by-direction/%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1/">威胁建模</a></li><li><a href="/docs/04-by-direction/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/">物理硬件接口</a></li><li><a href="/docs/04-by-direction/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/">消息机制</a></li><li><a href="/docs/04-by-direction/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/">协议总览</a></li><li><a href="/docs/04-by-direction/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/">延时专题</a></li><li><a href="/docs/04-by-direction/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/">音视频通识</a></li><li><a href="/docs/04-by-direction/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/">硬件编解码Api</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/">主流插件</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/">主流流媒体框架</a></li><li><a href="/docs/04-by-direction/%E4%B8%BB%E8%A6%81%E7%B1%BB/">主要类</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/">字体配置</a></li><li><a href="/docs/04-by-direction/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/">字体设计</a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li><li><a href="/docs/04-by-direction/"></a></li></ul>
+      </details></li><li><details open><summary>按语言</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/05-by-language/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">00 Markdown基础语法</a></li><li><a href="/docs/05-by-language/c-20-%E5%8D%8F%E7%A8%8B%E5%AE%9E%E7%8E%B0-coroutine/">C&#43;&#43; 20 协程实现 Coroutine</a></li><li><a href="/docs/05-by-language/c-%E7%89%88%E6%9C%AC%E5%8F%B7%E7%89%B9%E6%80%A7/">C&#43;&#43; 版本号特性</a></li><li><a href="/docs/05-by-language/configure/">Configure</a></li><li><a href="/docs/05-by-language/cxa-demangle/">Cxa Demangle</a></li><li><a href="/docs/05-by-language/emscripten/">Emscripten</a></li><li><a href="/docs/05-by-language/enable-shared-from-this/">Enable Shared From This</a></li><li><a href="/docs/05-by-language/go-mod/">Go Mod</a></li><li><a href="/docs/05-by-language/jamfile/">Jamfile</a></li><li><a href="/docs/05-by-language/jni/">Jni</a></li><li><a href="/docs/05-by-language/lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Lambda 表达式</a></li><li><a href="/docs/05-by-language/libgo/">Libgo</a></li><li><a href="/docs/05-by-language/mage/">Mage</a></li><li><a href="/docs/05-by-language/python3/">Python3</a></li><li><a href="/docs/05-by-language/stl/">Stl</a></li><li><a href="/docs/05-by-language/thread/">Thread</a></li><li class="active" ><a aria-current="page" href="/docs/05-by-language/todo/">Todo</a></li><li><a href="/docs/05-by-language/todo-%E6%A8%A1%E6%9D%BF%E8%90%83%E5%8F%96/">Todo 模板萃取</a></li><li><a href="/docs/05-by-language/%E6%88%90%E6%9E%9C%E7%89%A9%E6%96%87%E4%BB%B6/">成果物文件</a></li><li><a href="/docs/05-by-language/%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/">对象模型</a></li><li><a href="/docs/05-by-language/%E7%AC%A6%E5%8F%B7%E4%B8%8E%E9%93%BE%E6%8E%A5/">符号与链接</a></li><li><a href="/docs/05-by-language/%E5%B7%A5%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">工程配置文件</a></li><li><a href="/docs/05-by-language/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">交叉编译器的命名规则</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/">跨平台配置</a></li><li><a href="/docs/05-by-language/%E7%B1%BB%E5%9B%BE-class-diagram/">类图 Class Diagram</a></li><li><a href="/docs/05-by-language/%E6%A8%A1%E6%9D%BF/">模板</a></li><li><a href="/docs/05-by-language/%E6%9C%AF%E8%AF%AD/">术语</a></li><li><a href="/docs/05-by-language/%E7%8E%B0%E4%BB%A3cmake%E7%9A%84%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">现代Cmake的推荐使用方法</a></li><li><a href="/docs/05-by-language/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8rvalue-references/">右值引用(Rvalue References)</a></li><li><a href="/docs/05-by-language/%E8%AF%AD%E6%B3%95/">语法</a></li><li><a href="/docs/05-by-language/%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7-doxygen/">注释工具 Doxygen</a></li></ul>
+      </details></li><li><details><summary>操作系统</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li><li><details><summary>inux</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>linux-内核系统体系结构</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><details><summary>boot</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/">Boot</a></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84/">内核系统体系架构</a></li></ul>
+      </details></li><li><details><summary>一个简单的多任务内核实例</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li><li><a href="/docs/03-os/02.-inux/01.-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%86%85%E6%A0%B8%E5%AE%9E%E4%BE%8B/"></a></li></ul>
+      </details></li><li><details><summary>源码分析</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li><li><details><summary>网络模块</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/socket/">Socket</a></li><li><a href="/docs/03-os/02.-inux/00.%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/01.-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97/"></a></li></ul>
+      </details></li></ul>
+      </details></li><li><a href="/docs/03-os/02.-inux/boot/">Boot</a></li><li><a href="/docs/03-os/02.-inux/kernel/">Kernel</a></li><li><a href="/docs/03-os/02.-inux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">Linux 内核完全注释 实验操作环境</a></li><li><a href="/docs/03-os/02.-inux/%E6%B1%87%E7%BC%96-with-8086x86/">汇编 With 8086(X86)</a></li></ul>
+      </details></li><li><details><summary>Windows</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li><li><details><summary>系统调优</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/03.-windows/01.-%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/gpuview/">Gpuview</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>内存管理</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li><li><details><summary>jemalloc</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/01.-jemalloc/jemalloc/">Jemalloc</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>系统IO</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/io-%E6%B5%8B%E8%AF%95/">Io 测试</a></li><li><a href="/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/%E6%A8%A1%E6%8B%9F%E7%A3%81%E7%9B%98io%E6%85%A2%E7%9A%84%E6%96%B9%E6%B3%95/">模拟磁盘Io慢的方法</a></li></ul>
+      </details></li><li><details><summary>性能</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/03-os/04.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD/">性能</a></li></ul>
+      </details></li></ul>
+      </details></li><li><details><summary>计算机网络</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><details><summary>工具</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/">Iperf, Iperf3</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/">Iputils</a></li><li><a href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/">Net Tools</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C/">网络</a></li></ul>
+      </details></li><li><details><summary>实战</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/">实战</a></li></ul>
+      </details></li><li><a href="/docs/01-computer-network/iproute2/">Iproute2</a></li><li><a href="/docs/01-computer-network/kcp/">Kcp</a></li><li><a href="/docs/01-computer-network/ngtcp2/">Ngtcp2</a></li><li><a href="/docs/01-computer-network/ntp%E5%8D%8F%E8%AE%AE/">Ntp协议</a></li><li><a href="/docs/01-computer-network/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/">几种Udp可靠传输的协议对比</a></li><li><a href="/docs/01-computer-network/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6-traffic-control-tc/">流量控制 （Traffic Control, Tc）</a></li><li><a href="/docs/01-computer-network/%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC/">内核版本</a></li><li><a href="/docs/01-computer-network/%E5%BC%B1%E7%BD%91/">弱网</a></li><li><a href="/docs/01-computer-network/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3linux%E5%86%85%E6%A0%B8%E7%BD%91%E7%BB%9C%E5%86%85%E5%B9%95/">深入理解Linux内核网络内幕</a></li><li><a href="/docs/01-computer-network/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/">网络拥塞控制</a></li><li><a href="/docs/01-computer-network/%E6%9C%AA%E5%91%BD%E5%90%8D/">未命名</a></li><li><a href="/docs/01-computer-network/"></a></li></ul>
+      </details></li><li><details><summary>数据库</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/">Orm(Object Relational Mapping) 对象映射关系</a></li><li><a href="/docs/06-database/sql/">Sql</a></li></ul>
+      </details></li><li><details><summary>运维</summary>
+        <ul class="list-unstyled list-nested"><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><details><summary>headscale</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/02.headscale/%E9%83%A8%E7%BD%B2headscale/">部署Headscale</a></li></ul>
+      </details></li><li><details><summary>Kubernetes</summary>
+        <ul class="list-unstyled list-nested"><li><a href="/docs/07-ops/01.-kubernetes/k8s/">K8S</a></li></ul>
+      </details></li><li><a href="/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li></ul>
+      </details></li></ul>
+      </details></li>
+  </ul>
+</nav>
+
+		</div>
+		
+			<div class="col container-fw d-lg-flex flex-lg-row justify-content-center mx-auto">
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		<nav class="toc-mobile toc-mobile-sticky d-xl-none" aria-label="Quaternary navigation">
+				
+			</nav>
+			
+			<div class="page-header d-flex flex-row justify-content-between align-items-start">
+				<div>
+					<h1>Todo</h1>
+					
+				</div>
+				<div>
+					<div id="ai-dropdown" class="dropdown">
+  <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M18 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <a class="dropdown-item" href="https://chatgpt.com/?hints=search&q=Read+http%3A%2F%2Flocalhost%3A37261%2Fdocs%2F05-by-language%2Ftodo%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
+        <svg fill="currentColor" fill-rule="evenodd" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg" class="mb-1 me-1"><title>OpenAI</title><path d="M21.55 10.004a5.416 5.416 0 00-.478-4.501c-1.217-2.09-3.662-3.166-6.05-2.66A5.59 5.59 0 0010.831 1C8.39.995 6.224 2.546 5.473 4.838A5.553 5.553 0 001.76 7.496a5.487 5.487 0 00.691 6.5 5.416 5.416 0 00.477 4.502c1.217 2.09 3.662 3.165 6.05 2.66A5.586 5.586 0 0013.168 23c2.443.006 4.61-1.546 5.361-3.84a5.553 5.553 0 003.715-2.66 5.488 5.488 0 00-.693-6.497v.001zm-8.381 11.558a4.199 4.199 0 01-2.675-.954c.034-.018.093-.05.132-.074l4.44-2.53a.71.71 0 00.364-.623v-6.176l1.877 1.069c.02.01.033.029.036.05v5.115c-.003 2.274-1.87 4.118-4.174 4.123zM4.192 17.78a4.059 4.059 0 01-.498-2.763c.032.02.09.055.131.078l4.44 2.53c.225.13.504.13.73 0l5.42-3.088v2.138a.068.068 0 01-.027.057L9.9 19.288c-1.999 1.136-4.552.46-5.707-1.51h-.001zM3.023 8.216A4.15 4.15 0 015.198 6.41l-.002.151v5.06a.711.711 0 00.364.624l5.42 3.087-1.876 1.07a.067.067 0 01-.063.005l-4.489-2.559c-1.995-1.14-2.679-3.658-1.53-5.63h.001zm15.417 3.54l-5.42-3.088L14.896 7.6a.067.067 0 01.063-.006l4.489 2.557c1.998 1.14 2.683 3.662 1.529 5.633a4.163 4.163 0 01-2.174 1.807V12.38a.71.71 0 00-.363-.623zm1.867-2.773a6.04 6.04 0 00-.132-.078l-4.44-2.53a.731.731 0 00-.729 0l-5.42 3.088V7.325a.068.068 0 01.027-.057L14.1 4.713c2-1.137 4.555-.46 5.707 1.513.487.833.664 1.809.499 2.757h.001zm-11.741 3.81l-1.877-1.068a.065.065 0 01-.036-.051V6.559c.001-2.277 1.873-4.122 4.181-4.12.976 0 1.92.338 2.671.954-.034.018-.092.05-.131.073l-4.44 2.53a.71.71 0 00-.365.623l-.003 6.173v.002zm1.02-2.168L12 9.25l2.414 1.375v2.75L12 14.75l-2.415-1.375v-2.75z"></path></svg>
+        Open in ChatGPT
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="https://claude.ai/new?q=Read+http%3A%2F%2Flocalhost%3A37261%2Fdocs%2F05-by-language%2Ftodo%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
+        <svg fill="currentColor" fill-rule="evenodd" height="16" viewBox="0 0 256 257" width="16" xmlns="http://www.w3.org/2000/svg" class="mb-1 me-1" preserveAspectRatio="xMidYMid"><title>Anthropic</title><path d="m50.228 170.321 50.357-28.257.843-2.463-.843-1.361h-2.462l-8.426-.518-28.775-.778-24.952-1.037-24.175-1.296-6.092-1.297L0 125.796l.583-3.759 5.12-3.434 7.324.648 16.202 1.101 24.304 1.685 17.629 1.037 26.118 2.722h4.148l.583-1.685-1.426-1.037-1.101-1.037-25.147-17.045-27.22-18.017-14.258-10.37-7.713-5.25-3.888-4.925-1.685-10.758 7-7.713 9.397.649 2.398.648 9.527 7.323 20.35 15.75L94.817 91.9l3.889 3.24 1.555-1.102.195-.777-1.75-2.917-14.453-26.118-15.425-26.572-6.87-11.018-1.814-6.61c-.648-2.723-1.102-4.991-1.102-7.778l7.972-10.823L71.42 0 82.05 1.426l4.472 3.888 6.61 15.101 10.694 23.786 16.591 32.34 4.861 9.592 2.592 8.879.973 2.722h1.685v-1.556l1.36-18.211 2.528-22.36 2.463-28.776.843-8.1 4.018-9.722 7.971-5.25 6.222 2.981 5.12 7.324-.713 4.73-3.046 19.768-5.962 30.98-3.889 20.739h2.268l2.593-2.593 10.499-13.934 17.628-22.036 7.778-8.749 9.073-9.657 5.833-4.601h11.018l8.1 12.055-3.628 12.443-11.342 14.388-9.398 12.184-13.48 18.147-8.426 14.518.778 1.166 2.01-.194 30.46-6.481 16.462-2.982 19.637-3.37 8.88 4.148.971 4.213-3.5 8.62-20.998 5.184-24.628 4.926-36.682 8.685-.454.324.519.648 16.526 1.555 7.065.389h17.304l32.21 2.398 8.426 5.574 5.055 6.805-.843 5.184-12.962 6.611-17.498-4.148-40.83-9.721-14-3.5h-1.944v1.167l11.666 11.406 21.387 19.314 26.767 24.887 1.36 6.157-3.434 4.86-3.63-.518-23.526-17.693-9.073-7.972-20.545-17.304h-1.36v1.814l4.73 6.935 25.017 37.59 1.296 11.536-1.814 3.76-6.481 2.268-7.13-1.297-14.647-20.544-15.1-23.138-12.185-20.739-1.49.843-7.194 77.448-3.37 3.953-7.778 2.981-6.48-4.925-3.436-7.972 3.435-15.749 4.148-20.544 3.37-16.333 3.046-20.285 1.815-6.74-.13-.454-1.49.194-15.295 20.999-23.267 31.433-18.406 19.702-4.407 1.75-7.648-3.954.713-7.064 4.277-6.286 25.47-32.405 15.36-20.092 9.917-11.6-.065-1.686h-.583L44.07 198.125l-12.055 1.555-5.185-4.86.648-7.972 2.463-2.593 20.35-13.999-.064.065Z"></path></svg>
+        Open in Claude
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="https://www.perplexity.ai/search/?q=Read+http%3A%2F%2Flocalhost%3A37261%2Fdocs%2F05-by-language%2Ftodo%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
+        <svg fill="currentColor" height="16" viewBox="0 0 34 38" width="16" xmlns="http://www.w3.org/2000/svg" class="mb-1 me-1"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.12114 0.0400391L15.919 9.98864V9.98636V0.062995H18.0209V10.0332L28.8671 0.0400391V11.3829H33.3202V27.744H28.8808V37.8442L18.0209 28.303V37.9538H15.919V28.4604L5.13338 37.96V27.744H0.680176V11.3829H5.12114V0.0400391ZM14.3344 13.4592H2.78208V25.6677H5.13074V21.8167L14.3344 13.4592ZM7.23518 22.7379V33.3271L15.919 25.6786V14.8506L7.23518 22.7379ZM18.0814 25.5775V14.8404L26.7677 22.7282V27.744H26.7789V33.219L18.0814 25.5775ZM28.8808 25.6677H31.2183V13.4592H19.752L28.8808 21.7302V25.6677ZM26.7652 11.3829V4.81584L19.6374 11.3829H26.7652ZM14.3507 11.3829H7.22306V4.81584L14.3507 11.3829Z" fill="currentColor"></path></svg>
+        Open in Perplexity
+      </a>
+    </li>
+    <li><hr class="dropdown-divider"></li>
+    <li>
+      <a id="copy-markdown" class="dropdown-item" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-1 me-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
+        Copy Markdown
+      </a>
+    </li>
+  </ul>
+</div>
+
+				</div>
+				</div>
+			<ul>
+<li>
+<p><input disabled="" type="checkbox"> 我们使用快速的、存储
+于内存的字符串对象,其类型为std::ostringstream</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> semaphore</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> sched_get_priority_min</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> atomic .load</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> pthread_setschedparam /pthread_setaffinity_np</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> CPU_SET 、 CPU_ZERO</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> EBO(empty base optimization) 空气类</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> mutable</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::tuple</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::function</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::bind</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::move</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::forward</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::function</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> semaphore</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::thread, std::this_thread</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::enable_if</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::chrono::system_clock</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::chrono::microseconds</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::chrono::duration_cast</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::async 阻塞</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> atomic</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> epoll_create</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> thread_local</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> static_pointer_cast</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::runtime_error</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::forward</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> function_traits</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> std::remove_reference</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> ::stl_function_type</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> explicit</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> ios::out, ios::app</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> static_pointer_cast</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> thread_local</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> decltype</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> enable_shared_from_this</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> aio</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> //比如说动态库中打印了一条日志，然后动态库卸载了，那么指向静态数据区的指针就会失效</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> <strong>非聚合</strong>类</p>
+</li>
+</ul>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary"></div>
+					<a href="/docs/05-by-language/thread/" class="stretched-link text-reset text-decoration-none">Thread</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary"></div>
+					<a href="/docs/05-by-language/todo-%E6%A8%A1%E6%9D%BF%E8%90%83%E5%8F%96/" class="stretched-link text-reset text-decoration-none">Todo 模板萃取</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+			</div>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 text-lg-start">
+        <ul class="list-inline">
+          
+        </ul>
+      </div>
+      <div class="col-lg-8 text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.55d761f8934656de9adbcb9ccd57bffb40e7f4aaabb3f0288bb97209e92399d3.js"
+  integrity="sha256-Vddh&#43;JNGVt6a28uczVe/&#43;0Dn9Kqrs/Aoi7lyCekjmdM=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.cf522a3a968d921d569c9a5a1386809a47d2d4669b3cf6917322eb332c65225a.js"
+  integrity="sha256-z1IqOpaNkh1WnJpaE4aAmkfS1GabPPaRcyLrMyxlIlo=">
+</script>
+<script async
+  src="/js/search-modal.528eaefc659b474d1169fee994a193a6392817acb93034b4f28c55350b697e28.js"
+  integrity="sha256-Uo6u/GWbR00Raf7plKGTpjkoF6y5MDS08oxVNQtpfig=">
+</script>
+
+
+    
+  </body>
+</html>

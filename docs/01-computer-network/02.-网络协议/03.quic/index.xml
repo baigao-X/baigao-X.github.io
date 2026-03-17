@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QUIC on My Docs</title>
+    <link>http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/</link>
+    <description>Recent content in QUIC on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ngtcp2</title>
+      <link>http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/ngtcp2/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/ngtcp2/</guid>
+      <description>&lt;p&gt;ngtcp2 库实现了三种主要的拥塞控制算法：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;RENO&lt;/strong&gt; - A simple algorithm using additive increase/multiplicative decrease (AIMD)&lt;br&gt;&#xA;&lt;strong&gt;RENO&lt;/strong&gt; - 一种使用加法增加/乘法减少 （AIMD） 的简单算法&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;CUBIC&lt;/strong&gt; - An enhanced algorithm with a cubic growth function&lt;br&gt;&#xA;&lt;strong&gt;CUBIC&lt;/strong&gt; - 具有三次增长函数的增强算法&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;BBR&lt;/strong&gt; - A model-based algorithm using bandwidth and RTT measurements&lt;br&gt;&#xA;&lt;strong&gt;BBR&lt;/strong&gt; - 使用带宽和 RTT 测量的基于模型的算法&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

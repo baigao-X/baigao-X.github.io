@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Better Sleep Better on My Docs</title>
+    <link>http://localhost:37385/docs/02-code-better-sleep-better/</link>
+    <description>Recent content in Code Better Sleep Better on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/02-code-better-sleep-better/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mikado重构法</title>
+      <link>http://localhost:37385/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/</guid>
+      <description>&lt;p&gt;(1) 制定Mikado目标以及想要达到的最终状态。&#xA;(2) 以最稚拙的方法实现这一目标。&#xA;(3) 找出所有的错误。&#xA;(4) 找到解决错误的即时方案。&#xA;(5) 将即时方案作为新的前提目标。&#xA;(6) 如果有错误,将相应的代码回滚到最初状态。&#xA;(7) 对每个方案重复步骤2至步骤6。&#xA;(8) 检查代码是否存在错误;将前提目标标记为完成。&#xA;(9) 完成了Mikado目标吗?如果是,任务完成!&lt;/p&gt;&#xA;&lt;p&gt;MikadoBehead You Legacy Beast: Refactor&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

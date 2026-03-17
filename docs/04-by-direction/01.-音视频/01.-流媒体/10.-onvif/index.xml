@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ONVIF on My Docs</title>
+    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/10.-onvif/</link>
+    <description>Recent content in ONVIF on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/10.-onvif/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; 开源库实现</title>
+      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/10.-onvif/c-%E5%BC%80%E6%BA%90%E5%BA%93%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/10.-onvif/c-%E5%BC%80%E6%BA%90%E5%BA%93%E5%AE%9E%E7%8E%B0/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;[1] 广播地址: 239.255.255.250 :3702&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Onvif 协议解读</title>
+      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/10.-onvif/onvif-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/10.-onvif/onvif-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;p&gt;[&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://www.iana.org/&#34; rel=&#34;external&#34;&gt;IANA&lt;/a&gt;（互联网地址分配机构）分配的多播地址列表](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml)&lt;/p&gt;&#xA;&lt;p&gt;Profile S：「网络摄像机」的技术规格，包括如何发送音视频流，音视频编码器配置，PTZ控制、中继控制等。&#xA;Profile C：「门禁控制系统(PACS)设备」的技术规格。&#xA;Profile G：「视频储存和录像」的技术规格，包括视频储存，搜索，检索，以及媒体播放功能的技术规格。&#xA;Profile A：「常见的例行门禁控制功能」的技术规范，适用于负责授予和撤销员工凭证、创建和更新计划表，以及对系统内门禁控制权限进行更改的安保人员、接待员或人力资源专员等用户。&#xA;Profile Q：「传输层安全性(TLS)」的技术规格，该安全通信协议使ONVIF合标设备能够以不受篡改和窃听威胁的方式在网络上与客户通讯。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
