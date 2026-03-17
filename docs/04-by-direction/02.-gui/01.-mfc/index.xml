@@ -1,27 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MFC on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/02.-gui/01.-mfc/</link>
-    <description>Recent content in MFC on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/02.-gui/01.-mfc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>消息机制</title>
-      <link>http://localhost:37385/docs/04-by-direction/02.-gui/01.-mfc/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/02.-gui/01.-mfc/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</guid>
-      <description>&lt;h1 id=&#34;1-消息分类&#34;&gt;1. 消息分类&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-标准windows消息&#34;&gt;1.1. 标准windows消息&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;除了WM_COMMAND 之外以WM_ 开头的消息都是标准消息&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;12-命令消息&#34;&gt;1.2. 命令消息&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;下消息名为WM_COMMAND，消息中附带了标识符ID来区分来自哪个菜单、工具栏按钮或者加速键的消息&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;13-通知消息&#34;&gt;1.3. 通知消息&lt;/h2&gt;&#xA;&lt;p&gt;一般由子窗口发送给父窗口，消息名也为WM_COMMAND。 附带了空间通知码来区分控件&lt;/p&gt;&#xA;&lt;h1 id=&#34;2-实现消息的组成&#34;&gt;2. 实现消息的组成&lt;/h1&gt;&#xA;&lt;h2 id=&#34;21-消息映射入口&#34;&gt;2.1. 消息映射入口：&lt;/h2&gt;&#xA;&lt;p&gt;在实现文件中由&lt;strong&gt;BEGIN_MESSAG_MAP&lt;/strong&gt;和&lt;strong&gt;END_MESSAGE_MAP&lt;/strong&gt;之间的内容成为消息映射入口项&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>主要类</title>
-      <link>http://localhost:37385/docs/04-by-direction/02.-gui/01.-mfc/%E4%B8%BB%E8%A6%81%E7%B1%BB/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/02.-gui/01.-mfc/%E4%B8%BB%E8%A6%81%E7%B1%BB/</guid>
-      <description>&lt;h1 id=&#34;1-应用类cwinapp&#34;&gt;1. 应用类CWinApp&lt;/h1&gt;&#xA;&lt;h1 id=&#34;2-框架类-cframewnd&#34;&gt;2. 框架类 CFrameWnd&lt;/h1&gt;&#xA;&lt;h1 id=&#34;3-对话框类-cdialog&#34;&gt;3. 对话框类 CDialog&lt;/h1&gt;&#xA;&lt;h2 id=&#34;31-模态对话框&#34;&gt;3.1. 模态对话框&lt;/h2&gt;&#xA;&lt;h2 id=&#34;32-非模态对话框&#34;&gt;3.2. 非模态对话框&lt;/h2&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MFC on My Docs</title><link>/docs/04-by-direction/02.-gui/01.-mfc/</link><description>Recent content in MFC on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/02.-gui/01.-mfc/index.xml" rel="self" type="application/rss+xml"/><item><title>消息机制</title><link>/docs/04-by-direction/02.-gui/01.-mfc/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/02.-gui/01.-mfc/%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</guid><description>&lt;h1 id="1-消息分类"&gt;1. 消息分类&lt;/h1&gt;
+&lt;h2 id="11-标准windows消息"&gt;1.1. 标准windows消息&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;除了WM_COMMAND 之外以WM_ 开头的消息都是标准消息
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="12-命令消息"&gt;1.2. 命令消息&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;下消息名为WM_COMMAND，消息中附带了标识符ID来区分来自哪个菜单、工具栏按钮或者加速键的消息
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="13-通知消息"&gt;1.3. 通知消息&lt;/h2&gt;
+&lt;p&gt;一般由子窗口发送给父窗口，消息名也为WM_COMMAND。 附带了空间通知码来区分控件&lt;/p&gt;
+&lt;h1 id="2-实现消息的组成"&gt;2. 实现消息的组成&lt;/h1&gt;
+&lt;h2 id="21-消息映射入口"&gt;2.1. 消息映射入口：&lt;/h2&gt;
+&lt;p&gt;在实现文件中由&lt;strong&gt;BEGIN_MESSAG_MAP&lt;/strong&gt;和&lt;strong&gt;END_MESSAGE_MAP&lt;/strong&gt;之间的内容成为消息映射入口项&lt;/p&gt;</description></item><item><title>主要类</title><link>/docs/04-by-direction/02.-gui/01.-mfc/%E4%B8%BB%E8%A6%81%E7%B1%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/02.-gui/01.-mfc/%E4%B8%BB%E8%A6%81%E7%B1%BB/</guid><description>&lt;h1 id="1-应用类cwinapp"&gt;1. 应用类CWinApp&lt;/h1&gt;
+&lt;h1 id="2-框架类-cframewnd"&gt;2. 框架类 CFrameWnd&lt;/h1&gt;
+&lt;h1 id="3-对话框类-cdialog"&gt;3. 对话框类 CDialog&lt;/h1&gt;
+&lt;h2 id="31-模态对话框"&gt;3.1. 模态对话框&lt;/h2&gt;
+&lt;h2 id="32-非模态对话框"&gt;3.2. 非模态对话框&lt;/h2&gt;</description></item></channel></rss>

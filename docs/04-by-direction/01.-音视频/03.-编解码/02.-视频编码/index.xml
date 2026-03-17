@@ -1,34 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>视频编码 on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/</link>
-    <description>Recent content in 视频编码 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>H264 Avc</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h264-avc/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h264-avc/</guid>
-      <description>&lt;p&gt;![[Pasted image 20240806090850.png]]&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-h264包结构&#34;&gt;1. H264包结构&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-nalu&#34;&gt;1.1. NALU&lt;/h2&gt;&#xA;&lt;p&gt;NALU (Network Abstraction Layer Unit) 翻译过来就是网络抽象层单元.&#xA;在 H.264/AVC 视频编码标准中，最外面一层叫做 NAL(Network Abstract Layer) 网络抽象层。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>H265 Hevc</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h265-hevc/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h265-hevc/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;高效视频编码&lt;/strong&gt;（HEVC），也称为H. 265和MPEG-H part 2&lt;/p&gt;&#xA;&lt;p&gt;(H.264码流分Annex-B和AVCC两种格式。H.265码流是Annex-B和HVCC格式。)&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-nalu-header&#34;&gt;1. NALU header&lt;/h1&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;nal_unit( NumBytesInNALunit )&lt;/th&gt;&#xA;          &lt;th&gt;Descriptor&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;forbidden_zero_bit&lt;/td&gt;&#xA;          &lt;td&gt;f(1)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;nal_unit_type&lt;/td&gt;&#xA;          &lt;td&gt;u(6)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;nuh_layer_id&lt;/td&gt;&#xA;          &lt;td&gt;u(6)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;nuh_temporal_id_plus1&lt;/td&gt;&#xA;          &lt;td&gt;u(3)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h1 id=&#34;2-包类型&#34;&gt;2. 包类型&lt;/h1&gt;&#xA;&lt;p&gt;相较H274的SPS、PPS， H265还多了VPS&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Yuv</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/yuv/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/yuv/</guid>
-      <description>&lt;h4 id=&#34;1-采样方式色度下采样&#34;&gt;&lt;strong&gt;1. 采样方式（色度下采样）&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;YUV444&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：每个像素独立采样Y、U、V分量，无信息损失。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;带宽占用&lt;/strong&gt;：与RGB相同（每像素3字节）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：专业视频编辑、医疗成像等对色彩精度要求高的领域。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;YUV422&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：水平方向每2个Y共用1组UV，垂直方向全采样。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;带宽占用&lt;/strong&gt;：每像素2字节（比RGB节省33%）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;存储结构示例&lt;/strong&gt;（YUYV打包格式）：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;YUV420&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：每2×2像素的4个Y共用1组UV，水平和垂直方向均下采样。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;带宽占用&lt;/strong&gt;：每像素1.5字节（比RGB节省50%）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：广泛用于流媒体（H.264/AVC）、视频会议等带宽敏感场景&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;2-存储结构内存排列方式&#34;&gt;&lt;strong&gt;2. 存储结构（内存排列方式）&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;h5 id=&#34;1-平面格式planar&#34;&gt;&lt;strong&gt;(1) 平面格式（Planar）&lt;/strong&gt;&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;I420（YU12）&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → UUUU → VVVV&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;YV12&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → VVVV → UUUU&lt;/code&gt;（与I420的UV顺序相反）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;2-半平面格式semi-planar&#34;&gt;&lt;strong&gt;(2) 半平面格式（Semi-Planar）&lt;/strong&gt;&lt;/h5&gt;&#xA;&lt;pre&gt;&lt;code&gt;Y独立存储，UV交错存储在同一个平面：&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;NV12&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → UVUVUV...&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;典型应用：iOS系统、微软DirectX 。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;NV21&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → VUVUVU...&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;典型应用：Android系统摄像头输出&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;3-打包格式packed&#34;&gt;&lt;strong&gt;(3) 打包格式（Packed）&lt;/strong&gt;&lt;/h5&gt;&#xA;&lt;p&gt;YUV分量按像素交错存储在同一数组：&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>视频编码 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/</link><description>Recent content in 视频编码 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml"/><item><title>H264 Avc</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h264-avc/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h264-avc/</guid><description>&lt;p&gt;![[Pasted image 20240806090850.png]]&lt;/p&gt;
+&lt;h1 id="1-h264包结构"&gt;1. H264包结构&lt;/h1&gt;
+&lt;h2 id="11-nalu"&gt;1.1. NALU&lt;/h2&gt;
+&lt;p&gt;NALU (Network Abstraction Layer Unit) 翻译过来就是网络抽象层单元.
+在 H.264/AVC 视频编码标准中，最外面一层叫做 NAL(Network Abstract Layer) 网络抽象层。&lt;/p&gt;</description></item><item><title>H265 Hevc</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h265-hevc/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h265-hevc/</guid><description>&lt;p&gt;&lt;strong&gt;高效视频编码&lt;/strong&gt;（HEVC），也称为H. 265和MPEG-H part 2&lt;/p&gt;
+&lt;p&gt;(H.264码流分Annex-B和AVCC两种格式。H.265码流是Annex-B和HVCC格式。)&lt;/p&gt;
+&lt;h1 id="1-nalu-header"&gt;1. NALU header&lt;/h1&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;nal_unit( NumBytesInNALunit )&lt;/th&gt;
+ &lt;th&gt;Descriptor&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;forbidden_zero_bit&lt;/td&gt;
+ &lt;td&gt;f(1)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;nal_unit_type&lt;/td&gt;
+ &lt;td&gt;u(6)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;nuh_layer_id&lt;/td&gt;
+ &lt;td&gt;u(6)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;nuh_temporal_id_plus1&lt;/td&gt;
+ &lt;td&gt;u(3)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id="2-包类型"&gt;2. 包类型&lt;/h1&gt;
+&lt;p&gt;相较H274的SPS、PPS， H265还多了VPS&lt;/p&gt;</description></item><item><title>Yuv</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/yuv/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/yuv/</guid><description>&lt;h4 id="1-采样方式色度下采样"&gt;&lt;strong&gt;1. 采样方式（色度下采样）&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;YUV444&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：每个像素独立采样Y、U、V分量，无信息损失。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;带宽占用&lt;/strong&gt;：与RGB相同（每像素3字节）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：专业视频编辑、医疗成像等对色彩精度要求高的领域。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YUV422&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：水平方向每2个Y共用1组UV，垂直方向全采样。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;带宽占用&lt;/strong&gt;：每像素2字节（比RGB节省33%）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储结构示例&lt;/strong&gt;（YUYV打包格式）：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YUV420&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：每2×2像素的4个Y共用1组UV，水平和垂直方向均下采样。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;带宽占用&lt;/strong&gt;：每像素1.5字节（比RGB节省50%）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：广泛用于流媒体（H.264/AVC）、视频会议等带宽敏感场景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-存储结构内存排列方式"&gt;&lt;strong&gt;2. 存储结构（内存排列方式）&lt;/strong&gt;&lt;/h4&gt;
+&lt;h5 id="1-平面格式planar"&gt;&lt;strong&gt;(1) 平面格式（Planar）&lt;/strong&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;I420（YU12）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → UUUU → VVVV&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YV12&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → VVVV → UUUU&lt;/code&gt;（与I420的UV顺序相反）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="2-半平面格式semi-planar"&gt;&lt;strong&gt;(2) 半平面格式（Semi-Planar）&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;Y独立存储，UV交错存储在同一个平面：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NV12&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → UVUVUV...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;典型应用：iOS系统、微软DirectX 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NV21&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;存储顺序：&lt;code&gt;YYYYYYYY → VUVUVU...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;典型应用：Android系统摄像头输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="3-打包格式packed"&gt;&lt;strong&gt;(3) 打包格式（Packed）&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;YUV分量按像素交错存储在同一数组：&lt;/p&gt;</description></item></channel></rss>

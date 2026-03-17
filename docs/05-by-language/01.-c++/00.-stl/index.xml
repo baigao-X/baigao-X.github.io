@@ -1,34 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>STL on My Docs</title>
-    <link>http://localhost:37385/docs/05-by-language/01.-c&#43;&#43;/00.-stl/</link>
-    <description>Recent content in STL on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/05-by-language/01.-c++/00.-stl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cxa Demangle</title>
-      <link>http://localhost:37385/docs/05-by-language/01.-c-/00.-stl/cxa-demangle/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/05-by-language/01.-c-/00.-stl/cxa-demangle/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;abi::__cxa_demangle：&#xA;gcc获取类型的全名（typeid(int).name() 不同编译器的名字不同，在gcc中指示一个短名）&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Enable Shared From This</title>
-      <link>http://localhost:37385/docs/05-by-language/01.-c-/00.-stl/enable-shared-from-this/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/05-by-language/01.-c-/00.-stl/enable-shared-from-this/</guid>
-      <description>&lt;h1 id=&#34;stdenable_shared_from_this&#34;&gt;std::enable_shared_from_this&lt;/h1&gt;&#xA;&lt;h2 id=&#34;stdshared_ptr&#34;&gt;std::shared_ptr&lt;/h2&gt;</description>
-    </item>
-    <item>
-      <title>Thread</title>
-      <link>http://localhost:37385/docs/05-by-language/01.-c-/00.-stl/thread/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/05-by-language/01.-c-/00.-stl/thread/</guid>
-      <description>&lt;h2 id=&#34;01-hardware_concurrency&#34;&gt;0.1. hardware_concurrency()&lt;/h2&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>STL on My Docs</title><link>/docs/05-by-language/01.-c++/00.-stl/</link><description>Recent content in STL on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/05-by-language/01.-c++/00.-stl/index.xml" rel="self" type="application/rss+xml"/><item><title>Cxa Demangle</title><link>/docs/05-by-language/01.-c-/00.-stl/cxa-demangle/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/01.-c-/00.-stl/cxa-demangle/</guid><description>&lt;ul&gt;
+&lt;li&gt;abi::__cxa_demangle：
+gcc获取类型的全名（typeid(int).name() 不同编译器的名字不同，在gcc中指示一个短名）&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Enable Shared From This</title><link>/docs/05-by-language/01.-c-/00.-stl/enable-shared-from-this/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/01.-c-/00.-stl/enable-shared-from-this/</guid><description>&lt;h1 id="stdenable_shared_from_this"&gt;std::enable_shared_from_this&lt;/h1&gt;
+&lt;h2 id="stdshared_ptr"&gt;std::shared_ptr&lt;/h2&gt;</description></item><item><title>Thread</title><link>/docs/05-by-language/01.-c-/00.-stl/thread/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/01.-c-/00.-stl/thread/</guid><description>&lt;h2 id="01-hardware_concurrency"&gt;0.1. hardware_concurrency()&lt;/h2&gt;</description></item></channel></rss>

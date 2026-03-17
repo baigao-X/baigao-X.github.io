@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>性能 on My Docs</title>
-    <link>http://localhost:37385/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/</link>
-    <description>Recent content in 性能 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>性能领域</title>
-      <link>http://localhost:37385/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/</guid>
-      <description>&lt;p&gt;量化quantify&#xA;延时latency -&amp;gt; 估算最大增速&#xA;连接延时、请求延时&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;计数器&lt;/strong&gt;&#xA;&lt;strong&gt;统计数据&lt;/strong&gt;&#xA;&lt;strong&gt;指标&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;工具&#34;&gt;工具&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;vmstat&lt;/strong&gt;&#xA;&lt;strong&gt;Grafana&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;剖析&lt;/strong&gt; 指通过工具进行采样&#xA;&lt;strong&gt;跟踪&lt;/strong&gt;是基于事件的记录，捕获事件数据并保存供以后分析&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;iperf&lt;/strong&gt; 网络微基准测试工具&#xA;&lt;strong&gt;strace&lt;/strong&gt; 系统调用&#xA;&lt;strong&gt;tcpdump&lt;/strong&gt; 网络数据包&#xA;&lt;strong&gt;Gtrace&lt;/strong&gt;&#xA;&lt;strong&gt;cachestat&lt;/strong&gt; 检查文件系统缓存的命中率&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>性能 on My Docs</title><link>/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/</link><description>Recent content in 性能 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>性能领域</title><link>/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E9%A2%86%E5%9F%9F/</guid><description>&lt;p&gt;量化quantify
+延时latency -&amp;gt; 估算最大增速
+连接延时、请求延时&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计数器&lt;/strong&gt;
+&lt;strong&gt;统计数据&lt;/strong&gt;
+&lt;strong&gt;指标&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="工具"&gt;工具&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;vmstat&lt;/strong&gt;
+&lt;strong&gt;Grafana&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;剖析&lt;/strong&gt; 指通过工具进行采样
+&lt;strong&gt;跟踪&lt;/strong&gt;是基于事件的记录，捕获事件数据并保存供以后分析&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;iperf&lt;/strong&gt; 网络微基准测试工具
+&lt;strong&gt;strace&lt;/strong&gt; 系统调用
+&lt;strong&gt;tcpdump&lt;/strong&gt; 网络数据包
+&lt;strong&gt;Gtrace&lt;/strong&gt;
+&lt;strong&gt;cachestat&lt;/strong&gt; 检查文件系统缓存的命中率&lt;/p&gt;</description></item></channel></rss>

@@ -1,27 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>FLV on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/</link>
-    <description>Recent content in FLV on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Flv  标准解读</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</guid>
-      <description>&lt;p&gt;FLV（Flash Video）是一种流媒体格式，因其体积小、协议相对简单，很快便流行开来，并得到广泛的支持。&#xA;常见的HTTP-FLV直播协议，就是使用HTTP流式传输通过FLV封装的音视频数据。&#xA;而Websocket-FLV就是通过Websocket传输FLV封装的音视频数据。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;兼容性：&#xA;HTTP-FLV的兼容性很好，除了iOS原生浏览器不支持，其他平台和浏览器都支持了，参考&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://caniuse.com/?search=mse&#34; rel=&#34;external&#34;&gt;MSE&lt;/a&gt;。&#xA;i若需要支持iOS浏览器，你可以考虑使用HLS或者使用WASM；注意一般iOS的Native应用，可以选择使用ijkplayer播放器。&lt;/li&gt;&#xA;&lt;li&gt;与HLS区别&#xA;HLS本质上就是&lt;strong&gt;HTTP文件下载&lt;/strong&gt;，而HTTP-FLV本质上是&lt;strong&gt;流传输&lt;/strong&gt;。&#xA;CDN对于HTTP文件下载的支持很完善，因此HLS的兼容性比HTTP-FLV 要好很多；&#xA;同样HTTP-FLV的延迟比HLS要低很多，基本上可以做到3的5秒左右延迟，而HLS的延迟一般是8到10秒以上。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;1-格式说明&#34;&gt;1. 格式说明&lt;/h1&gt;&#xA;&lt;p&gt;![[Pasted image 20240327150217.png]]&lt;/p&gt;&#xA;&lt;h2 id=&#34;11-flv-header&#34;&gt;1.1. FLV Header&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;9bytes&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Signature: 3 bytes, &amp;lsquo;FLV&amp;rsquo;(0x 46 0x4c 0x56) 。&lt;/li&gt;&#xA;&lt;li&gt;version: 1bytes, 版本号，固定为1&lt;/li&gt;&#xA;&lt;li&gt;TypeFlags 1bytes:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;TypeFlagsReserved: 5bit, 保留，固定为0&lt;/li&gt;&#xA;&lt;li&gt;TypeFlagsAudio: 1bit,表示这文件是否有音频&lt;/li&gt;&#xA;&lt;li&gt;TypeFlagsReserved: 1bit, 保留，固定为0&lt;/li&gt;&#xA;&lt;li&gt;TypeFlagsVideo: 1bit,表示这个文件是否有视频&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;DataOffset : 4byte,  表示从文件头开始便宜多少是 FLV Body。因为 &lt;code&gt;FLV Header&lt;/code&gt; 之后就是 &lt;code&gt;FLV Body&lt;/code&gt; ，因此可以说 &lt;code&gt;DataOffset&lt;/code&gt; 字段是头部的大小&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;12-preivoustagsize&#34;&gt;1.2. PreivousTagSize&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;4bytes&#xA;表示上一个Tag的大小。第一个的值永远为0.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;13-tag&#34;&gt;1.3. Tag&lt;/h2&gt;&#xA;&lt;h3 id=&#34;131-tag-header&#34;&gt;1.3.1. Tag Header&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;TagType: 1bytes, 表示Tag类型&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Script Tag， &lt;code&gt;TagType&lt;/code&gt; 等于 18，这种 Tag 只有一个，而且在开头的位置，主要是存储文件的基本信息，帧率，采样率，持续时间之类的。&lt;/li&gt;&#xA;&lt;li&gt;Video Tag，&lt;code&gt;TagType&lt;/code&gt; 等于 9，存放 一帧视频的数据，通常是 一帧。&lt;/li&gt;&#xA;&lt;li&gt;Audio Tag，&lt;code&gt;TagType&lt;/code&gt; 等于 8，存放一帧音频的数据，通常是一帧。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;DataSize: 3bytes，表示后面的 &lt;code&gt;Tag Data&lt;/code&gt; 部分的大小。&lt;/li&gt;&#xA;&lt;li&gt;TimeStamp: 3 字节，当前这一帧视频 或者 音频的 解码时间。&lt;/li&gt;&#xA;&lt;li&gt;TimeStampExtended:占1 字节，解码时间扩展，因为 &lt;code&gt;TimeStamp&lt;/code&gt; 字段只有 3 字节，如果存不下 &lt;code&gt;dts&lt;/code&gt;（解码时间），就需要用 &lt;code&gt;TimeStampExtended&lt;/code&gt; 来扩展，&lt;code&gt;TimeStampExtended&lt;/code&gt; 会作为最高位的字节。&lt;/li&gt;&#xA;&lt;li&gt;StreamID: 这个字段总是0，但是没有说明是干嘛的。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;132-tag-data&#34;&gt;1.3.2. Tag Data&lt;/h3&gt;&#xA;&lt;p&gt;不同类型的Tag 有不同的格式&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Http Flv &amp; Websocket Flv</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FLV on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/</link><description>Recent content in FLV on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/index.xml" rel="self" type="application/rss+xml"/><item><title>Flv 标准解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/flv-%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p&gt;FLV（Flash Video）是一种流媒体格式，因其体积小、协议相对简单，很快便流行开来，并得到广泛的支持。
+常见的HTTP-FLV直播协议，就是使用HTTP流式传输通过FLV封装的音视频数据。
+而Websocket-FLV就是通过Websocket传输FLV封装的音视频数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;兼容性：
+HTTP-FLV的兼容性很好，除了iOS原生浏览器不支持，其他平台和浏览器都支持了，参考
+
+&lt;a class="link link--text" href="https://caniuse.com/?search=mse" rel="external"&gt;MSE&lt;/a&gt;。
+i若需要支持iOS浏览器，你可以考虑使用HLS或者使用WASM；注意一般iOS的Native应用，可以选择使用ijkplayer播放器。&lt;/li&gt;
+&lt;li&gt;与HLS区别
+HLS本质上就是&lt;strong&gt;HTTP文件下载&lt;/strong&gt;，而HTTP-FLV本质上是&lt;strong&gt;流传输&lt;/strong&gt;。
+CDN对于HTTP文件下载的支持很完善，因此HLS的兼容性比HTTP-FLV 要好很多；
+同样HTTP-FLV的延迟比HLS要低很多，基本上可以做到3的5秒左右延迟，而HLS的延迟一般是8到10秒以上。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="1-格式说明"&gt;1. 格式说明&lt;/h1&gt;
+&lt;p&gt;![[Pasted image 20240327150217.png]]&lt;/p&gt;
+&lt;h2 id="11-flv-header"&gt;1.1. FLV Header&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;9bytes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Signature: 3 bytes, &amp;lsquo;FLV&amp;rsquo;(0x 46 0x4c 0x56) 。&lt;/li&gt;
+&lt;li&gt;version: 1bytes, 版本号，固定为1&lt;/li&gt;
+&lt;li&gt;TypeFlags 1bytes:
+&lt;ul&gt;
+&lt;li&gt;TypeFlagsReserved: 5bit, 保留，固定为0&lt;/li&gt;
+&lt;li&gt;TypeFlagsAudio: 1bit,表示这文件是否有音频&lt;/li&gt;
+&lt;li&gt;TypeFlagsReserved: 1bit, 保留，固定为0&lt;/li&gt;
+&lt;li&gt;TypeFlagsVideo: 1bit,表示这个文件是否有视频&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DataOffset : 4byte, 表示从文件头开始便宜多少是 FLV Body。因为 &lt;code&gt;FLV Header&lt;/code&gt; 之后就是 &lt;code&gt;FLV Body&lt;/code&gt; ，因此可以说 &lt;code&gt;DataOffset&lt;/code&gt; 字段是头部的大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="12-preivoustagsize"&gt;1.2. PreivousTagSize&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;4bytes
+表示上一个Tag的大小。第一个的值永远为0.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="13-tag"&gt;1.3. Tag&lt;/h2&gt;
+&lt;h3 id="131-tag-header"&gt;1.3.1. Tag Header&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;TagType: 1bytes, 表示Tag类型
+&lt;ul&gt;
+&lt;li&gt;Script Tag， &lt;code&gt;TagType&lt;/code&gt; 等于 18，这种 Tag 只有一个，而且在开头的位置，主要是存储文件的基本信息，帧率，采样率，持续时间之类的。&lt;/li&gt;
+&lt;li&gt;Video Tag，&lt;code&gt;TagType&lt;/code&gt; 等于 9，存放 一帧视频的数据，通常是 一帧。&lt;/li&gt;
+&lt;li&gt;Audio Tag，&lt;code&gt;TagType&lt;/code&gt; 等于 8，存放一帧音频的数据，通常是一帧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DataSize: 3bytes，表示后面的 &lt;code&gt;Tag Data&lt;/code&gt; 部分的大小。&lt;/li&gt;
+&lt;li&gt;TimeStamp: 3 字节，当前这一帧视频 或者 音频的 解码时间。&lt;/li&gt;
+&lt;li&gt;TimeStampExtended:占1 字节，解码时间扩展，因为 &lt;code&gt;TimeStamp&lt;/code&gt; 字段只有 3 字节，如果存不下 &lt;code&gt;dts&lt;/code&gt;（解码时间），就需要用 &lt;code&gt;TimeStampExtended&lt;/code&gt; 来扩展，&lt;code&gt;TimeStampExtended&lt;/code&gt; 会作为最高位的字节。&lt;/li&gt;
+&lt;li&gt;StreamID: 这个字段总是0，但是没有说明是干嘛的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="132-tag-data"&gt;1.3.2. Tag Data&lt;/h3&gt;
+&lt;p&gt;不同类型的Tag 有不同的格式&lt;/p&gt;</description></item><item><title>Http Flv &amp; Websocket Flv</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/04.-flv/http-flv-websocket-flv/</guid><description/></item></channel></rss>

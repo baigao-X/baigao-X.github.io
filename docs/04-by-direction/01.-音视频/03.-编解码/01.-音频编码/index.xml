@@ -1,55 +1,254 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>音频编码 on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/</link>
-    <description>Recent content in 音频编码 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Aac</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</guid>
-      <description>&lt;h2 id=&#34;01-概述&#34;&gt;0.1. 概述&lt;/h2&gt;&#xA;&lt;p&gt;AAC（Advanced Audio Coding），被认为是MP3的继任者，相对MP3有更高的压缩效率。&#xA;由Fraunhofer IIS、杜比实验室、AT&amp;amp;T、Sony（索尼）等公司共同开发。&#xA;1997年由MPEG正式宣布为国际标准，&#xA;MPEG-2标准的第7部分-&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://www.iso.org/standard/25040.html&#34; rel=&#34;external&#34;&gt;ISO/IEC 13818-7:1997&lt;/a&gt;。&#xA;MPEG-4标准中，AAC音频流部分在&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://www.iso.org/standard/76383.html&#34; rel=&#34;external&#34;&gt;ISO/IEC 14496-3 (subpart 4)&lt;/a&gt;中规定。&lt;/p&gt;&#xA;&lt;h2 id=&#34;02-帧格式&#34;&gt;0.2. 帧格式&lt;/h2&gt;&#xA;&lt;p&gt;AAC音频格式有：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;ADIF(Audio Data Interchage Format)&lt;/code&gt;，音频数据交换格式：只有一个统一的头，必须得到所有数据后解码，适用于本地文件。&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;ADTS(Audio Data Transport Stream)&lt;/code&gt;，音视数据传输流：每一帧都有头信息，任意帧解码，适用于传输流。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;03-adts-格式&#34;&gt;0.3. ADTS 格式&lt;/h2&gt;&#xA;&lt;p&gt;![[Pasted image 20230712142111.png]]&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>G.711</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/g.711/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/g.711/</guid>
-      <description>&lt;p&gt;G.711是一种由国际电信联盟（ITU-T）制定的音频编码方式，又称为ITU-T G.711。&#xA;采用对数PCM抽样标准&#xA;采样率为8KHz&#xA;是主流的波形声音编码&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;01-g711a&#34;&gt;0.1. G.711A&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt; 采用 µ-law algorithm 压缩算法 （又称often u-law, ulaw, mu-law)， 主要运用于北美和日本&#xA;特别设计来方便计算机处理&#xA;将13bit的PCM数据编码成8bit数据&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;02-g711u&#34;&gt;0.2. G.711U&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt; 采用 a-law algorithm 压缩算法 主要运用于欧洲和世界其他地区&#xA;将14bit的PCM数据编码成8bit数据&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    <item>
-      <title>Mp3</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/mp3/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/mp3/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pcm</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/pcm/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/pcm/</guid>
-      <description>&lt;p&gt;PAM：&lt;strong&gt;P&lt;/strong&gt;ulse &lt;strong&gt;A&lt;/strong&gt;mplitude &lt;strong&gt;M&lt;/strong&gt;odulation 脉冲幅度调制(数字信号过程采样)&#xA;PCM：&lt;strong&gt;P&lt;/strong&gt;ulse &lt;strong&gt;C&lt;/strong&gt;ode &lt;strong&gt;M&lt;/strong&gt;odulation 脉冲编码调制&lt;/p&gt;&#xA;&lt;p&gt;裸流&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-参数&#34;&gt;1. 参数：&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-sample-rate-采样频率&#34;&gt;1.1 Sample Rate: 采样频率：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;8kHz(电话)&lt;/li&gt;&#xA;&lt;li&gt;44.1kHz(CD)&lt;/li&gt;&#xA;&lt;li&gt;48kHz(DVD)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;12-sample-size-量化位数&#34;&gt;1.2 Sample Size 量化位数&lt;/h3&gt;&#xA;&lt;p&gt;通常为16-bit&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Wav</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/wav/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/wav/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;**Waveform Audio File Format**（**WAVE**，又或者是因为文件后缀名而受大众所知的**WAV**） &#xA;一种典型的未压缩音频格式&#xA;它采用`RIFF`（Resource Interchange File Format）文件格式结构。通常用来保存`PCM`格式的原始音频数据，所以通常被称为无损音频。但是严格意义上来讲，`WAV`也可以存储其它压缩格式的音频数据。&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;01-格式&#34;&gt;0.1. 格式&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;WAV&lt;/code&gt;文件遵循RIFF规则，其内容以区块（&lt;code&gt;chunk&lt;/code&gt;）为最小单位进行存储。&#xA;由以下chunk组成&lt;/p&gt;&#xA;&lt;p&gt;以下为一般都会有的&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;RIFF chunk&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Format chunk&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Data chunk&lt;/code&gt;&#xA;以下为可选的&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Fact chunk&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Cue points chunk&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Playlist chunk&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Associated data list chunk&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;011-riff-chunk&#34;&gt;0.1.1. RIFF chunk&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;12 bytes&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;名称&lt;/th&gt;&#xA;          &lt;th&gt;偏移地址&lt;/th&gt;&#xA;          &lt;th&gt;长度(bytes)&lt;/th&gt;&#xA;          &lt;th&gt;字节序&lt;/th&gt;&#xA;          &lt;th&gt;内容&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ID&lt;/td&gt;&#xA;          &lt;td&gt;0x00&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;big endian&lt;/td&gt;&#xA;          &lt;td&gt;&amp;lsquo;RIFF&amp;rsquo; (0x52494646)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Size&lt;/td&gt;&#xA;          &lt;td&gt;0x04&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;fileSize -8 (减去ID和Size的长度)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Type&lt;/td&gt;&#xA;          &lt;td&gt;0x08&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;big endian&lt;/td&gt;&#xA;          &lt;td&gt;&amp;lsquo;WAVE&amp;rsquo;(0x57415645)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;012-format-chunk&#34;&gt;0.1.2. FORMAT chunk&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;24bytes&#x9;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;名称&lt;/th&gt;&#xA;          &lt;th&gt;偏移地址&lt;/th&gt;&#xA;          &lt;th&gt;长度(bytes)&lt;/th&gt;&#xA;          &lt;th&gt;字节序&lt;/th&gt;&#xA;          &lt;th&gt;内容&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ID&lt;/td&gt;&#xA;          &lt;td&gt;0x00&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;big endian&lt;/td&gt;&#xA;          &lt;td&gt;&amp;lsquo;fmt &amp;rsquo; (0x666D7420)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Size&lt;/td&gt;&#xA;          &lt;td&gt;0x04&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;16&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;AudioFormat&lt;/td&gt;&#xA;          &lt;td&gt;0x08&lt;/td&gt;&#xA;          &lt;td&gt;2&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;音频格式&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;NumChannels&lt;/td&gt;&#xA;          &lt;td&gt;0x0A&lt;/td&gt;&#xA;          &lt;td&gt;2&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;声道格式(单声道=1;立体声=2)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;SampleRate&lt;/td&gt;&#xA;          &lt;td&gt;0x0C&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;采样率(每秒块)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ByteRate&lt;/td&gt;&#xA;          &lt;td&gt;0x10&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;每秒数据字节数 = ByteAlign x SampleRate&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ByteAlign&lt;/td&gt;&#xA;          &lt;td&gt;0x14&lt;/td&gt;&#xA;          &lt;td&gt;2&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;数据块大小(字节)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;BitsPerSample&lt;/td&gt;&#xA;          &lt;td&gt;0x16&lt;/td&gt;&#xA;          &lt;td&gt;2&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;采样位数&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h4 id=&#34;0121-audio-format&#34;&gt;0.1.2.1. Audio Format&lt;/h4&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Code&lt;/th&gt;&#xA;          &lt;th&gt;Symbol&lt;/th&gt;&#xA;          &lt;th&gt;Data&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;0x0001&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;WAVE_FORMAT_PCM&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;PCM&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;0x0003&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;WAVE_FORMAT_IEEE_FLOAT&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;IEEE float&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;0x0006&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;WAVE_FORMAT_ALAW&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;8-bit ITU-T G.711 A-law&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;0x0007&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;WAVE_FORMAT_MULAW&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;8-bit ITU-T G.711 µ-law&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;0xFFFE&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;WAVE_FORMAT_EXTENSIBLE&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Determined by &lt;code&gt;SubFormat&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;013-data-chunk&#34;&gt;0.1.3. DATA chunk&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;名称&lt;/th&gt;&#xA;          &lt;th&gt;偏移地址&lt;/th&gt;&#xA;          &lt;th&gt;长度(bytes)&lt;/th&gt;&#xA;          &lt;th&gt;字节序&lt;/th&gt;&#xA;          &lt;th&gt;内容&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ID&lt;/td&gt;&#xA;          &lt;td&gt;0x00&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;big endian&lt;/td&gt;&#xA;          &lt;td&gt;&amp;lsquo;data&amp;rsquo; (0x64617461)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Size&lt;/td&gt;&#xA;          &lt;td&gt;0x04&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;little endian&lt;/td&gt;&#xA;          &lt;td&gt;Data的长度 N = ByteRate * seconds&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Data&lt;/td&gt;&#xA;          &lt;td&gt;0x08&lt;/td&gt;&#xA;          &lt;td&gt;N Byte&lt;/td&gt;&#xA;          &lt;td&gt;N/A&lt;/td&gt;&#xA;          &lt;td&gt;音频数据&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Pad byte&lt;/td&gt;&#xA;          &lt;td&gt;0xxx&lt;/td&gt;&#xA;          &lt;td&gt;0或1&lt;/td&gt;&#xA;          &lt;td&gt;N/A&lt;/td&gt;&#xA;          &lt;td&gt;填充字数，若数据长度N则奇数则填充&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;02-list-chunk&#34;&gt;0.2. LIST chunk&lt;/h2&gt;&#xA;&lt;p&gt;8 byte (不包含实际Data)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>常用音频编码类型</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/</guid>
-      <description>&lt;h2 id=&#34;01-aac&#34;&gt;0.1. AAC&lt;/h2&gt;&#xA;&lt;h2 id=&#34;02-pcm&#34;&gt;0.2. PCM&lt;/h2&gt;&#xA;&lt;h2 id=&#34;03-g711-u-law&#34;&gt;0.3. G.711 U-law&lt;/h2&gt;&#xA;&lt;h2 id=&#34;04-g711-a-law&#34;&gt;0.4. G.711 A-law&lt;/h2&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>音频编码 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/</link><description>Recent content in 音频编码 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml"/><item><title>Aac</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</guid><description>&lt;h2 id="01-概述"&gt;0.1. 概述&lt;/h2&gt;
+&lt;p&gt;AAC（Advanced Audio Coding），被认为是MP3的继任者，相对MP3有更高的压缩效率。
+由Fraunhofer IIS、杜比实验室、AT&amp;amp;T、Sony（索尼）等公司共同开发。
+1997年由MPEG正式宣布为国际标准，
+MPEG-2标准的第7部分-
+
+&lt;a class="link link--text" href="https://www.iso.org/standard/25040.html" rel="external"&gt;ISO/IEC 13818-7:1997&lt;/a&gt;。
+MPEG-4标准中，AAC音频流部分在
+
+&lt;a class="link link--text" href="https://www.iso.org/standard/76383.html" rel="external"&gt;ISO/IEC 14496-3 (subpart 4)&lt;/a&gt;中规定。&lt;/p&gt;
+&lt;h2 id="02-帧格式"&gt;0.2. 帧格式&lt;/h2&gt;
+&lt;p&gt;AAC音频格式有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ADIF(Audio Data Interchage Format)&lt;/code&gt;，音频数据交换格式：只有一个统一的头，必须得到所有数据后解码，适用于本地文件。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ADTS(Audio Data Transport Stream)&lt;/code&gt;，音视数据传输流：每一帧都有头信息，任意帧解码，适用于传输流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="03-adts-格式"&gt;0.3. ADTS 格式&lt;/h2&gt;
+&lt;p&gt;![[Pasted image 20230712142111.png]]&lt;/p&gt;</description></item><item><title>G.711</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/g.711/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/g.711/</guid><description>&lt;p&gt;G.711是一种由国际电信联盟（ITU-T）制定的音频编码方式，又称为ITU-T G.711。
+采用对数PCM抽样标准
+采样率为8KHz
+是主流的波形声音编码&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="01-g711a"&gt;0.1. G.711A&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt; 采用 µ-law algorithm 压缩算法 （又称often u-law, ulaw, mu-law)， 主要运用于北美和日本
+特别设计来方便计算机处理
+将13bit的PCM数据编码成8bit数据
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="02-g711u"&gt;0.2. G.711U&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt; 采用 a-law algorithm 压缩算法 主要运用于欧洲和世界其他地区
+将14bit的PCM数据编码成8bit数据
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Mp3</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/mp3/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/mp3/</guid><description/></item><item><title>Pcm</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/pcm/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/pcm/</guid><description>&lt;p&gt;PAM：&lt;strong&gt;P&lt;/strong&gt;ulse &lt;strong&gt;A&lt;/strong&gt;mplitude &lt;strong&gt;M&lt;/strong&gt;odulation 脉冲幅度调制(数字信号过程采样)
+PCM：&lt;strong&gt;P&lt;/strong&gt;ulse &lt;strong&gt;C&lt;/strong&gt;ode &lt;strong&gt;M&lt;/strong&gt;odulation 脉冲编码调制&lt;/p&gt;
+&lt;p&gt;裸流&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-参数"&gt;1. 参数：&lt;/h2&gt;
+&lt;h3 id="11-sample-rate-采样频率"&gt;1.1 Sample Rate: 采样频率：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;8kHz(电话)&lt;/li&gt;
+&lt;li&gt;44.1kHz(CD)&lt;/li&gt;
+&lt;li&gt;48kHz(DVD)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="12-sample-size-量化位数"&gt;1.2 Sample Size 量化位数&lt;/h3&gt;
+&lt;p&gt;通常为16-bit&lt;/p&gt;</description></item><item><title>Wav</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/wav/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/wav/</guid><description>&lt;pre&gt;&lt;code&gt;**Waveform Audio File Format**（**WAVE**，又或者是因为文件后缀名而受大众所知的**WAV**） 
+一种典型的未压缩音频格式
+它采用`RIFF`（Resource Interchange File Format）文件格式结构。通常用来保存`PCM`格式的原始音频数据，所以通常被称为无损音频。但是严格意义上来讲，`WAV`也可以存储其它压缩格式的音频数据。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id="01-格式"&gt;0.1. 格式&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;WAV&lt;/code&gt;文件遵循RIFF规则，其内容以区块（&lt;code&gt;chunk&lt;/code&gt;）为最小单位进行存储。
+由以下chunk组成&lt;/p&gt;
+&lt;p&gt;以下为一般都会有的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;RIFF chunk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Format chunk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Data chunk&lt;/code&gt;
+以下为可选的&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Fact chunk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cue points chunk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Playlist chunk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Associated data list chunk&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="011-riff-chunk"&gt;0.1.1. RIFF chunk&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;12 bytes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;名称&lt;/th&gt;
+ &lt;th&gt;偏移地址&lt;/th&gt;
+ &lt;th&gt;长度(bytes)&lt;/th&gt;
+ &lt;th&gt;字节序&lt;/th&gt;
+ &lt;th&gt;内容&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ID&lt;/td&gt;
+ &lt;td&gt;0x00&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;big endian&lt;/td&gt;
+ &lt;td&gt;&amp;lsquo;RIFF&amp;rsquo; (0x52494646)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Size&lt;/td&gt;
+ &lt;td&gt;0x04&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;fileSize -8 (减去ID和Size的长度)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Type&lt;/td&gt;
+ &lt;td&gt;0x08&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;big endian&lt;/td&gt;
+ &lt;td&gt;&amp;lsquo;WAVE&amp;rsquo;(0x57415645)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="012-format-chunk"&gt;0.1.2. FORMAT chunk&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;24bytes	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;名称&lt;/th&gt;
+ &lt;th&gt;偏移地址&lt;/th&gt;
+ &lt;th&gt;长度(bytes)&lt;/th&gt;
+ &lt;th&gt;字节序&lt;/th&gt;
+ &lt;th&gt;内容&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ID&lt;/td&gt;
+ &lt;td&gt;0x00&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;big endian&lt;/td&gt;
+ &lt;td&gt;&amp;lsquo;fmt &amp;rsquo; (0x666D7420)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Size&lt;/td&gt;
+ &lt;td&gt;0x04&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;16&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;AudioFormat&lt;/td&gt;
+ &lt;td&gt;0x08&lt;/td&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;音频格式&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;NumChannels&lt;/td&gt;
+ &lt;td&gt;0x0A&lt;/td&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;声道格式(单声道=1;立体声=2)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;SampleRate&lt;/td&gt;
+ &lt;td&gt;0x0C&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;采样率(每秒块)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ByteRate&lt;/td&gt;
+ &lt;td&gt;0x10&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;每秒数据字节数 = ByteAlign x SampleRate&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ByteAlign&lt;/td&gt;
+ &lt;td&gt;0x14&lt;/td&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;数据块大小(字节)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;BitsPerSample&lt;/td&gt;
+ &lt;td&gt;0x16&lt;/td&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;采样位数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="0121-audio-format"&gt;0.1.2.1. Audio Format&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Code&lt;/th&gt;
+ &lt;th&gt;Symbol&lt;/th&gt;
+ &lt;th&gt;Data&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;0x0001&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;WAVE_FORMAT_PCM&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;PCM&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;0x0003&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;WAVE_FORMAT_IEEE_FLOAT&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;IEEE float&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;0x0006&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;WAVE_FORMAT_ALAW&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;8-bit ITU-T G.711 A-law&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;0x0007&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;WAVE_FORMAT_MULAW&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;8-bit ITU-T G.711 µ-law&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;0xFFFE&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;WAVE_FORMAT_EXTENSIBLE&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Determined by &lt;code&gt;SubFormat&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="013-data-chunk"&gt;0.1.3. DATA chunk&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;名称&lt;/th&gt;
+ &lt;th&gt;偏移地址&lt;/th&gt;
+ &lt;th&gt;长度(bytes)&lt;/th&gt;
+ &lt;th&gt;字节序&lt;/th&gt;
+ &lt;th&gt;内容&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ID&lt;/td&gt;
+ &lt;td&gt;0x00&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;big endian&lt;/td&gt;
+ &lt;td&gt;&amp;lsquo;data&amp;rsquo; (0x64617461)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Size&lt;/td&gt;
+ &lt;td&gt;0x04&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;little endian&lt;/td&gt;
+ &lt;td&gt;Data的长度 N = ByteRate * seconds&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data&lt;/td&gt;
+ &lt;td&gt;0x08&lt;/td&gt;
+ &lt;td&gt;N Byte&lt;/td&gt;
+ &lt;td&gt;N/A&lt;/td&gt;
+ &lt;td&gt;音频数据&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Pad byte&lt;/td&gt;
+ &lt;td&gt;0xxx&lt;/td&gt;
+ &lt;td&gt;0或1&lt;/td&gt;
+ &lt;td&gt;N/A&lt;/td&gt;
+ &lt;td&gt;填充字数，若数据长度N则奇数则填充&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="02-list-chunk"&gt;0.2. LIST chunk&lt;/h2&gt;
+&lt;p&gt;8 byte (不包含实际Data)&lt;/p&gt;</description></item><item><title>常用音频编码类型</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/%E5%B8%B8%E7%94%A8%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/</guid><description>&lt;h2 id="01-aac"&gt;0.1. AAC&lt;/h2&gt;
+&lt;h2 id="02-pcm"&gt;0.2. PCM&lt;/h2&gt;
+&lt;h2 id="03-g711-u-law"&gt;0.3. G.711 U-law&lt;/h2&gt;
+&lt;h2 id="04-g711-a-law"&gt;0.4. G.711 A-law&lt;/h2&gt;</description></item></channel></rss>

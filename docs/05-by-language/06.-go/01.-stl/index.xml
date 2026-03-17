@@ -1,20 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>STL on My Docs</title>
-    <link>http://localhost:37385/docs/05-by-language/06.-go/01.-stl/</link>
-    <description>Recent content in STL on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/05-by-language/06.-go/01.-stl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Stl</title>
-      <link>http://localhost:37385/docs/05-by-language/06.-go/01.-stl/stl/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/05-by-language/06.-go/01.-stl/stl/</guid>
-      <description>&lt;h1 id=&#34;1-stl&#34;&gt;1. STL&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;C&lt;/li&gt;&#xA;&lt;li&gt;syscall&lt;/li&gt;&#xA;&lt;li&gt;sync 线程同步模块&#xA;&lt;ul&gt;&#xA;&lt;li&gt;sync.once&lt;/li&gt;&#xA;&lt;li&gt;sync.WaitGroup&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;context&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Background()&lt;/li&gt;&#xA;&lt;li&gt;WithCancel()&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;path 系统IO&#xA;&lt;ul&gt;&#xA;&lt;li&gt;filepath&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Walk&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;runtime&lt;/li&gt;&#xA;&lt;li&gt;flag 命令行解析参数&lt;/li&gt;&#xA;&lt;li&gt;os 系统接口&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Exit&lt;/li&gt;&#xA;&lt;li&gt;Getenv&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;strings&#xA;&lt;ul&gt;&#xA;&lt;li&gt;EqualFold&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;2-开源库&#34;&gt;2. 开源库&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;cron&lt;/li&gt;&#xA;&lt;li&gt;jinzhu/configor - json、yaml、TOML、Shell Env&lt;/li&gt;&#xA;&lt;li&gt;gopkg.in/ini.v1 : ini 配置文件&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>STL on My Docs</title><link>/docs/05-by-language/06.-go/01.-stl/</link><description>Recent content in STL on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/05-by-language/06.-go/01.-stl/index.xml" rel="self" type="application/rss+xml"/><item><title>Stl</title><link>/docs/05-by-language/06.-go/01.-stl/stl/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/06.-go/01.-stl/stl/</guid><description>&lt;h1 id="1-stl"&gt;1. STL&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;C&lt;/li&gt;
+&lt;li&gt;syscall&lt;/li&gt;
+&lt;li&gt;sync 线程同步模块
+&lt;ul&gt;
+&lt;li&gt;sync.once&lt;/li&gt;
+&lt;li&gt;sync.WaitGroup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;context
+&lt;ul&gt;
+&lt;li&gt;Background()&lt;/li&gt;
+&lt;li&gt;WithCancel()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;path 系统IO
+&lt;ul&gt;
+&lt;li&gt;filepath
+&lt;ul&gt;
+&lt;li&gt;Walk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;runtime&lt;/li&gt;
+&lt;li&gt;flag 命令行解析参数&lt;/li&gt;
+&lt;li&gt;os 系统接口
+&lt;ul&gt;
+&lt;li&gt;Exit&lt;/li&gt;
+&lt;li&gt;Getenv&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;strings
+&lt;ul&gt;
+&lt;li&gt;EqualFold&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="2-开源库"&gt;2. 开源库&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;cron&lt;/li&gt;
+&lt;li&gt;jinzhu/configor - json、yaml、TOML、Shell Env&lt;/li&gt;
+&lt;li&gt;gopkg.in/ini.v1 : ini 配置文件&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

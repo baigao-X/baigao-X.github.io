@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>设计原则 on My Docs</title>
-    <link>http://localhost:37385/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</link>
-    <description>Recent content in 设计原则 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>单一责任原则(Single Responsibility Principle,Srp)</title>
-      <link>http://localhost:37385/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/</guid>
-      <description>&lt;p&gt;每个函数的改动都是基于一个原因&lt;/p&gt;&#xA;&lt;p&gt;高层的策略与底层的实现细节不应该糅合到一起&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>依赖倒置原则(Dependency Inversion Principle)</title>
-      <link>http://localhost:37385/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/</guid>
-      <description>&lt;h2 id=&#34;1-dependency-injection-依赖注入&#34;&gt;1. Dependency injection 依赖注入&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;对象和函数接受所依赖的其他对象或函数。达到分离构造对象和使用对象的关注点。&#xA;1. 将配置项外部化到配置文件中&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;11-优点&#34;&gt;1.1 优点：&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;减少类与依赖项之间的耦合&lt;/li&gt;&#xA;&lt;li&gt;便于单元测试&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;12-缺点&#34;&gt;1.2 缺点：&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;1. 代码难以追踪，因为他的行为与构造是分离的&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;13-关键4个角色&#34;&gt;1.3 关键4个角色&lt;/h3&gt;&#xA;&lt;h4 id=&#34;131-服务&#34;&gt;1.3.1 服务：&lt;/h4&gt;&#xA;&lt;pre&gt;&lt;code&gt;指包含有用功能能够的类&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h4 id=&#34;132-客户端&#34;&gt;1.3.2. 客户端&lt;/h4&gt;&#xA;&lt;pre&gt;&lt;code&gt;使用服务的类&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h4 id=&#34;133-接口&#34;&gt;1.3.3. 接口&lt;/h4&gt;&#xA;&lt;h4 id=&#34;134-注入器&#34;&gt;1.3.4. 注入器&lt;/h4&gt;&#xA;&lt;pre&gt;&lt;code&gt;也可以称为组装器、容器、提供者、工厂，向客户端引入服务&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;14-类型&#34;&gt;1.4 类型&lt;/h3&gt;&#xA;&lt;h4 id=&#34;141-构造函数注入面向对象编程&#34;&gt;1.4.1 构造函数注入(面向对象编程)&lt;/h4&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>设计原则 on My Docs</title><link>/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</link><description>Recent content in 设计原则 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/index.xml" rel="self" type="application/rss+xml"/><item><title>单一责任原则(Single Responsibility Principle,Srp)</title><link>/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB%E5%8E%9F%E5%88%99single-responsibility-principlesrp/</guid><description>&lt;p&gt;每个函数的改动都是基于一个原因&lt;/p&gt;
+&lt;p&gt;高层的策略与底层的实现细节不应该糅合到一起&lt;/p&gt;</description></item><item><title>依赖倒置原则(Dependency Inversion Principle)</title><link>/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dependency-inversion-principle/</guid><description>&lt;h2 id="1-dependency-injection-依赖注入"&gt;1. Dependency injection 依赖注入&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;对象和函数接受所依赖的其他对象或函数。达到分离构造对象和使用对象的关注点。
+1. 将配置项外部化到配置文件中
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="11-优点"&gt;1.1 优点：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;减少类与依赖项之间的耦合&lt;/li&gt;
+&lt;li&gt;便于单元测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="12-缺点"&gt;1.2 缺点：&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;1. 代码难以追踪，因为他的行为与构造是分离的
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="13-关键4个角色"&gt;1.3 关键4个角色&lt;/h3&gt;
+&lt;h4 id="131-服务"&gt;1.3.1 服务：&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;指包含有用功能能够的类
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="132-客户端"&gt;1.3.2. 客户端&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;使用服务的类
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="133-接口"&gt;1.3.3. 接口&lt;/h4&gt;
+&lt;h4 id="134-注入器"&gt;1.3.4. 注入器&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;也可以称为组装器、容器、提供者、工厂，向客户端引入服务
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="14-类型"&gt;1.4 类型&lt;/h3&gt;
+&lt;h4 id="141-构造函数注入面向对象编程"&gt;1.4.1 构造函数注入(面向对象编程)&lt;/h4&gt;</description></item></channel></rss>

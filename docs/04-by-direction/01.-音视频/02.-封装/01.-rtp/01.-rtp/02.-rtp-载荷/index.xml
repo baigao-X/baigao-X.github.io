@@ -1,20 +1,133 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>rtp-载荷 on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/</link>
-    <description>Recent content in rtp-载荷 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Rtp 载荷 Aac</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/</guid>
-      <description>&lt;h2 id=&#34;01-协议文档&#34;&gt;0.1. 协议文档：&lt;/h2&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://tools.ietf.org/html/rfc3640&#34; rel=&#34;external&#34;&gt;rfc3640&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;02-示例&#34;&gt;0.2. 示例&lt;/h2&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;m=audio 0 RTP/AVP 96&#xA;a=rtpmap:96 mpeg4-generic/22050&#xA;a=fmtp:96 streamtype=5;profile-level-id=1;mode=AAC-hbr;sizelength=13;indexlength=3;indexdeltalength=3;config=1210&#xA;&#xA;-- config&#xA;HEX 1210 &#xA;OBJ 0001 0010 0001 0000&#xA;&#xA;audioObjectType: 00010 -&amp;gt; 2&#xA;&#xA;xxxx x010 0001 0000&#xA;samplingFrequencyIndex: 0100 -&amp;gt; 4&#xA;&#xA;xxxx xxxx x001 0000&#xA;channelConfiguration: 0010 -&amp;gt; 2&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;config&lt;/code&gt; : 共占2字节(16bit)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;字段&lt;/th&gt;&#xA;          &lt;th&gt;比特数&lt;/th&gt;&#xA;          &lt;th&gt;说明&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;audioObjectType&lt;/td&gt;&#xA;          &lt;td&gt;5&lt;/td&gt;&#xA;          &lt;td&gt;aac的profile, 通常情况是1, 或者2&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;samplingFrequencyIndex&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;aac的采样频率的索引&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;channelConfiguration&lt;/td&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;aac的通道数, 1~6表示为相应的通道数量, 7表示8通道&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;revsert&lt;/td&gt;&#xA;          &lt;td&gt;3&lt;/td&gt;&#xA;          &lt;td&gt;保留&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;samplingFrequencyIndex 索引表&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;值&lt;/th&gt;&#xA;          &lt;th&gt;表示的采样频率&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;0&lt;/td&gt;&#xA;          &lt;td&gt;96000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;1&lt;/td&gt;&#xA;          &lt;td&gt;88200&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;2&lt;/td&gt;&#xA;          &lt;td&gt;64000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;3&lt;/td&gt;&#xA;          &lt;td&gt;48000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;44100&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5&lt;/td&gt;&#xA;          &lt;td&gt;32000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;6&lt;/td&gt;&#xA;          &lt;td&gt;24000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;7&lt;/td&gt;&#xA;          &lt;td&gt;22050&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;8&lt;/td&gt;&#xA;          &lt;td&gt;16000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;9&lt;/td&gt;&#xA;          &lt;td&gt;12000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;10&lt;/td&gt;&#xA;          &lt;td&gt;11025&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;11&lt;/td&gt;&#xA;          &lt;td&gt;8000&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;12&lt;/td&gt;&#xA;          &lt;td&gt;7350&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;15&lt;/td&gt;&#xA;          &lt;td&gt;表示自定义的采样频率, 一般不会出现&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>rtp-载荷 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/</link><description>Recent content in rtp-载荷 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>Rtp 载荷 Aac</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/01.-rtp/02.-rtp-%E8%BD%BD%E8%8D%B7/rtp-%E8%BD%BD%E8%8D%B7-aac/</guid><description>&lt;h2 id="01-协议文档"&gt;0.1. 协议文档：&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;a class="link link--text" href="https://tools.ietf.org/html/rfc3640" rel="external"&gt;rfc3640&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="02-示例"&gt;0.2. 示例&lt;/h2&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;m=audio 0 RTP/AVP 96
+a=rtpmap:96 mpeg4-generic/22050
+a=fmtp:96 streamtype=5;profile-level-id=1;mode=AAC-hbr;sizelength=13;indexlength=3;indexdeltalength=3;config=1210
+
+-- config
+HEX 1210 
+OBJ 0001 0010 0001 0000
+
+audioObjectType: 00010 -&amp;gt; 2
+
+xxxx x010 0001 0000
+samplingFrequencyIndex: 0100 -&amp;gt; 4
+
+xxxx xxxx x001 0000
+channelConfiguration: 0010 -&amp;gt; 2&lt;/code&gt;&lt;/pre&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;config&lt;/code&gt; : 共占2字节(16bit)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;字段&lt;/th&gt;
+ &lt;th&gt;比特数&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;audioObjectType&lt;/td&gt;
+ &lt;td&gt;5&lt;/td&gt;
+ &lt;td&gt;aac的profile, 通常情况是1, 或者2&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;samplingFrequencyIndex&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;aac的采样频率的索引&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;channelConfiguration&lt;/td&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;aac的通道数, 1~6表示为相应的通道数量, 7表示8通道&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;revsert&lt;/td&gt;
+ &lt;td&gt;3&lt;/td&gt;
+ &lt;td&gt;保留&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;samplingFrequencyIndex 索引表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;值&lt;/th&gt;
+ &lt;th&gt;表示的采样频率&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;0&lt;/td&gt;
+ &lt;td&gt;96000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1&lt;/td&gt;
+ &lt;td&gt;88200&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;64000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;3&lt;/td&gt;
+ &lt;td&gt;48000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;44100&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;5&lt;/td&gt;
+ &lt;td&gt;32000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;6&lt;/td&gt;
+ &lt;td&gt;24000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;7&lt;/td&gt;
+ &lt;td&gt;22050&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;8&lt;/td&gt;
+ &lt;td&gt;16000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;9&lt;/td&gt;
+ &lt;td&gt;12000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;10&lt;/td&gt;
+ &lt;td&gt;11025&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;11&lt;/td&gt;
+ &lt;td&gt;8000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;12&lt;/td&gt;
+ &lt;td&gt;7350&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;15&lt;/td&gt;
+ &lt;td&gt;表示自定义的采样频率, 一般不会出现&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>

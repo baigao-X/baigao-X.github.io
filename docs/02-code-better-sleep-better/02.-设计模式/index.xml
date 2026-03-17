@@ -1,27 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>设计模式 on My Docs</title>
-    <link>http://localhost:37385/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-    <description>Recent content in 设计模式 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>0X.  桥接模式</title>
-      <link>http://localhost:37385/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</guid>
-      <description>&lt;h2 id=&#34;pimpl惯用法&#34;&gt;Pimpl惯用法&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;pointer to implementation”（指向实现的指针）&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;由于C++语言特性，如果对外开放一个类，即使是private成员，也需要声明在公有头文件中。&#xA;使用该惯用法可以在公有接口中完全隐藏内部细节。支持将私有成员数据和方法，从.h转移到.cpp文件。&lt;/p&gt;&#xA;&lt;pre class=&#34;mermaid&#34;&gt;&#xD;&#xA;  classDiagram&#xA;&#xA;&#xA;class Interface {&#xA;&#x9;- IMpl *impl //可以优化成智能指针&#xA;&#x9;+ Function1() void&#xA;}&#xA;&#xA;class Impl {&#xA;&#x9;- int privateData&#xA;&#x9;- privateFunctiont1() void&#xA;}&#xA;&#xA;Interface &amp;#34;1&amp;#34; *-- &amp;#34;1&amp;#34; Impl : Composition&#xD;&#xA;&lt;/pre&gt;&#xD;&#xA;&#xD;&#xA;&lt;h3 id=&#34;优点&#34;&gt;优点&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;信息隐藏&#xA;只显示需要的公有属性，让使用者更容易查看，同时降低了耦合，带来了更好的二进制兼容性&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>概论</title>
-      <link>http://localhost:37385/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A6%82%E8%AE%BA/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A6%82%E8%AE%BA/</guid>
-      <description>&lt;h3 id=&#34;tell-dont-ask&#34;&gt;Tell-Don&amp;rsquo;t-Ask&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;设计理念： 你应该告诉一个对象去做一些工作, 然后让它自主完成任务。而不是去查询他的状态，然后自己执行。 &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;feature-envy-依恋情节&#34;&gt;feature envy “依恋情节”&lt;/h3&gt;&#xA;&lt;h1 id=&#34;指针实现pointer-to-implementationpimpl惯用法&#34;&gt;指针实现”(pointer to implementation,PIMPL)惯用法&lt;/h1&gt;&#xA;&lt;h3 id=&#34;raii-惯用法&#34;&gt;RAII 惯用法&lt;/h3&gt;&#xA;&lt;p&gt;https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization&lt;/p&gt;&#xA;&lt;p&gt;Mikado方法重构&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>设计模式 on My Docs</title><link>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link><description>Recent content in 设计模式 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml"/><item><title>0X. 桥接模式</title><link>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</guid><description>&lt;h2 id="pimpl惯用法"&gt;Pimpl惯用法&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;pointer to implementation”（指向实现的指针）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;由于C++语言特性，如果对外开放一个类，即使是private成员，也需要声明在公有头文件中。
+使用该惯用法可以在公有接口中完全隐藏内部细节。支持将私有成员数据和方法，从.h转移到.cpp文件。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+ classDiagram
+
+
+class Interface {
+	- IMpl *impl //可以优化成智能指针
+	+ Function1() void
+}
+
+class Impl {
+	- int privateData
+	- privateFunctiont1() void
+}
+
+Interface &amp;#34;1&amp;#34; *-- &amp;#34;1&amp;#34; Impl : Composition
+&lt;/pre&gt;
+
+&lt;h3 id="优点"&gt;优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;信息隐藏
+只显示需要的公有属性，让使用者更容易查看，同时降低了耦合，带来了更好的二进制兼容性&lt;/p&gt;</description></item><item><title>概论</title><link>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A6%82%E8%AE%BA/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A6%82%E8%AE%BA/</guid><description>&lt;h3 id="tell-dont-ask"&gt;Tell-Don&amp;rsquo;t-Ask&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;设计理念： 你应该告诉一个对象去做一些工作, 然后让它自主完成任务。而不是去查询他的状态，然后自己执行。 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="feature-envy-依恋情节"&gt;feature envy “依恋情节”&lt;/h3&gt;
+&lt;h1 id="指针实现pointer-to-implementationpimpl惯用法"&gt;指针实现”(pointer to implementation,PIMPL)惯用法&lt;/h1&gt;
+&lt;h3 id="raii-惯用法"&gt;RAII 惯用法&lt;/h3&gt;
+&lt;p&gt;https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization&lt;/p&gt;
+&lt;p&gt;Mikado方法重构&lt;/p&gt;</description></item></channel></rss>

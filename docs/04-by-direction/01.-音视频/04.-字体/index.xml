@@ -1,27 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>字体 on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/</link>
-    <description>Recent content in 字体 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>字体配置</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;h1 id=&#34;1-字体格式&#34;&gt;1. 字体格式&lt;/h1&gt;&#xA;&lt;h1 id=&#34;2-字体名称的格式&#34;&gt;2. 字体名称的格式&lt;/h1&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sarasa-fixed-slab-cl-regular.ttf&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;字体家族名称：sarasa。每个文件名都由它开头.&lt;/li&gt;&#xA;&lt;li&gt;字体风格 (Style)：fixed。字体风格决定了西文字符的字形，分为 Gothic、UI、Mono、Term、Fixed 五种。详见下图。&lt;/li&gt;&#xA;&lt;li&gt;字体衬线：slab。只有一部分文件有这个部分，代表其加入了衬线，数字和字母的笔画末端有短线修饰。&lt;/li&gt;&#xA;&lt;li&gt;汉字字形 (Orthography)：cl。根据不同国家和地区的标准，字形分为 CL、HC、J、K、SC、TC 六种，例如中国大陆、中国香港、日本的“冷”字写法都不一样，详见下图。&lt;/li&gt;&#xA;&lt;li&gt;字重：regular。这一项代表的是字体的粗细，从细到粗为 extralight、light、regular、semibold、bold。加上 italic 后缀的为意大利体 (斜体)。&lt;/li&gt;&#xA;&lt;li&gt;后缀名：ttf。最通用的字体格式，不解释。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;21-style&#34;&gt;2.1. Style&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;风格&lt;/th&gt;&#xA;          &lt;th&gt;等宽&lt;/th&gt;&#xA;          &lt;th&gt;弯引号&lt;/th&gt;&#xA;          &lt;th&gt;破折号&lt;/th&gt;&#xA;          &lt;th&gt;连字&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Gothic&lt;/td&gt;&#xA;          &lt;td&gt;否&lt;/td&gt;&#xA;          &lt;td&gt;全宽&lt;/td&gt;&#xA;          &lt;td&gt;全宽&lt;/td&gt;&#xA;          &lt;td&gt;否&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;UI&lt;/td&gt;&#xA;          &lt;td&gt;否&lt;/td&gt;&#xA;          &lt;td&gt;半宽&lt;/td&gt;&#xA;          &lt;td&gt;全宽&lt;/td&gt;&#xA;          &lt;td&gt;否&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Mono&lt;/td&gt;&#xA;          &lt;td&gt;是&lt;/td&gt;&#xA;          &lt;td&gt;半宽&lt;/td&gt;&#xA;          &lt;td&gt;全宽&lt;/td&gt;&#xA;          &lt;td&gt;是&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Term&lt;/td&gt;&#xA;          &lt;td&gt;是&lt;/td&gt;&#xA;          &lt;td&gt;半宽&lt;/td&gt;&#xA;          &lt;td&gt;半宽&lt;/td&gt;&#xA;          &lt;td&gt;是&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Fixed&lt;/td&gt;&#xA;          &lt;td&gt;是&lt;/td&gt;&#xA;          &lt;td&gt;半宽&lt;/td&gt;&#xA;          &lt;td&gt;半宽&lt;/td&gt;&#xA;          &lt;td&gt;否&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;22-orthography&#34;&gt;2.2. Orthography&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;名称&lt;/th&gt;&#xA;          &lt;th&gt;场景&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;CL&lt;/td&gt;&#xA;          &lt;td&gt;Classical，旧字体汉字，用于需要使用旧字形的场景&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;HC&lt;/td&gt;&#xA;          &lt;td&gt;HongKong Chinese，香港繁体和澳门繁体的字形&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;J&lt;/td&gt;&#xA;          &lt;td&gt;Japanese，日本语，日本新字体的字形&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;K&lt;/td&gt;&#xA;          &lt;td&gt;Korean，朝鲜语(韩语)，朝鲜半岛和朝鲜族的字形&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;SC&lt;/td&gt;&#xA;          &lt;td&gt;Simplified Chinese，简体中文，中国内地、大马、新加坡等地字形&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;TC&lt;/td&gt;&#xA;          &lt;td&gt;traditional Chinese，繁体中文，中国台湾地区的字形&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;23-weight&#34;&gt;2.3. weight&lt;/h2&gt;&#xA;&lt;p&gt;Ultra Light &amp;lt; Extralight &amp;lt; Light &amp;lt; Semi Light（Demi Light)&amp;lt; Regual &amp;lt; Medium &amp;lt; Semi Bold(Demi Bold)&amp;lt; Bold &amp;lt;  Extra Bold  &amp;lt; Ultra Bold &amp;lt; Heavy(Black)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>字体设计</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/</guid>
-      <description>&lt;p&gt;字体系列(字体集合)和字体&lt;/p&gt;&#xA;&lt;p&gt;字符图像-character images&#xA;字符度量-character metrics&#xA;字形-字体图像&lt;/p&gt;&#xA;&lt;h2 id=&#34;01-字体文件&#34;&gt;0.1. 字体文件&lt;/h2&gt;&#xA;&lt;h3 id=&#34;011-字符映射表charmapscmaps&#34;&gt;0.1.1. 字符映射表(charmaps、cmaps)&lt;/h3&gt;&#xA;&lt;p&gt;用于将字符代码转化成给定的编码(ASCII,Unicode)等&lt;/p&gt;&#xA;&lt;h3 id=&#34;012-字形glyph&#34;&gt;0.1.2. 字形(glyph)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;0121-字形轮廓&#34;&gt;0.1.2.1. 字形轮廓&lt;/h4&gt;&#xA;&lt;p&gt;字形的缩放&#xA;使用dpi(每英寸像素点数)来定义特性。&lt;/p&gt;&#xA;&lt;p&gt;以点为单位(1点=1/72英寸)&lt;/p&gt;&#xA;&lt;p&gt;文本大小（以像素为单位）”与显示或打印字符的实际尺寸并不直接相关&lt;/p&gt;&#xA;&lt;h4 id=&#34;0122-向量表示&#34;&gt;0.1.2.2. 向量表示&lt;/h4&gt;&#xA;&lt;p&gt;线段-和贝塞尔弧&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>字体 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/</link><description>Recent content in 字体 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/index.xml" rel="self" type="application/rss+xml"/><item><title>字体配置</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/</guid><description>&lt;h1 id="1-字体格式"&gt;1. 字体格式&lt;/h1&gt;
+&lt;h1 id="2-字体名称的格式"&gt;2. 字体名称的格式&lt;/h1&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sarasa-fixed-slab-cl-regular.ttf&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;字体家族名称：sarasa。每个文件名都由它开头.&lt;/li&gt;
+&lt;li&gt;字体风格 (Style)：fixed。字体风格决定了西文字符的字形，分为 Gothic、UI、Mono、Term、Fixed 五种。详见下图。&lt;/li&gt;
+&lt;li&gt;字体衬线：slab。只有一部分文件有这个部分，代表其加入了衬线，数字和字母的笔画末端有短线修饰。&lt;/li&gt;
+&lt;li&gt;汉字字形 (Orthography)：cl。根据不同国家和地区的标准，字形分为 CL、HC、J、K、SC、TC 六种，例如中国大陆、中国香港、日本的“冷”字写法都不一样，详见下图。&lt;/li&gt;
+&lt;li&gt;字重：regular。这一项代表的是字体的粗细，从细到粗为 extralight、light、regular、semibold、bold。加上 italic 后缀的为意大利体 (斜体)。&lt;/li&gt;
+&lt;li&gt;后缀名：ttf。最通用的字体格式，不解释。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="21-style"&gt;2.1. Style&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;风格&lt;/th&gt;
+ &lt;th&gt;等宽&lt;/th&gt;
+ &lt;th&gt;弯引号&lt;/th&gt;
+ &lt;th&gt;破折号&lt;/th&gt;
+ &lt;th&gt;连字&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Gothic&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;全宽&lt;/td&gt;
+ &lt;td&gt;全宽&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;UI&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;半宽&lt;/td&gt;
+ &lt;td&gt;全宽&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Mono&lt;/td&gt;
+ &lt;td&gt;是&lt;/td&gt;
+ &lt;td&gt;半宽&lt;/td&gt;
+ &lt;td&gt;全宽&lt;/td&gt;
+ &lt;td&gt;是&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Term&lt;/td&gt;
+ &lt;td&gt;是&lt;/td&gt;
+ &lt;td&gt;半宽&lt;/td&gt;
+ &lt;td&gt;半宽&lt;/td&gt;
+ &lt;td&gt;是&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Fixed&lt;/td&gt;
+ &lt;td&gt;是&lt;/td&gt;
+ &lt;td&gt;半宽&lt;/td&gt;
+ &lt;td&gt;半宽&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="22-orthography"&gt;2.2. Orthography&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;名称&lt;/th&gt;
+ &lt;th&gt;场景&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;CL&lt;/td&gt;
+ &lt;td&gt;Classical，旧字体汉字，用于需要使用旧字形的场景&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;HC&lt;/td&gt;
+ &lt;td&gt;HongKong Chinese，香港繁体和澳门繁体的字形&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;J&lt;/td&gt;
+ &lt;td&gt;Japanese，日本语，日本新字体的字形&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;K&lt;/td&gt;
+ &lt;td&gt;Korean，朝鲜语(韩语)，朝鲜半岛和朝鲜族的字形&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;SC&lt;/td&gt;
+ &lt;td&gt;Simplified Chinese，简体中文，中国内地、大马、新加坡等地字形&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;TC&lt;/td&gt;
+ &lt;td&gt;traditional Chinese，繁体中文，中国台湾地区的字形&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="23-weight"&gt;2.3. weight&lt;/h2&gt;
+&lt;p&gt;Ultra Light &amp;lt; Extralight &amp;lt; Light &amp;lt; Semi Light（Demi Light)&amp;lt; Regual &amp;lt; Medium &amp;lt; Semi Bold(Demi Bold)&amp;lt; Bold &amp;lt; Extra Bold &amp;lt; Ultra Bold &amp;lt; Heavy(Black)&lt;/p&gt;</description></item><item><title>字体设计</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/04.-%E5%AD%97%E4%BD%93/%E5%AD%97%E4%BD%93%E8%AE%BE%E8%AE%A1/</guid><description>&lt;p&gt;字体系列(字体集合)和字体&lt;/p&gt;
+&lt;p&gt;字符图像-character images
+字符度量-character metrics
+字形-字体图像&lt;/p&gt;
+&lt;h2 id="01-字体文件"&gt;0.1. 字体文件&lt;/h2&gt;
+&lt;h3 id="011-字符映射表charmapscmaps"&gt;0.1.1. 字符映射表(charmaps、cmaps)&lt;/h3&gt;
+&lt;p&gt;用于将字符代码转化成给定的编码(ASCII,Unicode)等&lt;/p&gt;
+&lt;h3 id="012-字形glyph"&gt;0.1.2. 字形(glyph)&lt;/h3&gt;
+&lt;h4 id="0121-字形轮廓"&gt;0.1.2.1. 字形轮廓&lt;/h4&gt;
+&lt;p&gt;字形的缩放
+使用dpi(每英寸像素点数)来定义特性。&lt;/p&gt;
+&lt;p&gt;以点为单位(1点=1/72英寸)&lt;/p&gt;
+&lt;p&gt;文本大小（以像素为单位）”与显示或打印字符的实际尺寸并不直接相关&lt;/p&gt;
+&lt;h4 id="0122-向量表示"&gt;0.1.2.2. 向量表示&lt;/h4&gt;
+&lt;p&gt;线段-和贝塞尔弧&lt;/p&gt;</description></item></channel></rss>

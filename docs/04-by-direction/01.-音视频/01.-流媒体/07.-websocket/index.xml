@@ -1,20 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Websocket on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/</link>
-    <description>Recent content in Websocket on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Websocekt协议解读</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
-      <description>&lt;h1 id=&#34;1-标准&#34;&gt;1. 标准&lt;/h1&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://www.rfc-editor.org/info/rfc6455&#34; rel=&#34;external&#34;&gt;RFC-6455&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;基于TCP&lt;/p&gt;&#xA;&lt;h1 id=&#34;2-报文格式&#34;&gt;2. 报文格式&lt;/h1&gt;&#xA;&lt;h2 id=&#34;21-http升级websockt-的协商报文&#34;&gt;2.1. http升级websockt 的协商报文&lt;/h2&gt;&#xA;&lt;h3 id=&#34;211-示例报文&#34;&gt;2.1.1. 示例报文&lt;/h3&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;- GET /webfin/websocket/ HTTP/1.1。&#xA;&#xA;- Host: localhost。&#xA;- Upgrade: websocket。&#xA;- Connection: Upgrade。&#xA;- Sec-WebSocket-Key: xqBt3ImNzJbYqRINxEFlkg==。&#xA;- Origin: [http://服务器地址](https://link.zhihu.com/?target=http%3A//xn--zfru1gfr6bz63i/)。&#xA;- Sec-WebSocket-Version: 13。&#xA;&#xA;服务器回应:&#xA;&#xA;- HTTP/1.1 101 Switching Protocols。&#xA;- Upgrade: websocket。&#xA;- Connection: Upgrade。&#xA;- Sec-WebSocket-Accept: K7DJLdLooIwIG/MOpvWFB3y3FE8=。&#xA;- WebSocket借用http请求进行握手，相比正常的http请求，多了一些内容。其中：&#xA;- Upgrade: websocket。&#xA;- Connection: Upgrade。&#xA;- 表示希望将http协议升级到Websocket协议。Sec-WebSocket-Key是浏览器随机生成的base64 encode的值，用来询问服务器是否是支持WebSocket。&#xA;&#xA;服务器返回:&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h4 id=&#34;2111-字段说明&#34;&gt;2.1.1.1. 字段说明&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Upgrade: websocket。&lt;/li&gt;&#xA;&lt;li&gt;Connection: Upgrade:  告诉浏览器即将升级的是Websocket协议&lt;/li&gt;&#xA;&lt;li&gt;Sec-WebSocket-Accept: 是将请求包“Sec-WebSocket-Key”的值，与”258EAFA5-E914-47DA-95CA-C5AB0DC85B11″这个字符串进行拼接，然后对拼接后的字符串进行sha-1运算，再进行base64编码得到的。用来说明自己是WebSocket助理服务器。&lt;/li&gt;&#xA;&lt;li&gt;Sec-WebSocket-Version: WebSocket协议版本号。RFC6455要求使用的版本是13，之前草案的版本均应当被弃用。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;212-websocket-报文格式&#34;&gt;2.1.2. Websocket 报文格式&lt;/h3&gt;&#xA;&lt;p&gt;![[Pasted image 20240819085930.png]]&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Websocket on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/</link><description>Recent content in Websocket on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/index.xml" rel="self" type="application/rss+xml"/><item><title>Websocekt协议解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/07.-websocket/websocekt%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid><description>&lt;h1 id="1-标准"&gt;1. 标准&lt;/h1&gt;
+&lt;p&gt;
+
+&lt;a class="link link--text" href="https://www.rfc-editor.org/info/rfc6455" rel="external"&gt;RFC-6455&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;基于TCP&lt;/p&gt;
+&lt;h1 id="2-报文格式"&gt;2. 报文格式&lt;/h1&gt;
+&lt;h2 id="21-http升级websockt-的协商报文"&gt;2.1. http升级websockt 的协商报文&lt;/h2&gt;
+&lt;h3 id="211-示例报文"&gt;2.1.1. 示例报文&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;- GET /webfin/websocket/ HTTP/1.1。
+
+- Host: localhost。
+- Upgrade: websocket。
+- Connection: Upgrade。
+- Sec-WebSocket-Key: xqBt3ImNzJbYqRINxEFlkg==。
+- Origin: [http://服务器地址](https://link.zhihu.com/?target=http%3A//xn--zfru1gfr6bz63i/)。
+- Sec-WebSocket-Version: 13。
+
+服务器回应:
+
+- HTTP/1.1 101 Switching Protocols。
+- Upgrade: websocket。
+- Connection: Upgrade。
+- Sec-WebSocket-Accept: K7DJLdLooIwIG/MOpvWFB3y3FE8=。
+- WebSocket借用http请求进行握手，相比正常的http请求，多了一些内容。其中：
+- Upgrade: websocket。
+- Connection: Upgrade。
+- 表示希望将http协议升级到Websocket协议。Sec-WebSocket-Key是浏览器随机生成的base64 encode的值，用来询问服务器是否是支持WebSocket。
+
+服务器返回:&lt;/code&gt;&lt;/pre&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h4 id="2111-字段说明"&gt;2.1.1.1. 字段说明&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Upgrade: websocket。&lt;/li&gt;
+&lt;li&gt;Connection: Upgrade: 告诉浏览器即将升级的是Websocket协议&lt;/li&gt;
+&lt;li&gt;Sec-WebSocket-Accept: 是将请求包“Sec-WebSocket-Key”的值，与”258EAFA5-E914-47DA-95CA-C5AB0DC85B11″这个字符串进行拼接，然后对拼接后的字符串进行sha-1运算，再进行base64编码得到的。用来说明自己是WebSocket助理服务器。&lt;/li&gt;
+&lt;li&gt;Sec-WebSocket-Version: WebSocket协议版本号。RFC6455要求使用的版本是13，之前草案的版本均应当被弃用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="212-websocket-报文格式"&gt;2.1.2. Websocket 报文格式&lt;/h3&gt;
+&lt;p&gt;![[Pasted image 20240819085930.png]]&lt;/p&gt;</description></item></channel></rss>

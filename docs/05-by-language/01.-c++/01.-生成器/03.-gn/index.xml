@@ -1,20 +1,90 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>GN on My Docs</title>
-    <link>http://localhost:37385/docs/05-by-language/01.-c&#43;&#43;/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/</link>
-    <description>Recent content in GN on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>语法</title>
-      <link>http://localhost:37385/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/%E8%AF%AD%E6%B3%95/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/%E8%AF%AD%E6%B3%95/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;GN 是一个为 [Ninja](https://ninja-build.org/) 生成构建文件的元构建系统。&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://gn.googlesource.com/gn/+/main/docs/quick_start.md&#34; rel=&#34;external&#34;&gt;官方教程&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;关键字&#34;&gt;关键字&lt;/h2&gt;&#xA;&lt;p&gt;GN 构建系统有很多关键字，主要分为以下几个类别：&lt;/p&gt;&#xA;&lt;h3 id=&#34;目标类型-target-types&#34;&gt;目标类型 (Target Types)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;基本目标类型&#34;&gt;基本目标类型&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;target 下面关键字都可以作为target_type,等价于 target(target_type, target_name)&lt;/li&gt;&#xA;&lt;li&gt;executable - 生成可执行文件&lt;/li&gt;&#xA;&lt;li&gt;static_library - 生成静态库&lt;/li&gt;&#xA;&lt;li&gt;shared_library - 生成动态库/共享库&lt;/li&gt;&#xA;&lt;li&gt;source_set - 源文件集合，会生成一堆.o&lt;/li&gt;&#xA;&lt;li&gt;test 生成一个测试目标(本质也是一个可执行程序)&lt;/li&gt;&#xA;&lt;li&gt;loadable_module - 可加载模块&lt;/li&gt;&#xA;&lt;li&gt;group - 元目标，用于组织依赖图&lt;/li&gt;&#xA;&lt;li&gt;action - 自定义构建动作&lt;/li&gt;&#xA;&lt;li&gt;copy - 文件复制操作&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;目标属性-target-properties&#34;&gt;目标属性 (Target Properties)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;源文件和依赖&#34;&gt;源文件和依赖&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;sources - 源文件列表&lt;/li&gt;&#xA;&lt;li&gt;deps - 依赖的目标列表&lt;/li&gt;&#xA;&lt;li&gt;data_deps - 运行时数据依赖&lt;/li&gt;&#xA;&lt;li&gt;public_deps - 公共依赖&lt;/li&gt;&#xA;&lt;li&gt;data - 数据文件&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;配置相关&#34;&gt;配置相关&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;configs - 配置列表 : define、cflags、ldflags用这个配置&lt;/li&gt;&#xA;&lt;li&gt;public_configs - 公共配置&lt;/li&gt;&#xA;&lt;li&gt;all_dependent_configs - 所有依赖目标的配置&lt;/li&gt;&#xA;&lt;li&gt;declare_args - 声明的变量有全局作用域，可以被构建过程引用，可以被其他.gni文件引用 //理解为cmake 中的option&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;测试和可见性&#34;&gt;测试和可见性&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;testonly - 标记仅用于测试&lt;/li&gt;&#xA;&lt;li&gt;visibility - 可见性控制&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;输出控制&#34;&gt;输出控制&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;output_name - 输出文件名&lt;/li&gt;&#xA;&lt;li&gt;output_dir - 输出目录&lt;/li&gt;&#xA;&lt;li&gt;outputs - 输出文件列表&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;配置类型-config-types&#34;&gt;配置类型 (Config Types)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;config - 编译配置定义&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;工具链相关-toolchain&#34;&gt;工具链相关 (Toolchain)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;toolchain - 工具链定义&lt;/li&gt;&#xA;&lt;li&gt;tool - 工具定义&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;模板相关-templates&#34;&gt;模板相关 (Templates)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;template - 自定义模板定义&lt;/li&gt;&#xA;&lt;li&gt;forward_variables_from - 变量转发&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;控制流和函数&#34;&gt;控制流和函数&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;if / else - 条件语句&lt;/li&gt;&#xA;&lt;li&gt;foreach - 循环语句&lt;/li&gt;&#xA;&lt;li&gt;import - 导入 .gni 文件&lt;/li&gt;&#xA;&lt;li&gt;assert - 断言&lt;/li&gt;&#xA;&lt;li&gt;print - 调试输出&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;内置变量和函数&#34;&gt;内置变量和函数&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;target_name - 当前目标名称&lt;/li&gt;&#xA;&lt;li&gt;current_toolchain - 当前工具链&lt;/li&gt;&#xA;&lt;li&gt;default_toolchain - 默认工具链&lt;/li&gt;&#xA;&lt;li&gt;host_os&lt;/li&gt;&#xA;&lt;li&gt;targert_os&lt;/li&gt;&#xA;&lt;li&gt;target_os - 目标操作系统 &amp;ldquo;mac|android|ios|fuchsia|chromeos|watchos&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;target_cpu - 目标 CPU 架构 &amp;ldquo;x86|x64|arm|arm64&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;is_debug - 是否为调试构建&lt;/li&gt;&#xA;&lt;li&gt;set_defaults - 设置目标参数&lt;/li&gt;&#xA;&lt;li&gt;set_default_toolchain - 设置了默认工具链，在定义大多数目标时就不再需要显式声明 toolchain 属性，GN 会自动使用这个默认值&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;路径和标签&#34;&gt;路径和标签&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;// - 源码根目录路径前缀&lt;/li&gt;&#xA;&lt;li&gt;: - 同一 BUILD.gn 文件内的目标引用&lt;/li&gt;&#xA;&lt;li&gt;(toolchain) - 指定工具链的目标引用&#xA;GN 的语法类似 Python，支持条件语句、循环和表达式 1 。你可以使用 gn help 命令获取完整的参考文档&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GN on My Docs</title><link>/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/</link><description>Recent content in GN on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/index.xml" rel="self" type="application/rss+xml"/><item><title>语法</title><link>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/%E8%AF%AD%E6%B3%95/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/%E8%AF%AD%E6%B3%95/</guid><description>&lt;pre&gt;&lt;code&gt;GN 是一个为 [Ninja](https://ninja-build.org/) 生成构建文件的元构建系统。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+&lt;a class="link link--text" href="https://gn.googlesource.com/gn/+/main/docs/quick_start.md" rel="external"&gt;官方教程&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="关键字"&gt;关键字&lt;/h2&gt;
+&lt;p&gt;GN 构建系统有很多关键字，主要分为以下几个类别：&lt;/p&gt;
+&lt;h3 id="目标类型-target-types"&gt;目标类型 (Target Types)&lt;/h3&gt;
+&lt;h4 id="基本目标类型"&gt;基本目标类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;target 下面关键字都可以作为target_type,等价于 target(target_type, target_name)&lt;/li&gt;
+&lt;li&gt;executable - 生成可执行文件&lt;/li&gt;
+&lt;li&gt;static_library - 生成静态库&lt;/li&gt;
+&lt;li&gt;shared_library - 生成动态库/共享库&lt;/li&gt;
+&lt;li&gt;source_set - 源文件集合，会生成一堆.o&lt;/li&gt;
+&lt;li&gt;test 生成一个测试目标(本质也是一个可执行程序)&lt;/li&gt;
+&lt;li&gt;loadable_module - 可加载模块&lt;/li&gt;
+&lt;li&gt;group - 元目标，用于组织依赖图&lt;/li&gt;
+&lt;li&gt;action - 自定义构建动作&lt;/li&gt;
+&lt;li&gt;copy - 文件复制操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="目标属性-target-properties"&gt;目标属性 (Target Properties)&lt;/h3&gt;
+&lt;h4 id="源文件和依赖"&gt;源文件和依赖&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;sources - 源文件列表&lt;/li&gt;
+&lt;li&gt;deps - 依赖的目标列表&lt;/li&gt;
+&lt;li&gt;data_deps - 运行时数据依赖&lt;/li&gt;
+&lt;li&gt;public_deps - 公共依赖&lt;/li&gt;
+&lt;li&gt;data - 数据文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="配置相关"&gt;配置相关&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;configs - 配置列表 : define、cflags、ldflags用这个配置&lt;/li&gt;
+&lt;li&gt;public_configs - 公共配置&lt;/li&gt;
+&lt;li&gt;all_dependent_configs - 所有依赖目标的配置&lt;/li&gt;
+&lt;li&gt;declare_args - 声明的变量有全局作用域，可以被构建过程引用，可以被其他.gni文件引用 //理解为cmake 中的option&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="测试和可见性"&gt;测试和可见性&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;testonly - 标记仅用于测试&lt;/li&gt;
+&lt;li&gt;visibility - 可见性控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="输出控制"&gt;输出控制&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;output_name - 输出文件名&lt;/li&gt;
+&lt;li&gt;output_dir - 输出目录&lt;/li&gt;
+&lt;li&gt;outputs - 输出文件列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="配置类型-config-types"&gt;配置类型 (Config Types)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;config - 编译配置定义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="工具链相关-toolchain"&gt;工具链相关 (Toolchain)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;toolchain - 工具链定义&lt;/li&gt;
+&lt;li&gt;tool - 工具定义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="模板相关-templates"&gt;模板相关 (Templates)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;template - 自定义模板定义&lt;/li&gt;
+&lt;li&gt;forward_variables_from - 变量转发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="控制流和函数"&gt;控制流和函数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;if / else - 条件语句&lt;/li&gt;
+&lt;li&gt;foreach - 循环语句&lt;/li&gt;
+&lt;li&gt;import - 导入 .gni 文件&lt;/li&gt;
+&lt;li&gt;assert - 断言&lt;/li&gt;
+&lt;li&gt;print - 调试输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="内置变量和函数"&gt;内置变量和函数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;target_name - 当前目标名称&lt;/li&gt;
+&lt;li&gt;current_toolchain - 当前工具链&lt;/li&gt;
+&lt;li&gt;default_toolchain - 默认工具链&lt;/li&gt;
+&lt;li&gt;host_os&lt;/li&gt;
+&lt;li&gt;targert_os&lt;/li&gt;
+&lt;li&gt;target_os - 目标操作系统 &amp;ldquo;mac|android|ios|fuchsia|chromeos|watchos&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;target_cpu - 目标 CPU 架构 &amp;ldquo;x86|x64|arm|arm64&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;is_debug - 是否为调试构建&lt;/li&gt;
+&lt;li&gt;set_defaults - 设置目标参数&lt;/li&gt;
+&lt;li&gt;set_default_toolchain - 设置了默认工具链，在定义大多数目标时就不再需要显式声明 toolchain 属性，GN 会自动使用这个默认值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="路径和标签"&gt;路径和标签&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;// - 源码根目录路径前缀&lt;/li&gt;
+&lt;li&gt;: - 同一 BUILD.gn 文件内的目标引用&lt;/li&gt;
+&lt;li&gt;(toolchain) - 指定工具链的目标引用
+GN 的语法类似 Python，支持条件语句、循环和表达式 1 。你可以使用 gn help 命令获取完整的参考文档&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

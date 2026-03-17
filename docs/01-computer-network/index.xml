@@ -1,27 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>计算机网络 on My Docs</title>
-    <link>http://localhost:37385/docs/01-computer-network/</link>
-    <description>Recent content in 计算机网络 on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/01-computer-network/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Iproute2</title>
-      <link>http://localhost:37385/docs/01-computer-network/iproute2/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/01-computer-network/iproute2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>弱网</title>
-      <link>http://localhost:37385/docs/01-computer-network/%E5%BC%B1%E7%BD%91/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/01-computer-network/%E5%BC%B1%E7%BD%91/</guid>
-      <description>&lt;p&gt;衡量弱网的几个指标&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;带宽（吞吐量）：单位时间内传输的数据量，单位通常是：每秒比特数：bps。 反映网络传输能力。&lt;/li&gt;&#xA;&lt;li&gt;丢包：数据丢包个数=发送的数据包数-接收的数据包数。 反映网络可靠性。&lt;/li&gt;&#xA;&lt;li&gt;时延：数据包从发送开始到接收到该数据，所耗费的时间，单位通常是ms。反映网络速度。&lt;/li&gt;&#xA;&lt;li&gt;抖动(Jitter)：指时延的变化，即两个数据包时延的差值。 反映网络稳定性。&lt;/li&gt;&#xA;&lt;li&gt;乱序：指接收到的数据包顺序和发送顺序不一致的次数。反映网络稳定性。一般乱序比较严重的时候，丢包也会比较严重，所以一般都以丢包指标为主，忽略乱序指标。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;1-如何分析和衡量&#34;&gt;1. 如何分析和衡量&lt;/h1&gt;&#xA;&lt;h1 id=&#34;2-如何模拟&#34;&gt;2. 如何模拟&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;[[01. 流量控制 （Traffic Control, tc）| tc]]  : linux 通过流量控制模块设置&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. tc qdisc del root dev em4&#xA;2. tc qdisc add dev em4 root handle 1: htb default 30&#xA;3. tc class add dev em4 parent 1: classid 1:20 htb rate 5mbit ceil 5mbit&#xA;4. tc qdisc add dev em4 parent 1:20 handle 20: sfq perturb 10&#xA;5. tc class add dev em4 parent 1:1 classid 1:30 htb rate 1000mbit&#xA;6. tc qdisc add dev em4 parent 1:30 handle 30: sfq perturb 10&#xA;7. tc filter add dev em4 protocol ip parent 1: prio 1 u32 match ip dport 10990 0xffff flowid 1:20&#xA;&#xA;1. 删除网卡em4上现有的所有规则&#xA;2. 在网卡em4上添加一个名字为1:的root HTB qdisc&#xA;3. 在root qdisc下创建一个分支1:20，这个分支的带宽固定为5mbit/s&#xA;4. 在分支1:20下创建一个classless 的 sfq qdisc，该队列可以随机的发送其内部存放的packet，perturb 10表示该对队列每间隔10s更新一下自身的hash算法。这个随机算法能较为公平的发送其内部的数据包。&#xA;5. 在root qdisc下创建一个分支1:30，这个分支的带宽为1000mbit/s&#xA;6. 在分支1:30下创建一个classless 的 sfq qdisc，记为30&#xA;7. 在root队列上添加filter，该filter将所有目的端口为10990的包，都存放到了分支1:20下，剩余的默认存放到1:30下。&#xA;通过上述代码可以让所有发往端口10990的包的发送速度控制在 tc的速度限定值（5mbits/s）/用户数&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机网络 on My Docs</title><link>/docs/01-computer-network/</link><description>Recent content in 计算机网络 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/01-computer-network/index.xml" rel="self" type="application/rss+xml"/><item><title>Iproute2</title><link>/docs/01-computer-network/iproute2/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/01-computer-network/iproute2/</guid><description/></item><item><title>弱网</title><link>/docs/01-computer-network/%E5%BC%B1%E7%BD%91/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/01-computer-network/%E5%BC%B1%E7%BD%91/</guid><description>&lt;p&gt;衡量弱网的几个指标&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;带宽（吞吐量）：单位时间内传输的数据量，单位通常是：每秒比特数：bps。 反映网络传输能力。&lt;/li&gt;
+&lt;li&gt;丢包：数据丢包个数=发送的数据包数-接收的数据包数。 反映网络可靠性。&lt;/li&gt;
+&lt;li&gt;时延：数据包从发送开始到接收到该数据，所耗费的时间，单位通常是ms。反映网络速度。&lt;/li&gt;
+&lt;li&gt;抖动(Jitter)：指时延的变化，即两个数据包时延的差值。 反映网络稳定性。&lt;/li&gt;
+&lt;li&gt;乱序：指接收到的数据包顺序和发送顺序不一致的次数。反映网络稳定性。一般乱序比较严重的时候，丢包也会比较严重，所以一般都以丢包指标为主，忽略乱序指标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="1-如何分析和衡量"&gt;1. 如何分析和衡量&lt;/h1&gt;
+&lt;h1 id="2-如何模拟"&gt;2. 如何模拟&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[[01. 流量控制 （Traffic Control, tc）| tc]] : linux 通过流量控制模块设置&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;1. tc qdisc del root dev em4
+2. tc qdisc add dev em4 root handle 1: htb default 30
+3. tc class add dev em4 parent 1: classid 1:20 htb rate 5mbit ceil 5mbit
+4. tc qdisc add dev em4 parent 1:20 handle 20: sfq perturb 10
+5. tc class add dev em4 parent 1:1 classid 1:30 htb rate 1000mbit
+6. tc qdisc add dev em4 parent 1:30 handle 30: sfq perturb 10
+7. tc filter add dev em4 protocol ip parent 1: prio 1 u32 match ip dport 10990 0xffff flowid 1:20
+
+1. 删除网卡em4上现有的所有规则
+2. 在网卡em4上添加一个名字为1:的root HTB qdisc
+3. 在root qdisc下创建一个分支1:20，这个分支的带宽固定为5mbit/s
+4. 在分支1:20下创建一个classless 的 sfq qdisc，该队列可以随机的发送其内部存放的packet，perturb 10表示该对队列每间隔10s更新一下自身的hash算法。这个随机算法能较为公平的发送其内部的数据包。
+5. 在root qdisc下创建一个分支1:30，这个分支的带宽为1000mbit/s
+6. 在分支1:30下创建一个classless 的 sfq qdisc，记为30
+7. 在root队列上添加filter，该filter将所有目的端口为10990的包，都存放到了分支1:20下，剩余的默认存放到1:30下。
+通过上述代码可以让所有发往端口10990的包的发送速度控制在 tc的速度限定值（5mbits/s）/用户数&lt;/code&gt;&lt;/pre&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;</description></item></channel></rss>

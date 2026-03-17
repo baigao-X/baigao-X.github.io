@@ -1,20 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>SIP on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/</link>
-    <description>Recent content in SIP on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Sip 协议解读</title>
-      <link>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
-      <description>&lt;h1 id=&#34;关键组件&#34;&gt;关键组件&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;用户代理: User Agent&lt;/li&gt;&#xA;&lt;li&gt;注册服务器&lt;/li&gt;&#xA;&lt;li&gt;代理服务器&lt;/li&gt;&#xA;&lt;li&gt;重定向服务器&lt;/li&gt;&#xA;&lt;li&gt;位置服务器&lt;/li&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;分层&#34;&gt;分层&lt;/h2&gt;&#xA;&lt;h3 id=&#34;编码层&#34;&gt;编码层&lt;/h3&gt;&#xA;&lt;h3 id=&#34;传输层&#34;&gt;传输层&lt;/h3&gt;&#xA;&lt;h3 id=&#34;事务层&#34;&gt;事务层&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Transaction ID&lt;/p&gt;&#xA;&lt;p&gt;负责SIP消息的发送和接收,确保消息按照正常顺序到达目的地，并处理消息的重传和确认超时机制&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;请求事务&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;相应事务&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;对话层&#34;&gt;对话层&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dialog ID&#xA;负责管理会话的生命周期，维护会话上下文&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;信令&#34;&gt;信令&lt;/h2&gt;&#xA;&lt;h3 id=&#34;register&#34;&gt;REGISTER&lt;/h3&gt;&#xA;&lt;h3 id=&#34;invite&#34;&gt;INVITE&lt;/h3&gt;&#xA;&lt;h3 id=&#34;ack&#34;&gt;ACK&lt;/h3&gt;&#xA;&lt;h3 id=&#34;bye&#34;&gt;BYE&lt;/h3&gt;&#xA;&lt;h3 id=&#34;cancel&#34;&gt;CANCEL&lt;/h3&gt;&#xA;&lt;h3 id=&#34;option&#34;&gt;OPTION&lt;/h3&gt;&#xA;&lt;h3 id=&#34;info&#34;&gt;INFO&lt;/h3&gt;&#xA;&lt;h3 id=&#34;message&#34;&gt;MESSAGE&lt;/h3&gt;&#xA;&lt;h2&gt;&lt;/h2&gt;&#xA;&lt;p&gt;SIP-URI（比如sip：123456@172.18.24.11）、Tel-URL（比如tel：+1312000）和SIPS-URI（sips：123456@172.18.24.11）&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SIP on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/</link><description>Recent content in SIP on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/index.xml" rel="self" type="application/rss+xml"/><item><title>Sip 协议解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/04.-sip/sip-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid><description>&lt;h1 id="关键组件"&gt;关键组件&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;用户代理: User Agent&lt;/li&gt;
+&lt;li&gt;注册服务器&lt;/li&gt;
+&lt;li&gt;代理服务器&lt;/li&gt;
+&lt;li&gt;重定向服务器&lt;/li&gt;
+&lt;li&gt;位置服务器&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="分层"&gt;分层&lt;/h2&gt;
+&lt;h3 id="编码层"&gt;编码层&lt;/h3&gt;
+&lt;h3 id="传输层"&gt;传输层&lt;/h3&gt;
+&lt;h3 id="事务层"&gt;事务层&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Transaction ID&lt;/p&gt;
+&lt;p&gt;负责SIP消息的发送和接收,确保消息按照正常顺序到达目的地，并处理消息的重传和确认超时机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;请求事务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相应事务&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="对话层"&gt;对话层&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dialog ID
+负责管理会话的生命周期，维护会话上下文&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="信令"&gt;信令&lt;/h2&gt;
+&lt;h3 id="register"&gt;REGISTER&lt;/h3&gt;
+&lt;h3 id="invite"&gt;INVITE&lt;/h3&gt;
+&lt;h3 id="ack"&gt;ACK&lt;/h3&gt;
+&lt;h3 id="bye"&gt;BYE&lt;/h3&gt;
+&lt;h3 id="cancel"&gt;CANCEL&lt;/h3&gt;
+&lt;h3 id="option"&gt;OPTION&lt;/h3&gt;
+&lt;h3 id="info"&gt;INFO&lt;/h3&gt;
+&lt;h3 id="message"&gt;MESSAGE&lt;/h3&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;p&gt;SIP-URI（比如sip：123456@172.18.24.11）、Tel-URL（比如tel：+1312000）和SIPS-URI（sips：123456@172.18.24.11）&lt;/p&gt;</description></item></channel></rss>

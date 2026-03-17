@@ -1,27 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>AI on My Docs</title>
-    <link>http://localhost:37385/docs/04-by-direction/00.-ai/</link>
-    <description>Recent content in AI on My Docs</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
-    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:37385/docs/04-by-direction/00.-ai/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>01 工具集合</title>
-      <link>http://localhost:37385/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</guid>
-      <description>&lt;h1 id=&#34;大模型列表&#34;&gt;大模型列表&lt;/h1&gt;&#xA;&lt;h2 id=&#34;llm&#34;&gt;LLM&lt;/h2&gt;&#xA;&lt;h3 id=&#34;gpt&#34;&gt;GPT&lt;/h3&gt;&#xA;&lt;p&gt;openai 开发的大语言模型&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;版本列表&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-3&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;175B&lt;/li&gt;&#xA;&lt;li&gt;4096 token&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-3.5&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;175B + 6B&lt;/li&gt;&#xA;&lt;li&gt;4096 token&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-4&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1T-1.5T&lt;/li&gt;&#xA;&lt;li&gt;8K-32K token&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-4o&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;claude&#34;&gt;Claude&lt;/h3&gt;&#xA;&lt;p&gt;由&lt;strong&gt;Anthropic公司&lt;/strong&gt;创始团队来自OpenAI创建的LLM，&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>术语</title>
-      <link>http://localhost:37385/docs/04-by-direction/00.-ai/%E6%9C%AF%E8%AF%AD/</link>
-      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:37385/docs/04-by-direction/00.-ai/%E6%9C%AF%E8%AF%AD/</guid>
-      <description>&lt;h3 id=&#34;nlp-自然语言处理&#34;&gt;NLP 自然语言处理&lt;/h3&gt;&#xA;&lt;h3 id=&#34;llm-large-language-model-大语言模型&#34;&gt;LLM (Large Language Model) 大语言模型&lt;/h3&gt;&#xA;&lt;p&gt;LLM是NLP的一个子集，是NLP领域的技术革命&#xA;一种基于深度学习具有大规模参数的预训练语言模型&#xA;大语言模型专注于单一文本模态&lt;/p&gt;&#xA;&lt;h3 id=&#34;多模态模型&#34;&gt;多模态模型&lt;/h3&gt;&#xA;&lt;p&gt;同时处理多种模态数据（如文本、图像、音频、视频）&lt;/p&gt;&#xA;&lt;h3 id=&#34;transformer架构&#34;&gt;Transformer架构&lt;/h3&gt;&#xA;&lt;p&gt;LLM 普遍采用该架构，依赖自注意力机制（Self-Attention）处理长距离文本依赖关系，提升对上下文的理解能力&lt;/p&gt;&#xA;&lt;h3 id=&#34;agent&#34;&gt;Agent&lt;/h3&gt;&#xA;&lt;p&gt;定义为以LLM为大脑驱动，具有自主理解、规划、记忆和工具能力的系统&lt;/p&gt;&#xA;&lt;h3 id=&#34;mcp-model-context-protocol-模型上下文协议&#34;&gt;MCP (Model Context Protocol) 模型上下文协议&lt;/h3&gt;&#xA;&lt;p&gt;由 Anthropic 协议推出的开放协议，核心目标是通过统一的通讯协议让AI模型能够访问外部资源&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on My Docs</title><link>/docs/04-by-direction/00.-ai/</link><description>Recent content in AI on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/00.-ai/index.xml" rel="self" type="application/rss+xml"/><item><title>01 工具集合</title><link>/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</guid><description>&lt;h1 id="大模型列表"&gt;大模型列表&lt;/h1&gt;
+&lt;h2 id="llm"&gt;LLM&lt;/h2&gt;
+&lt;h3 id="gpt"&gt;GPT&lt;/h3&gt;
+&lt;p&gt;openai 开发的大语言模型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;版本列表
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GPT-3&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;175B&lt;/li&gt;
+&lt;li&gt;4096 token&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPT-3.5&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;175B + 6B&lt;/li&gt;
+&lt;li&gt;4096 token&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPT-4&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;1T-1.5T&lt;/li&gt;
+&lt;li&gt;8K-32K token&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPT-4o&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="claude"&gt;Claude&lt;/h3&gt;
+&lt;p&gt;由&lt;strong&gt;Anthropic公司&lt;/strong&gt;创始团队来自OpenAI创建的LLM，&lt;/p&gt;</description></item><item><title>术语</title><link>/docs/04-by-direction/00.-ai/%E6%9C%AF%E8%AF%AD/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/00.-ai/%E6%9C%AF%E8%AF%AD/</guid><description>&lt;h3 id="nlp-自然语言处理"&gt;NLP 自然语言处理&lt;/h3&gt;
+&lt;h3 id="llm-large-language-model-大语言模型"&gt;LLM (Large Language Model) 大语言模型&lt;/h3&gt;
+&lt;p&gt;LLM是NLP的一个子集，是NLP领域的技术革命
+一种基于深度学习具有大规模参数的预训练语言模型
+大语言模型专注于单一文本模态&lt;/p&gt;
+&lt;h3 id="多模态模型"&gt;多模态模型&lt;/h3&gt;
+&lt;p&gt;同时处理多种模态数据（如文本、图像、音频、视频）&lt;/p&gt;
+&lt;h3 id="transformer架构"&gt;Transformer架构&lt;/h3&gt;
+&lt;p&gt;LLM 普遍采用该架构，依赖自注意力机制（Self-Attention）处理长距离文本依赖关系，提升对上下文的理解能力&lt;/p&gt;
+&lt;h3 id="agent"&gt;Agent&lt;/h3&gt;
+&lt;p&gt;定义为以LLM为大脑驱动，具有自主理解、规划、记忆和工具能力的系统&lt;/p&gt;
+&lt;h3 id="mcp-model-context-protocol-模型上下文协议"&gt;MCP (Model Context Protocol) 模型上下文协议&lt;/h3&gt;
+&lt;p&gt;由 Anthropic 协议推出的开放协议，核心目标是通过统一的通讯协议让AI模型能够访问外部资源&lt;/p&gt;</description></item></channel></rss>
