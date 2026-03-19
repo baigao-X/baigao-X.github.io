@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mermaid on My Docs</title><link>/docs/05-by-language/02.-markdown/01.-mermaid/</link><description>Recent content in mermaid on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/05-by-language/02.-markdown/01.-mermaid/index.xml" rel="self" type="application/rss+xml"/><item><title>类图 Class Diagram</title><link>/docs/05-by-language/02.-markdown/01.-mermaid/%E7%B1%BB%E5%9B%BE-class-diagram/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/02.-markdown/01.-mermaid/%E7%B1%BB%E5%9B%BE-class-diagram/</guid><description>&lt;ul&gt;
-&lt;li&gt;ClassDiagram&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="01-uml-关系图"&gt;0.1. UML 关系图&lt;/h2&gt;
-&lt;pre class="mermaid"&gt;
- classDiagram
-classA --|&amp;gt; classB : Inheritance 
-classC --* classD : Composition
-classE --o classF : Aggregation
-classG --&amp;gt; classH : Association
-classI -- classJ : Link(Solid)
-classK ..&amp;gt; classL : Dependency
-classM ..|&amp;gt; classN : Realization
-classO .. classP : Link(Dashed)
-&lt;/pre&gt;
-
-&lt;p&gt;![[Pasted image 20230726101916.png]]&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mermaid on My Docs</title>
+    <link>http://localhost:1313/docs/05-by-language/02.-markdown/01.-mermaid/</link>
+    <description>Recent content in mermaid on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/05-by-language/02.-markdown/01.-mermaid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>类图 Class Diagram</title>
+      <link>http://localhost:1313/docs/05-by-language/02.-markdown/01.-mermaid/%E7%B1%BB%E5%9B%BE-class-diagram/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/05-by-language/02.-markdown/01.-mermaid/%E7%B1%BB%E5%9B%BE-class-diagram/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;ClassDiagram&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;01-uml-关系图&#34;&gt;0.1. UML 关系图&lt;/h2&gt;&#xA;&lt;pre class=&#34;mermaid&#34;&gt;&#xD;&#xA;  classDiagram&#xA;classA --|&amp;gt; classB : Inheritance   &#xA;classC --* classD : Composition&#xA;classE --o classF : Aggregation&#xA;classG --&amp;gt; classH : Association&#xA;classI -- classJ : Link(Solid)&#xA;classK ..&amp;gt; classL : Dependency&#xA;classM ..|&amp;gt; classN : Realization&#xA;classO .. classP : Link(Dashed)&#xD;&#xA;&lt;/pre&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;![[Pasted image 20230726101916.png]]&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

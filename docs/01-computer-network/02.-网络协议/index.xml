@@ -1,35 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络协议 on My Docs</title><link>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</link><description>Recent content in 网络协议 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml"/><item><title>Ntp协议</title><link>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ntp%E5%8D%8F%E8%AE%AE/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ntp%E5%8D%8F%E8%AE%AE/</guid><description>&lt;h1 id="1-ntp-时间戳"&gt;1. NTP 时间戳&lt;/h1&gt;
-&lt;p&gt;用64bit无符号数表示，表示自1900年1月1日0时0分0秒经过的秒数
-高32bit表示秒数，低32bit表示小数部分，最小单位为232皮秒 (1皮秒=10的-12次方秒）&lt;/p&gt;</description></item><item><title>几种Udp可靠传输的协议对比</title><link>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/</guid><description>&lt;h1 id="kcp"&gt;KCP&lt;/h1&gt;
-&lt;p&gt;纯算法协议，不负责底层的socket收发。&lt;/p&gt;
-&lt;h2 id="目标"&gt;目标&lt;/h2&gt;
-&lt;p&gt;以额外的带宽，来获得更低延时的传输体验。适用与单路对带宽的充分压榨，但是不利于全局的带宽分配使用。&lt;/p&gt;
-&lt;h2 id="机制"&gt;机制&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP采用的是UNA(表示指定序号之前的包都收到了)，因此丢包会重传丢包后的所有数据，KCP采用ACK(表示指定序号的包收到了)+UNA, 因此选择性重传，只重传丢的包，减少冗余&lt;/li&gt;
-&lt;li&gt;快速重传(根据ACK来知道丢失的包，不等待超时直接重传)&lt;/li&gt;
-&lt;li&gt;动态RTO调整 （默认TCP超时是按照RTC x 2来设置），KCP采用x1.5。 同时最小RTO设置为10ms（TCP默认是100ms）&lt;/li&gt;
-&lt;li&gt;TCP会为了利用带宽 延迟发送ACK(合并发送ACK，以减少ACK数据包)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="srt"&gt;SRT&lt;/h1&gt;
-&lt;h2 id="目标-1"&gt;目标&lt;/h2&gt;
-&lt;p&gt;可靠低延迟的流媒体传输&lt;/p&gt;
-&lt;h2 id="机制-1"&gt;机制&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;NAK(否确认)机制： 根据rtt，来定时发送NAK包，NAK包指定丢失的包要求重传。&lt;/li&gt;
-&lt;li&gt;通过ACK和ACKACK来计算rtt。&lt;/li&gt;
-&lt;li&gt;AES加密， 定时更新密钥&lt;/li&gt;
-&lt;li&gt;FEC前向纠错&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="quic"&gt;QUIC&lt;/h1&gt;
-&lt;h2 id="目标-2"&gt;目标&lt;/h2&gt;
-&lt;p&gt;替代TCP&lt;/p&gt;</description></item><item><title>网络拥塞控制</title><link>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/</guid><description>&lt;h1 id="术语"&gt;术语&lt;/h1&gt;
-&lt;h3 id="网络缓冲区network-buffer"&gt;网络缓冲区(Network Buffer)&lt;/h3&gt;
-&lt;p&gt;![[Pasted image 20251208214908.png]]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;当&lt;strong&gt;发送速率&lt;/strong&gt;超过带宽，数据会在&lt;strong&gt;网络缓冲区&lt;/strong&gt; 排队，数据不会丢包(不考虑物理链路错误导致的丢包)，只会导致&lt;strong&gt;RTT&lt;/strong&gt;升高，&lt;/li&gt;
-&lt;li&gt;网络缓冲区会带来&lt;strong&gt;延迟抖动&lt;/strong&gt;，和&lt;strong&gt;缓冲区膨胀&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="buffer-size"&gt;Buffer Size&lt;/h4&gt;
-&lt;p&gt;指Network buffer的总内存大小，通常以字节为单位&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Buffer size = Queue Length x Packet Size x 8&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网络协议 on My Docs</title>
+    <link>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</link>
+    <description>Recent content in 网络协议 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ntp协议</title>
+      <link>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ntp%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ntp%E5%8D%8F%E8%AE%AE/</guid>
+      <description>&lt;h1 id=&#34;1-ntp-时间戳&#34;&gt;1. NTP 时间戳&lt;/h1&gt;&#xA;&lt;p&gt;用64bit无符号数表示，表示自1900年1月1日0时0分0秒经过的秒数&#xA;高32bit表示秒数，低32bit表示小数部分，最小单位为232皮秒 (1皮秒=10的-12次方秒）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>几种Udp可靠传输的协议对比</title>
+      <link>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/</guid>
+      <description>&lt;h1 id=&#34;kcp&#34;&gt;KCP&lt;/h1&gt;&#xA;&lt;p&gt;纯算法协议，不负责底层的socket收发。&lt;/p&gt;&#xA;&lt;h2 id=&#34;目标&#34;&gt;目标&lt;/h2&gt;&#xA;&lt;p&gt;以额外的带宽，来获得更低延时的传输体验。适用与单路对带宽的充分压榨，但是不利于全局的带宽分配使用。&lt;/p&gt;&#xA;&lt;h2 id=&#34;机制&#34;&gt;机制&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;TCP采用的是UNA(表示指定序号之前的包都收到了)，因此丢包会重传丢包后的所有数据，KCP采用ACK(表示指定序号的包收到了)+UNA, 因此选择性重传，只重传丢的包，减少冗余&lt;/li&gt;&#xA;&lt;li&gt;快速重传(根据ACK来知道丢失的包，不等待超时直接重传)&lt;/li&gt;&#xA;&lt;li&gt;动态RTO调整 （默认TCP超时是按照RTC x 2来设置），KCP采用x1.5。 同时最小RTO设置为10ms（TCP默认是100ms）&lt;/li&gt;&#xA;&lt;li&gt;TCP会为了利用带宽 延迟发送ACK(合并发送ACK，以减少ACK数据包)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;srt&#34;&gt;SRT&lt;/h1&gt;&#xA;&lt;h2 id=&#34;目标-1&#34;&gt;目标&lt;/h2&gt;&#xA;&lt;p&gt;可靠低延迟的流媒体传输&lt;/p&gt;&#xA;&lt;h2 id=&#34;机制-1&#34;&gt;机制&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;NAK(否确认)机制： 根据rtt，来定时发送NAK包，NAK包指定丢失的包要求重传。&lt;/li&gt;&#xA;&lt;li&gt;通过ACK和ACKACK来计算rtt。&lt;/li&gt;&#xA;&lt;li&gt;AES加密， 定时更新密钥&lt;/li&gt;&#xA;&lt;li&gt;FEC前向纠错&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;quic&#34;&gt;QUIC&lt;/h1&gt;&#xA;&lt;h2 id=&#34;目标-2&#34;&gt;目标&lt;/h2&gt;&#xA;&lt;p&gt;替代TCP&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>网络拥塞控制</title>
+      <link>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/</guid>
+      <description>&lt;h1 id=&#34;术语&#34;&gt;术语&lt;/h1&gt;&#xA;&lt;h3 id=&#34;网络缓冲区network-buffer&#34;&gt;网络缓冲区(Network Buffer)&lt;/h3&gt;&#xA;&lt;p&gt;![[Pasted image 20251208214908.png]]&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;当&lt;strong&gt;发送速率&lt;/strong&gt;超过带宽，数据会在&lt;strong&gt;网络缓冲区&lt;/strong&gt; 排队，数据不会丢包(不考虑物理链路错误导致的丢包)，只会导致&lt;strong&gt;RTT&lt;/strong&gt;升高，&lt;/li&gt;&#xA;&lt;li&gt;网络缓冲区会带来&lt;strong&gt;延迟抖动&lt;/strong&gt;，和&lt;strong&gt;缓冲区膨胀&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;buffer-size&#34;&gt;Buffer Size&lt;/h4&gt;&#xA;&lt;p&gt;指Network buffer的总内存大小，通常以字节为单位&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Buffer size = Queue Length x Packet Size x 8&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

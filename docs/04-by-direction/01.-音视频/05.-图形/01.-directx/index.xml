@@ -1,69 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DirectX on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/</link><description>Recent content in DirectX on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/index.xml" rel="self" type="application/rss+xml"/><item><title>Dxgi</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/</guid><description>&lt;p&gt;(DirectX Graphics Infrastructure) 是微软DirectX中的底层图形接口
-负责管理显示适配器、显示模式、资源分配等硬件相关操作。
-它作为&lt;strong&gt;Direct2D、Direct3D与其他图形API的公共基础层&lt;/strong&gt;，提供跨API的通用功能&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id="1-dxgi的核心功能"&gt;&lt;strong&gt;1. DXGI的核心功能&lt;/strong&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;设备与适配器管理&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;枚举物理GPU（&lt;code&gt;IDXGIAdapter&lt;/code&gt;）、检测显示器信息（&lt;code&gt;IDXGIOutput&lt;/code&gt;）。&lt;/li&gt;
-&lt;li&gt;支持多GPU系统（如NVIDIA SLI/AMD CrossFire）的配置。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;交换链（SwapChain）控制&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;创建和管理前后缓冲区（&lt;code&gt;IDXGISwapChain&lt;/code&gt;），实现双缓冲/三缓冲渲染，避免画面撕裂。&lt;/li&gt;
-&lt;li&gt;支持全屏模式切换、垂直同步（VSync）等显示设置。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;资源共享与表面（Surface）操作&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;通过&lt;code&gt;IDXGIResource&lt;/code&gt;接口在不同API（如Direct3D与Direct2D）间共享纹理、缓冲区等资源。&lt;/li&gt;
-&lt;li&gt;提供&lt;code&gt;IDXGISurface&lt;/code&gt;用于跨进程或跨API的显存数据访问。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;高动态范围（HDR）与显示色彩管理&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>关键数据结构</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid><description>&lt;h1 id="核心概念"&gt;核心概念&lt;/h1&gt;
-&lt;p&gt;资源与视图分离, 纹理数据是资源
-DirectX 11 中有多种资源视图，每种都有特定的用途：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;着色器资源视图（SRV） ：用于着色器读取资源&lt;/li&gt;
-&lt;li&gt;渲染目标视图（RTV） ：用于渲染输出&lt;/li&gt;
-&lt;li&gt;深度模板视图（DSV） ：用于深度和模板测试&lt;/li&gt;
-&lt;li&gt;无序访问视图（UAV） ：用于计算着色器的读写操作
-同一个资源可以有多种不同的视图，这是 DirectX 11 资源绑定模型的核心概念。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="渲染流程中的对象链"&gt;渲染流程中的对象链&lt;/h1&gt;
-&lt;h2 id="设备对象"&gt;设备对象&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11Device&lt;/strong&gt; : 负责创建所有 DirectX 资源&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11DeviceContext&lt;/strong&gt; : 负责设置渲染状态和提交渲染命令&lt;/li&gt;
-&lt;li&gt;ID3D11DeviceContext.&lt;strong&gt;Draw()&lt;/strong&gt; : 执行渲染&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;D3D11CreateDevice()&lt;/strong&gt;：//指定API版本，创建 ID3D11Device 和ID3D11DeviceContext&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="纹理对象"&gt;纹理对象&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11Texture2D&lt;/strong&gt;: 纹理对象,&lt;strong&gt;ID2D1RenderTarget&lt;/strong&gt;是其类型的抽象。 直接存储像素数据，但无法直接绑定到渲染管线，需通过视图进行访问&lt;/li&gt;
-&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateTexture2D&lt;/strong&gt;: 创建纹理&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11ShaderResourceView&lt;/strong&gt; 使着色器能够访问纹理数据&lt;/li&gt;
-&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateShaderResourceView&lt;/strong&gt;: 创建着色器资源视图&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11RenderTargetView&lt;/strong&gt; 视图 将纹理作为渲染目标， 继承自 &lt;strong&gt;ID3D11View&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateRenderTargetView&lt;/strong&gt;: 创建渲染目标试图，创建基于&lt;em&gt;交换链&lt;/em&gt;后台缓冲区的渲染目标视图&lt;/li&gt;
-&lt;li&gt;ID3D11DeviceContext.&lt;strong&gt;ClearRenderTargetView&lt;/strong&gt;: 清空渲染&lt;/li&gt;
-&lt;li&gt;ID3D11DeviceContext.&lt;strong&gt;OMSetRenderTargets&lt;/strong&gt;: 设置渲染目标&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="着色器对象"&gt;着色器对象&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11VertexShader&lt;/strong&gt; : 顶点着色器，处理顶点变换 （负责确认视频帧的显示区域）&lt;/li&gt;
-&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateVertexShader&lt;/strong&gt;: 创建顶点着色器&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11PixelShader&lt;/strong&gt; : 像素着色器，处理像素颜色计算（负责处理颜色空间转换和特效）&lt;/li&gt;
-&lt;li&gt;ID3D11Device.&lt;strong&gt;CreatePixelShader&lt;/strong&gt;: 创建像素着色器&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11InputLayout&lt;/strong&gt;: 顶点输入布局，用于桥接顶点缓冲区和顶点着色器&lt;/li&gt;
-&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateInputLayout&lt;/strong&gt;: 创建顶点输入布局对象&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ID3D11Buffer&lt;/strong&gt; : 常量缓冲区，向着色器传递参数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="采样器对象"&gt;采样器对象&lt;/h2&gt;
-&lt;p&gt;负责&lt;strong&gt;纹理数据读取规则的定义&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DirectX on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/</link>
+    <description>Recent content in DirectX on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dxgi</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/dxgi/</guid>
+      <description>&lt;p&gt;(DirectX Graphics Infrastructure) 是微软DirectX中的底层图形接口&#xA;负责管理显示适配器、显示模式、资源分配等硬件相关操作。&#xA;它作为&lt;strong&gt;Direct2D、Direct3D与其他图形API的公共基础层&lt;/strong&gt;，提供跨API的通用功能&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-dxgi的核心功能&#34;&gt;&lt;strong&gt;1. DXGI的核心功能&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;设备与适配器管理&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;枚举物理GPU（&lt;code&gt;IDXGIAdapter&lt;/code&gt;）、检测显示器信息（&lt;code&gt;IDXGIOutput&lt;/code&gt;）。&lt;/li&gt;&#xA;&lt;li&gt;支持多GPU系统（如NVIDIA SLI/AMD CrossFire）的配置。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;交换链（SwapChain）控制&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;创建和管理前后缓冲区（&lt;code&gt;IDXGISwapChain&lt;/code&gt;），实现双缓冲/三缓冲渲染，避免画面撕裂。&lt;/li&gt;&#xA;&lt;li&gt;支持全屏模式切换、垂直同步（VSync）等显示设置。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;资源共享与表面（Surface）操作&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;通过&lt;code&gt;IDXGIResource&lt;/code&gt;接口在不同API（如Direct3D与Direct2D）间共享纹理、缓冲区等资源。&lt;/li&gt;&#xA;&lt;li&gt;提供&lt;code&gt;IDXGISurface&lt;/code&gt;用于跨进程或跨API的显存数据访问。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;高动态范围（HDR）与显示色彩管理&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关键数据结构</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/05.-%E5%9B%BE%E5%BD%A2/01.-directx/%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>&lt;h1 id=&#34;核心概念&#34;&gt;核心概念&lt;/h1&gt;&#xA;&lt;p&gt;资源与视图分离, 纹理数据是资源&#xA;DirectX 11 中有多种资源视图，每种都有特定的用途：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;着色器资源视图（SRV） ：用于着色器读取资源&lt;/li&gt;&#xA;&lt;li&gt;渲染目标视图（RTV） ：用于渲染输出&lt;/li&gt;&#xA;&lt;li&gt;深度模板视图（DSV） ：用于深度和模板测试&lt;/li&gt;&#xA;&lt;li&gt;无序访问视图（UAV） ：用于计算着色器的读写操作&#xA;同一个资源可以有多种不同的视图，这是 DirectX 11 资源绑定模型的核心概念。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;渲染流程中的对象链&#34;&gt;渲染流程中的对象链&lt;/h1&gt;&#xA;&lt;h2 id=&#34;设备对象&#34;&gt;设备对象&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11Device&lt;/strong&gt; : 负责创建所有 DirectX 资源&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11DeviceContext&lt;/strong&gt; : 负责设置渲染状态和提交渲染命令&lt;/li&gt;&#xA;&lt;li&gt;ID3D11DeviceContext.&lt;strong&gt;Draw()&lt;/strong&gt; : 执行渲染&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;D3D11CreateDevice()&lt;/strong&gt;：//指定API版本，创建 ID3D11Device 和ID3D11DeviceContext&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;纹理对象&#34;&gt;纹理对象&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11Texture2D&lt;/strong&gt;: 纹理对象,&lt;strong&gt;ID2D1RenderTarget&lt;/strong&gt;是其类型的抽象。 直接存储像素数据，但无法直接绑定到渲染管线，需通过视图进行访问&lt;/li&gt;&#xA;&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateTexture2D&lt;/strong&gt;: 创建纹理&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11ShaderResourceView&lt;/strong&gt; 使着色器能够访问纹理数据&lt;/li&gt;&#xA;&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateShaderResourceView&lt;/strong&gt;: 创建着色器资源视图&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11RenderTargetView&lt;/strong&gt; 视图 将纹理作为渲染目标， 继承自 &lt;strong&gt;ID3D11View&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateRenderTargetView&lt;/strong&gt;: 创建渲染目标试图，创建基于&lt;em&gt;交换链&lt;/em&gt;后台缓冲区的渲染目标视图&lt;/li&gt;&#xA;&lt;li&gt;ID3D11DeviceContext.&lt;strong&gt;ClearRenderTargetView&lt;/strong&gt;: 清空渲染&lt;/li&gt;&#xA;&lt;li&gt;ID3D11DeviceContext.&lt;strong&gt;OMSetRenderTargets&lt;/strong&gt;: 设置渲染目标&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;着色器对象&#34;&gt;着色器对象&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11VertexShader&lt;/strong&gt; : 顶点着色器，处理顶点变换 （负责确认视频帧的显示区域）&lt;/li&gt;&#xA;&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateVertexShader&lt;/strong&gt;: 创建顶点着色器&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11PixelShader&lt;/strong&gt; : 像素着色器，处理像素颜色计算（负责处理颜色空间转换和特效）&lt;/li&gt;&#xA;&lt;li&gt;ID3D11Device.&lt;strong&gt;CreatePixelShader&lt;/strong&gt;: 创建像素着色器&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11InputLayout&lt;/strong&gt;: 顶点输入布局，用于桥接顶点缓冲区和顶点着色器&lt;/li&gt;&#xA;&lt;li&gt;ID3D11Device.&lt;strong&gt;CreateInputLayout&lt;/strong&gt;: 创建顶点输入布局对象&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ID3D11Buffer&lt;/strong&gt; : 常量缓冲区，向着色器传递参数&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;采样器对象&#34;&gt;采样器对象&lt;/h2&gt;&#xA;&lt;p&gt;负责&lt;strong&gt;纹理数据读取规则的定义&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,140 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WEBRTC on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/</link><description>Recent content in WEBRTC on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/index.xml" rel="self" type="application/rss+xml"/><item><title>Coturn</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/coturn/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/coturn/</guid><description>&lt;p&gt;coturn是一个C++编写的开源ICE
-
-&lt;a class="link link--text" href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&amp;from=20065" rel="external"&gt;服务器&lt;/a&gt;，同时兼顾了STUN和TURN的功能。&lt;/p&gt;
-&lt;hr&gt;</description></item><item><title>Ice</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/ice/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/ice/</guid><description>&lt;h4 id="ip_type"&gt;ip_type&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;host: 从本机网卡获取到的IP地址类型， 即内部ip地址和端口&lt;/li&gt;
-&lt;li&gt;srvflx: server reflexive, STUN服务器获取到的出口IP地址类型，即出口NAT设备映射的公网IP地址和端口&lt;/li&gt;
-&lt;li&gt;prflx: peer reflexive, STUN服务器从打洞报文中获取到的内部IP地址类型，一般情况下和host类型是一致的&lt;/li&gt;
-&lt;li&gt;relay: TURN服务器提供的中继IP地址类型
-一般优先级 host &amp;gt; srflx &amp;gt; prflx &amp;gt; relay。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="base-address"&gt;base address&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;host candidate，base 是其自身&lt;/li&gt;
-&lt;li&gt;srvflx address，base 是发送 stun binding request 给 stun 服务器的 host address&lt;/li&gt;
-&lt;li&gt;relayed candidate，base 是其自身&lt;/li&gt;
-&lt;li&gt;prflx address，base 是发送 stun binding request 给对端的 host address&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;host、srvflx、prflx 地址的 base address 很好理解，就是 ice agent 发送数据的内网源地址。&lt;br&gt;
-relayed address 的 base address 并不是 ice agent 发送数据的内网源地址，而是 turn 服务器分配的 ip:port 地址对。&lt;/p&gt;</description></item><item><title>Nat (Network Address Translation) 网络地址转换</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/</guid><description>&lt;p&gt;
-
-&lt;a class="link link--text" href="https://en.wikipedia.org/wiki/Network_address_translation" rel="external"&gt;wiki&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;RFC 1631&lt;/p&gt;
-&lt;h1 id="作用"&gt;作用&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;最初用于绕过在网络 移动或者更换上游互联网服务提供商时为每个主机分配地址的需要。&lt;/li&gt;
-&lt;li&gt;解决IPV4地址不够的“短期解决方案”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="nat类型"&gt;NAT类型&lt;/h1&gt;
-&lt;p&gt;RFC 3489-2003-NAT上的简单遍历协议 已经废弃
-将 NAT实现分类为：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;完全圆锥型NAT &amp;ldquo;Full Cone&amp;rdquo; NAT
-&lt;ul&gt;
-&lt;li&gt;一旦内部地址 (iAddr:iPort) 映射到外部地址 (eAddr:ePort)，来自 iAddr:iPort 的任何数据包都将通过 eAddr:ePort 发送。&lt;/li&gt;
-&lt;li&gt;任何外部主机都_可以通过将数据包发送到 eAddr:ePort 来将数据包发送到 iAddr:iPort。
-举例:
-1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后
-2.且所有外部主机发送的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$
-3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口依然为 $155.99.25.11:62000$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;地址受限圆锥型NAT
-&lt;ul&gt;
-&lt;li&gt;一旦内部地址 (iAddr:iPort) 映射到外部地址 (eAddr:ePort)，来自 iAddr:iPort 的任何数据包都将通过 eAddr:ePort 发送。&lt;/li&gt;
-&lt;li&gt;仅当 iAddr:iPort 先前已将数据包发送到 hAddr :any_时，外部主机 ( hAddr:any ) 才可以通过将数据包发送到 eAddr:ePort 来将数据包发送到 iAddr: &lt;em&gt;iPort&lt;/em&gt;。“任意”意味着端口号无关紧要。
-举例:
-1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后
-2.且所有来自IP$18.181.0.31(任何端口)$的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$
-3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口依然为 $155.99.25.11:62000$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;端口受限锥体NAT
-&lt;ul&gt;
-&lt;li&gt;一旦内部地址 (iAddr:iPort) 映射到外部地址 (eAddr:ePort)，来自 iAddr:iPort 的任何数据包都将通过 eAddr:ePort 发送。&lt;/li&gt;
-&lt;li&gt;仅当 iAddr:iPort 先前已将数据包发送到 hAddr:hPort 时，外部主机 ( hAddr:hPort ) 才可以通过将数据包发送到 eAddr:ePort 来将数据包发送到 iAddr:iPort。
-举例:
-1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后
-2.只有来自$18.181.0.31:1234$ 的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$
-3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口依然为 $155.99.25.11:62000$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;对称NAT
-&lt;ul&gt;
-&lt;li&gt;一个内部 IP 地址加上目标 IP 地址和端口的组合映射到单个唯一的外部源 IP 地址和端口；如果同一内部主机发送具有相同源地址和端口但目的地不同的数据包，则将使用不同的映射。&lt;/li&gt;
-&lt;li&gt;只有从内部主机接收到数据包的外部主机才能发回数据包。
-举例:
-1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后
-2.只有来自$18.181.0.31:1234$ 的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$
-3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口不再为 $155.99.25.11:62000$，而可能为$155.99.25.11:62001$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;实际NAT实现可能参考并结合以上模型，并非完全对应&lt;/p&gt;</description></item><item><title>Qos</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/qos/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/qos/</guid><description>&lt;p&gt;WebRTC中QoS的具体实现机制&lt;/p&gt;
-&lt;p&gt;WebRTC中的QoS（服务质量）实现机制主要通过一系列算法和技术来优化音视频传输的稳定性和质量，具体包括以下几个方面：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;带宽评估与拥塞控制&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用Google Congestion Control（GCC）动态评估带宽并调整发送速率，避免网络拥塞。&lt;/li&gt;
-&lt;li&gt;SCReAM算法用于低延迟流的实时拥塞控制，基于RTT和队列延迟进行调整。&lt;/li&gt;
-&lt;li&gt;REMB（接收端最大带宽）和SendSide BWE（发送端带宽估计）算法通过接收端评估带宽并反馈给发送端，以动态调整发送速率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;抗丢包与纠错&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;前向纠错（FEC）：通过冗余数据包恢复丢失的数据，包括ULPFEC、REDUC和FLEXEC三种形式。&lt;/li&gt;
-&lt;li&gt;丢包重传（NACK/RTX）：接收端检测到丢包后发送NACK请求重传，发送端通过RTX机制重新发送丢失的数据包。&lt;/li&gt;
-&lt;li&gt;丢包隐藏（PLC）：在解码端掩盖丢包影响，减少丢包对用户体验的影响。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;抗抖动&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;动态抖动缓冲区（JitterBuffer）：缓存RTP数据包以消除抖动和乱序问题，分为动态和静态两种模式。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;码率与分辨率自适应&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;动态调整码率（ABR）：根据CPU负载和编码参数调整码率。&lt;/li&gt;
-&lt;li&gt;多路并发传输（Simulcast/SVC）：发送多路不同质量的流，接收端根据网络条件选择合适的流。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;网络路径优化&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ICE（Interactive Connectivity Establishment）选择最优传输路径。&lt;/li&gt;
-&lt;li&gt;QUIC协议支持减少握手延迟和队头阻塞。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;辅助算法&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>Webrtc 协议解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p&gt;1.先基于HTTP 协商端口和协议&lt;/p&gt;
-&lt;p&gt;再基于协商的协议(TCP和UDP均可)和端口基于ICE协议打洞，再发送RTP/SRTP包。&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20240819092039.png]]&lt;/p&gt;
-&lt;h2 id="获取本地音视频"&gt;获取本地音视频.&lt;/h2&gt;
-&lt;h3 id="getusermedia"&gt;getUserMedia.&lt;/h3&gt;
-&lt;p&gt;获取本地音视频流&lt;/p&gt;
-&lt;h2 id="服务模块"&gt;服务模块：&lt;/h2&gt;
-&lt;h3 id="signaling-server-信令服务"&gt;Signaling Server: 信令服务&lt;/h3&gt;
-&lt;p&gt;两个浏览器之间交换SDP的服务
-- HTTP
-- Websocket
-- SIP
-- WHIP/WHEP协议： 还在草案阶段，未形成RFC文档
-- 
-
-&lt;a class="link link--text" href="https://datatracker.ietf.org/doc/draft-ietf-wish-whip/" rel="external"&gt;whip&lt;/a&gt;
-- 
-
-&lt;a class="link link--text" href="https://datatracker.ietf.org/doc/draft-ietf-wish-whep/" rel="external"&gt;whep&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Xx. 流行开源组件</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/</guid><description>&lt;p&gt;https://politcloud.org/post/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/%E4%BB%8E0%E6%89%93%E9%80%A0%E9%9F%B3%E8%A7%86%E9%A2%91%E7%9B%B4%E6%92%AD%E7%B3%BB%E7%BB%9F/25_%E9%82%A3%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%A0%E8%AF%A5%E9%80%89%E6%8B%A9%E8%B0%81/&lt;/p&gt;
-&lt;p&gt;OpemWebRTC&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;OpenWebRTC&lt;/strong&gt;：由 Ericsson 开发，旨在创建一个跨平台的 WebRTC 实现。它提供了一个完整的 WebRTC 栈，并且支持多种平台，如 Linux、iOS 和 Android。OpenWebRTC 使用 GStreamer 作为其媒体管道，可以轻松地与其他 GStreamer 元素集成。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;libwebrtc&lt;/strong&gt;：这是 Google 提供的 WebRTC 库，广泛应用于浏览器（如 Chrome）和其他应用中。它支持音视频通信和数据通道，并且有详细的文档和社区支持。libwebrtc 是一个高度优化的库，适合需要高性能和可靠性的应用。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WEBRTC on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/</link>
+    <description>Recent content in WEBRTC on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coturn</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/coturn/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/coturn/</guid>
+      <description>&lt;p&gt;coturn是一个C++编写的开源ICE&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&amp;from=20065&#34; rel=&#34;external&#34;&gt;服务器&lt;/a&gt;，同时兼顾了STUN和TURN的功能。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>Ice</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/ice/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/ice/</guid>
+      <description>&lt;h4 id=&#34;ip_type&#34;&gt;ip_type&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;host:  从本机网卡获取到的IP地址类型， 即内部ip地址和端口&lt;/li&gt;&#xA;&lt;li&gt;srvflx: server reflexive, STUN服务器获取到的出口IP地址类型，即出口NAT设备映射的公网IP地址和端口&lt;/li&gt;&#xA;&lt;li&gt;prflx: peer reflexive, STUN服务器从打洞报文中获取到的内部IP地址类型，一般情况下和host类型是一致的&lt;/li&gt;&#xA;&lt;li&gt;relay: TURN服务器提供的中继IP地址类型&#xA;一般优先级 host &amp;gt; srflx &amp;gt; prflx &amp;gt; relay。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;base-address&#34;&gt;base address&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;host candidate，base 是其自身&lt;/li&gt;&#xA;&lt;li&gt;srvflx address，base 是发送 stun binding request 给 stun 服务器的 host address&lt;/li&gt;&#xA;&lt;li&gt;relayed candidate，base 是其自身&lt;/li&gt;&#xA;&lt;li&gt;prflx address，base 是发送 stun binding request 给对端的 host address&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;host、srvflx、prflx 地址的 base address 很好理解，就是 ice agent 发送数据的内网源地址。&lt;br&gt;&#xA;relayed address 的 base address 并不是 ice agent 发送数据的内网源地址，而是 turn 服务器分配的 ip:port 地址对。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nat (Network Address Translation) 网络地址转换</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/nat-network-address-translation-%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/</guid>
+      <description>&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://en.wikipedia.org/wiki/Network_address_translation&#34; rel=&#34;external&#34;&gt;wiki&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;RFC 1631&lt;/p&gt;&#xA;&lt;h1 id=&#34;作用&#34;&gt;作用&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;最初用于绕过在网络 移动或者更换上游互联网服务提供商时为每个主机分配地址的需要。&lt;/li&gt;&#xA;&lt;li&gt;解决IPV4地址不够的“短期解决方案”&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;nat类型&#34;&gt;NAT类型&lt;/h1&gt;&#xA;&lt;p&gt;RFC 3489-2003-NAT上的简单遍历协议 已经废弃&#xA;将 NAT实现分类为：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;完全圆锥型NAT &amp;ldquo;Full Cone&amp;rdquo; NAT&#xA;&lt;ul&gt;&#xA;&lt;li&gt;一旦内部地址 (iAddr:iPort) 映射到外部地址 (eAddr:ePort)，来自 iAddr:iPort 的任何数据包都将通过 eAddr:ePort 发送。&lt;/li&gt;&#xA;&lt;li&gt;任何外部主机都_可以通过将数据包发送到 eAddr:ePort 来将数据包发送到 iAddr:iPort。&#xA;举例:&#xA;1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后&#xA;2.且所有外部主机发送的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$&#xA;3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口依然为 $155.99.25.11:62000$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;地址受限圆锥型NAT&#xA;&lt;ul&gt;&#xA;&lt;li&gt;一旦内部地址 (iAddr:iPort) 映射到外部地址 (eAddr:ePort)，来自 iAddr:iPort 的任何数据包都将通过 eAddr:ePort 发送。&lt;/li&gt;&#xA;&lt;li&gt;仅当 iAddr:iPort 先前已将数据包发送到 hAddr :any_时，外部主机 ( hAddr:any ) 才可以通过将数据包发送到 eAddr:ePort 来将数据包发送到 iAddr: &lt;em&gt;iPort&lt;/em&gt;。“任意”意味着端口号无关紧要。&#xA;举例:&#xA;1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后&#xA;2.且所有来自IP$18.181.0.31(任何端口)$的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$&#xA;3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口依然为 $155.99.25.11:62000$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;端口受限锥体NAT&#xA;&lt;ul&gt;&#xA;&lt;li&gt;一旦内部地址 (iAddr:iPort) 映射到外部地址 (eAddr:ePort)，来自 iAddr:iPort 的任何数据包都将通过 eAddr:ePort 发送。&lt;/li&gt;&#xA;&lt;li&gt;仅当 iAddr:iPort 先前已将数据包发送到 hAddr:hPort 时，外部主机 ( hAddr:hPort ) 才可以通过将数据包发送到 eAddr:ePort 来将数据包发送到 iAddr:iPort。&#xA;举例:&#xA;1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后&#xA;2.只有来自$18.181.0.31:1234$ 的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$&#xA;3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口依然为 $155.99.25.11:62000$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;对称NAT&#xA;&lt;ul&gt;&#xA;&lt;li&gt;一个内部 IP 地址加上目标 IP 地址和端口的组合映射到单个唯一的外部源 IP 地址和端口；如果同一内部主机发送具有相同源地址和端口但目的地不同的数据包，则将使用不同的映射。&lt;/li&gt;&#xA;&lt;li&gt;只有从内部主机接收到数据包的外部主机才能发回数据包。&#xA;举例:&#xA;1.A先通过私有IP端口$10.0.0.1:4321$ 发向公共服务器 $18.181.0.31:1234$,NAT选择的映射A的公网IP和端口为 $155.99.25.11:62000$后&#xA;2.只有来自$18.181.0.31:1234$ 的数据包都能通过$155.99.25.11:62000$ 到达A的内部IP端口$10.0.0.1:4321$&#xA;3.A再通过私有IP端口 $10.0.0.1:4321$ 发向B, NAT选择的映射A的公网IP和端口不再为 $155.99.25.11:62000$，而可能为$155.99.25.11:62001$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;实际NAT实现可能参考并结合以上模型，并非完全对应&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Qos</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/qos/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/qos/</guid>
+      <description>&lt;p&gt;WebRTC中QoS的具体实现机制&lt;/p&gt;&#xA;&lt;p&gt;WebRTC中的QoS（服务质量）实现机制主要通过一系列算法和技术来优化音视频传输的稳定性和质量，具体包括以下几个方面：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;带宽评估与拥塞控制&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;使用Google Congestion Control（GCC）动态评估带宽并调整发送速率，避免网络拥塞。&lt;/li&gt;&#xA;&lt;li&gt;SCReAM算法用于低延迟流的实时拥塞控制，基于RTT和队列延迟进行调整。&lt;/li&gt;&#xA;&lt;li&gt;REMB（接收端最大带宽）和SendSide BWE（发送端带宽估计）算法通过接收端评估带宽并反馈给发送端，以动态调整发送速率。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;抗丢包与纠错&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;前向纠错（FEC）：通过冗余数据包恢复丢失的数据，包括ULPFEC、REDUC和FLEXEC三种形式。&lt;/li&gt;&#xA;&lt;li&gt;丢包重传（NACK/RTX）：接收端检测到丢包后发送NACK请求重传，发送端通过RTX机制重新发送丢失的数据包。&lt;/li&gt;&#xA;&lt;li&gt;丢包隐藏（PLC）：在解码端掩盖丢包影响，减少丢包对用户体验的影响。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;抗抖动&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;动态抖动缓冲区（JitterBuffer）：缓存RTP数据包以消除抖动和乱序问题，分为动态和静态两种模式。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;码率与分辨率自适应&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;动态调整码率（ABR）：根据CPU负载和编码参数调整码率。&lt;/li&gt;&#xA;&lt;li&gt;多路并发传输（Simulcast/SVC）：发送多路不同质量的流，接收端根据网络条件选择合适的流。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;网络路径优化&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ICE（Interactive Connectivity Establishment）选择最优传输路径。&lt;/li&gt;&#xA;&lt;li&gt;QUIC协议支持减少握手延迟和队头阻塞。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;辅助算法&lt;/strong&gt;：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Webrtc 协议解读</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/webrtc-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;p&gt;1.先基于HTTP 协商端口和协议&lt;/p&gt;&#xA;&lt;p&gt;再基于协商的协议(TCP和UDP均可)和端口基于ICE协议打洞，再发送RTP/SRTP包。&lt;/p&gt;&#xA;&lt;p&gt;![[Pasted image 20240819092039.png]]&lt;/p&gt;&#xA;&lt;h2 id=&#34;获取本地音视频&#34;&gt;获取本地音视频.&lt;/h2&gt;&#xA;&lt;h3 id=&#34;getusermedia&#34;&gt;getUserMedia.&lt;/h3&gt;&#xA;&lt;p&gt;获取本地音视频流&lt;/p&gt;&#xA;&lt;h2 id=&#34;服务模块&#34;&gt;服务模块：&lt;/h2&gt;&#xA;&lt;h3 id=&#34;signaling-server-信令服务&#34;&gt;Signaling Server: 信令服务&lt;/h3&gt;&#xA;&lt;p&gt;两个浏览器之间交换SDP的服务&#xA;- HTTP&#xA;- Websocket&#xA;- SIP&#xA;- WHIP/WHEP协议： 还在草案阶段，未形成RFC文档&#xA;- &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://datatracker.ietf.org/doc/draft-ietf-wish-whip/&#34; rel=&#34;external&#34;&gt;whip&lt;/a&gt;&#xA;- &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://datatracker.ietf.org/doc/draft-ietf-wish-whep/&#34; rel=&#34;external&#34;&gt;whep&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xx. 流行开源组件</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/06.-webrtc/xx.-%E6%B5%81%E8%A1%8C%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/</guid>
+      <description>&lt;p&gt;https://politcloud.org/post/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/%E4%BB%8E0%E6%89%93%E9%80%A0%E9%9F%B3%E8%A7%86%E9%A2%91%E7%9B%B4%E6%92%AD%E7%B3%BB%E7%BB%9F/25_%E9%82%A3%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%A0%E8%AF%A5%E9%80%89%E6%8B%A9%E8%B0%81/&lt;/p&gt;&#xA;&lt;p&gt;OpemWebRTC&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;OpenWebRTC&lt;/strong&gt;：由 Ericsson 开发，旨在创建一个跨平台的 WebRTC 实现。它提供了一个完整的 WebRTC 栈，并且支持多种平台，如 Linux、iOS 和 Android。OpenWebRTC 使用 GStreamer 作为其媒体管道，可以轻松地与其他 GStreamer 元素集成。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;libwebrtc&lt;/strong&gt;：这是 Google 提供的 WebRTC 库，广泛应用于浏览器（如 Chrome）和其他应用中。它支持音视频通信和数据通道，并且有详细的文档和社区支持。libwebrtc 是一个高度优化的库，适合需要高性能和可靠性的应用。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

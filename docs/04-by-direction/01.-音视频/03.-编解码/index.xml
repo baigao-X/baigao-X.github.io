@@ -1,6 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编解码 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/</link><description>Recent content in 编解码 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/index.xml" rel="self" type="application/rss+xml"/><item><title>硬件编解码Api</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/</guid><description>&lt;p&gt;API 名称	主要平台	主要推动者/支持者	备注
-VAAPI	Linux, Unix-like	Intel (主要), AMD	Linux 平台的事实标准，尤其是对于开源驱动。
-VDPAU	Linux, Unix-like	NVIDIA	由 NVIDIA 最早为其 Linux 闭源驱动开发。现在较为老旧，新应用更多转向 VAAPI 或 NVDEC。
-NVDEC / NVENC	Linux, Windows	NVIDIA	NVIDIA 现代的、私有的硬件解码/编码 API，性能强大，通过其闭源驱动提供。
-DXVA / D3D11 VA	Windows	Microsoft	Windows 平台的标准视频加速接口，集成在 DirectX 中。
-VideoToolbox	macOS, iOS	Apple	苹果生态系统的官方硬件加速框架。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编解码 on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/</link>
+    <description>Recent content in 编解码 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>硬件编解码Api</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/%E7%A1%AC%E4%BB%B6%E7%BC%96%E8%A7%A3%E7%A0%81api/</guid>
+      <description>&lt;p&gt;API 名称&#x9;主要平台&#x9;主要推动者/支持者&#x9;备注&#xA;VAAPI&#x9;Linux, Unix-like&#x9;Intel (主要), AMD&#x9;Linux 平台的事实标准，尤其是对于开源驱动。&#xA;VDPAU&#x9;Linux, Unix-like&#x9;NVIDIA&#x9;由 NVIDIA 最早为其 Linux 闭源驱动开发。现在较为老旧，新应用更多转向 VAAPI 或 NVDEC。&#xA;NVDEC / NVENC&#x9;Linux, Windows&#x9;NVIDIA&#x9;NVIDIA 现代的、私有的硬件解码/编码 API，性能强大，通过其闭源驱动提供。&#xA;DXVA / D3D11 VA&#x9;Windows&#x9;Microsoft&#x9;Windows 平台的标准视频加速接口，集成在 DirectX 中。&#xA;VideoToolbox&#x9;macOS, iOS&#x9;Apple&#x9;苹果生态系统的官方硬件加速框架。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

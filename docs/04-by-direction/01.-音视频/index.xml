@@ -1,194 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>音视频 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/</link><description>Recent content in 音视频 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/index.xml" rel="self" type="application/rss+xml"/><item><title>工具</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%B7%A5%E5%85%B7/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%B7%A5%E5%85%B7/</guid><description>&lt;p&gt;音视频分析工具：&lt;/p&gt;
-&lt;h1 id="1-未分类"&gt;1. 未分类&lt;/h1&gt;
-&lt;h2 id="11-elecard-streameye"&gt;1.1. Elecard StreamEye&lt;/h2&gt;
-&lt;p&gt;视频查看工具
-查看帧的排列信息&lt;/p&gt;
-&lt;h2 id="12-mp4box"&gt;1.2. mp4box&lt;/h2&gt;
-&lt;h2 id="13-yamdi"&gt;1.3. yamdi&lt;/h2&gt;
-&lt;h2 id="14-videoeye"&gt;1.4. VideoEye&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20240327142115.png]]&lt;/p&gt;
-&lt;h1 id="2-mp4fmp4-文件解析"&gt;2. MP4/fMP4 文件解析&lt;/h1&gt;
-&lt;h1 id="3-mp4-explorer"&gt;3. Mp4 Explorer&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;适用于解析Mp4文件
- 会展现box层级 
- 会显示解析出的字段含义
- 但是不会显示对应的二进制值 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;![[Pasted image 20240327142242.png]]&lt;/p&gt;</description></item><item><title>图像</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%9B%BE%E5%83%8F/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%9B%BE%E5%83%8F/</guid><description>&lt;h1 id="1-宽高单位"&gt;1. 宽高单位&lt;/h1&gt;
-&lt;h2 id="11-像素-pixles"&gt;1.1. 像素 Pixles&lt;/h2&gt;
-&lt;h2 id="12-点-points"&gt;1.2. 点 points&lt;/h2&gt;
-&lt;p&gt;物理单位
-&lt;code&gt;1 point = 1/72 inch&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;文字大小通常以 points为单位
-通常拉丁字母在印刷时处于10~14point 之间&lt;/p&gt;
-&lt;h2 id="13-英寸in"&gt;1.3. 英寸，in，”&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;1 inch = 2.54cm&lt;/code&gt;&lt;/p&gt;</description></item><item><title>延时专题</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/</guid><description>&lt;p&gt;&lt;strong&gt;音频在设备端上的延时：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;音频采集延时&lt;/strong&gt;：采集后的音频首先会经过声卡进行信号转换，声卡本身会产生延时，比如 M-Audio 声卡设备延迟 1ms，
-
-&lt;a class="link link--text" href="https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E8%89%BE%E8%82%AF%E5%A3%B0%E5%8D%A1&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLoib7ogq_lo7DljaEiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.fJooL-vw5q4NfrHWEv1pNIee3nvvdi0B_H9iiI-mHI4&amp;zhida_source=entity" rel="external"&gt;艾肯声卡&lt;/a&gt;设备延迟约为 37ms；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;编解码延时&lt;/strong&gt;：随后音频进入前处理、编码的阶段，如果采用 OPUS 
-
-&lt;a class="link link--text" href="https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E6%A0%87%E5%87%86%E7%BC%96%E7%A0%81&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLmoIflh4bnvJbnoIEiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.6OzNeHT6J_ZzCInb0Njias8IcKGf52tKMoNIbhFbFwE&amp;zhida_source=entity" rel="external"&gt;标准编码&lt;/a&gt;，最低算法延时大约需要 2.5~60ms；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;音频播放延时&lt;/strong&gt;：这部分延时与播放端硬件性能相关。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;音频处理延时&lt;/strong&gt;：前后处理，包括 AEC，ANS，AGC 等前后处理算法都会带来算法延时，通常这里的延时就是
-
-&lt;a class="link link--text" href="https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E6%BB%A4%E6%B3%A2%E5%99%A8%E9%98%B6%E6%95%B0&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLmu6Tms6LlmajpmLbmlbAiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.OaEh4LaQE1Q9JbUnJjbIRvvjmRqLnYQx8dipar0QPAk&amp;zhida_source=entity" rel="external"&gt;滤波器阶数&lt;/a&gt;。在 10ms 以内。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;端网络延时&lt;/strong&gt;：这部分延时主要出现在解码之前的 jitter buffer 内，如果在抗丢包处理中，增加了重传算法和前向
-
-&lt;a class="link link--text" href="https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E7%BA%A0%E9%94%99%E7%AE%97%E6%B3%95&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLnuqDplJnnrpfms5UiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.QY11hACtHNAVpE3ndRgNYEnZJPY4x-PmIrxiAvKkg7E&amp;zhida_source=entity" rel="external"&gt;纠错算法&lt;/a&gt;，这里的延时一般在 20ms 到 200ms 左右。但是受到 
-
-&lt;a class="link link--text" href="https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=2&amp;q=jitter+buffer&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiJqaXR0ZXIgYnVmZmVyIiwiemhpZGFfc291cmNlIjoiZW50aXR5IiwiY29udGVudF9pZCI6NjU5MTk5MiwiY29udGVudF90eXBlIjoiQXJ0aWNsZSIsIm1hdGNoX29yZGVyIjoyLCJ6ZF90b2tlbiI6bnVsbH0.cBKBNIsKIk_fdstOxxUd156nujRmT9mi80k8JcGMU_g&amp;zhida_source=entity" rel="external"&gt;jitter buffer&lt;/a&gt; 影响，可能会更高。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;视频在设备端上的延时&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>音视频通识</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/</guid><description>&lt;h2 id="h264-h265-常规编码码率snipaste_2026-03-14_23-17-31jpg"&gt;H264 H265 常规编码码率![[Snipaste_2026-03-14_23-17-31.jpg]]&lt;/h2&gt;
-&lt;p&gt;![[Snipaste_2026-03-14_23-06-05.jpg|688]]
-![[Snipaste_2026-03-14_23-17-31.jpg|753]]
-![[Snipaste_2026-03-14_23-48-32.jpg|684]]&lt;/p&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;&lt;strong&gt;分辨率&lt;/strong&gt;&lt;/th&gt;
- &lt;th&gt;&lt;strong&gt;像素&lt;/strong&gt;&lt;/th&gt;
- &lt;th&gt;&lt;strong&gt;H264 典型码率范围&lt;/strong&gt;&lt;/th&gt;
- &lt;th&gt;&lt;strong&gt;H265典型码率范围(比H264降低40%-50%)&lt;/strong&gt;&lt;/th&gt;
- &lt;th&gt;&lt;strong&gt;应用场景&lt;/strong&gt;&lt;/th&gt;
- &lt;th&gt;数据来源&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;3840×2160（4K）&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;829万&lt;/td&gt;
- &lt;td&gt;10-12 Mbps&lt;/td&gt;
- &lt;td&gt;5-8Mbps&lt;/td&gt;
- &lt;td&gt;超高清监控、专业视频制作&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;2560×1440（2K）&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;368万&lt;/td&gt;
- &lt;td&gt;6-10 Mbps&lt;/td&gt;
- &lt;td&gt;3-5Mbps&lt;/td&gt;
- &lt;td&gt;高画质流媒体、安防监控&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;1920×1080（FHD）&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;207万&lt;/td&gt;
- &lt;td&gt;4-6 Mbps&lt;/td&gt;
- &lt;td&gt;2-3Mbps&lt;/td&gt;
- &lt;td&gt;蓝光视频、视频会议&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;1280×720（HD）&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;92万&lt;/td&gt;
- &lt;td&gt;2-4 Mbps&lt;/td&gt;
- &lt;td&gt;1-2Mbps&lt;/td&gt;
- &lt;td&gt;网络直播、移动端播放&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;704×576（D1）&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;40万&lt;/td&gt;
- &lt;td&gt;0.5-1 Mbps&lt;/td&gt;
- &lt;td&gt;0.5-1Mbps&lt;/td&gt;
- &lt;td&gt;传统监控、标清传输&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;H264 编码帧常规大小: GOP 50下：
-&lt;ul&gt;
-&lt;li&gt;常规I帧一帧大小1024字节到1518字节&lt;/li&gt;
-&lt;li&gt;常规一帧P帧大小128字节到256字节&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="音频常规码率"&gt;音频常规码率&lt;/h2&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;格式&lt;/th&gt;
- &lt;th&gt;码率范围（kbps）&lt;/th&gt;
- &lt;th&gt;特点与应用场景&lt;/th&gt;
- &lt;th&gt;来源&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;MP3&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;32–320&lt;/td&gt;
- &lt;td&gt;普及率高，128kbps为流媒体标准音质&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;AAC&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;24–384&lt;/td&gt;
- &lt;td&gt;效率优于MP3，96kbps即接近CD音质&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;WAV&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;1411+&lt;/td&gt;
- &lt;td&gt;未压缩，CD级无损音质&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;FLAC&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;800–2500&lt;/td&gt;
- &lt;td&gt;无损压缩，保留原始细节&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;WMA&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;128–320&lt;/td&gt;
- &lt;td&gt;微软格式，适合低带宽环境&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;APE&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;700–1411&lt;/td&gt;
- &lt;td&gt;无损压缩，体积较大&lt;/td&gt;
- &lt;td&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;44.1kHZ 下 每帧数据约23.22ms
-&lt;ul&gt;
-&lt;li&gt;PCM 原始数据 =位深* 声道数 * 采样精度 约 4096字节&lt;/li&gt;
-&lt;li&gt;G.711 数据约2048字节（典型压缩倍速2倍）&lt;/li&gt;
-&lt;li&gt;AAC 一帧数据：根据质量分别位 46字节-185字节，到240字节-400字节 （典型压缩倍速 20-50倍）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="qos"&gt;QOS&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;延迟 (Latency)&lt;/p&gt;</description></item><item><title>主流流媒体框架</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/</guid><description>&lt;h2 id="播放器"&gt;播放器：&lt;/h2&gt;
-&lt;h3 id="jessibuca"&gt;Jessibuca&lt;/h3&gt;
-&lt;h3 id="ffmpeg"&gt;ffmpeg&lt;/h3&gt;
-&lt;h2 id="流媒体"&gt;流媒体：&lt;/h2&gt;
-&lt;h3 id="zlm"&gt;ZLM&lt;/h3&gt;
-&lt;h3 id="srs"&gt;SRS&lt;/h3&gt;
-&lt;h3 id="mediasoap"&gt;MediaSoap&lt;/h3&gt;
-&lt;h3 id="ffmpeg-1"&gt;ffmpeg&lt;/h3&gt;
-&lt;h2 id="编解码"&gt;编解码&lt;/h2&gt;
-&lt;h3 id="ffmpeg-2"&gt;ffmpeg&lt;/h3&gt;
-&lt;h2 id="ai"&gt;AI&lt;/h2&gt;
-&lt;h3 id="yolo"&gt;YOLO&lt;/h3&gt;
-&lt;h3 id="opencv"&gt;opencv&lt;/h3&gt;
-&lt;h2 id="渲染"&gt;渲染&lt;/h2&gt;
-&lt;h3 id="vlkan"&gt;vlkan&lt;/h3&gt;
-&lt;h3 id="opengl"&gt;opengl&lt;/h3&gt;
-&lt;h3 id="d3d"&gt;D3D&lt;/h3&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>音视频 on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/</link>
+    <description>Recent content in 音视频 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工具</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%B7%A5%E5%85%B7/</guid>
+      <description>&lt;p&gt;音视频分析工具：&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-未分类&#34;&gt;1. 未分类&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-elecard-streameye&#34;&gt;1.1. Elecard StreamEye&lt;/h2&gt;&#xA;&lt;p&gt;视频查看工具&#xA;查看帧的排列信息&lt;/p&gt;&#xA;&lt;h2 id=&#34;12-mp4box&#34;&gt;1.2. mp4box&lt;/h2&gt;&#xA;&lt;h2 id=&#34;13-yamdi&#34;&gt;1.3. yamdi&lt;/h2&gt;&#xA;&lt;h2 id=&#34;14-videoeye&#34;&gt;1.4. VideoEye&lt;/h2&gt;&#xA;&lt;p&gt;![[Pasted image 20240327142115.png]]&lt;/p&gt;&#xA;&lt;h1 id=&#34;2-mp4fmp4-文件解析&#34;&gt;2. MP4/fMP4 文件解析&lt;/h1&gt;&#xA;&lt;h1 id=&#34;3-mp4-explorer&#34;&gt;3. Mp4 Explorer&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;适用于解析Mp4文件&#xA; 会展现box层级 &#xA; 会显示解析出的字段含义&#xA; 但是不会显示对应的二进制值 &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;![[Pasted image 20240327142242.png]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>图像</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%9B%BE%E5%83%8F/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%9B%BE%E5%83%8F/</guid>
+      <description>&lt;h1 id=&#34;1-宽高单位&#34;&gt;1. 宽高单位&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-像素-pixles&#34;&gt;1.1. 像素 Pixles&lt;/h2&gt;&#xA;&lt;h2 id=&#34;12-点-points&#34;&gt;1.2. 点 points&lt;/h2&gt;&#xA;&lt;p&gt;物理单位&#xA;&lt;code&gt;1 point = 1/72 inch&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;文字大小通常以 points为单位&#xA;通常拉丁字母在印刷时处于10~14point 之间&lt;/p&gt;&#xA;&lt;h2 id=&#34;13-英寸in&#34;&gt;1.3. 英寸，in，”&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;1 inch = 2.54cm&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>延时专题</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E5%BB%B6%E6%97%B6%E4%B8%93%E9%A2%98/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;音频在设备端上的延时：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;音频采集延时&lt;/strong&gt;：采集后的音频首先会经过声卡进行信号转换，声卡本身会产生延时，比如 M-Audio 声卡设备延迟 1ms，&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E8%89%BE%E8%82%AF%E5%A3%B0%E5%8D%A1&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLoib7ogq_lo7DljaEiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.fJooL-vw5q4NfrHWEv1pNIee3nvvdi0B_H9iiI-mHI4&amp;zhida_source=entity&#34; rel=&#34;external&#34;&gt;艾肯声卡&lt;/a&gt;设备延迟约为 37ms；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;编解码延时&lt;/strong&gt;：随后音频进入前处理、编码的阶段，如果采用 OPUS &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E6%A0%87%E5%87%86%E7%BC%96%E7%A0%81&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLmoIflh4bnvJbnoIEiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.6OzNeHT6J_ZzCInb0Njias8IcKGf52tKMoNIbhFbFwE&amp;zhida_source=entity&#34; rel=&#34;external&#34;&gt;标准编码&lt;/a&gt;，最低算法延时大约需要 2.5~60ms；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;音频播放延时&lt;/strong&gt;：这部分延时与播放端硬件性能相关。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;音频处理延时&lt;/strong&gt;：前后处理，包括 AEC，ANS，AGC 等前后处理算法都会带来算法延时，通常这里的延时就是&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E6%BB%A4%E6%B3%A2%E5%99%A8%E9%98%B6%E6%95%B0&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLmu6Tms6LlmajpmLbmlbAiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.OaEh4LaQE1Q9JbUnJjbIRvvjmRqLnYQx8dipar0QPAk&amp;zhida_source=entity&#34; rel=&#34;external&#34;&gt;滤波器阶数&lt;/a&gt;。在 10ms 以内。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;端网络延时&lt;/strong&gt;：这部分延时主要出现在解码之前的 jitter buffer 内，如果在抗丢包处理中，增加了重传算法和前向&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=1&amp;q=%E7%BA%A0%E9%94%99%E7%AE%97%E6%B3%95&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiLnuqDplJnnrpfms5UiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo2NTkxOTkyLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.QY11hACtHNAVpE3ndRgNYEnZJPY4x-PmIrxiAvKkg7E&amp;zhida_source=entity&#34; rel=&#34;external&#34;&gt;纠错算法&lt;/a&gt;，这里的延时一般在 20ms 到 200ms 左右。但是受到 &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://zhida.zhihu.com/search?content_id=6591992&amp;content_type=Article&amp;match_order=2&amp;q=jitter+buffer&amp;zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NDcyODgyNTQsInEiOiJqaXR0ZXIgYnVmZmVyIiwiemhpZGFfc291cmNlIjoiZW50aXR5IiwiY29udGVudF9pZCI6NjU5MTk5MiwiY29udGVudF90eXBlIjoiQXJ0aWNsZSIsIm1hdGNoX29yZGVyIjoyLCJ6ZF90b2tlbiI6bnVsbH0.cBKBNIsKIk_fdstOxxUd156nujRmT9mi80k8JcGMU_g&amp;zhida_source=entity&#34; rel=&#34;external&#34;&gt;jitter buffer&lt;/a&gt; 影响，可能会更高。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;视频在设备端上的延时&lt;/strong&gt;：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>音视频通识</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%86/</guid>
+      <description>&lt;h2 id=&#34;h264-h265-常规编码码率snipaste_2026-03-14_23-17-31jpg&#34;&gt;H264 H265 常规编码码率![[Snipaste_2026-03-14_23-17-31.jpg]]&lt;/h2&gt;&#xA;&lt;p&gt;![[Snipaste_2026-03-14_23-06-05.jpg|688]]&#xA;![[Snipaste_2026-03-14_23-17-31.jpg|753]]&#xA;![[Snipaste_2026-03-14_23-48-32.jpg|684]]&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;strong&gt;分辨率&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;像素&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;H264 典型码率范围&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;H265典型码率范围(比H264降低40%-50%)&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;应用场景&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;数据来源&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;3840×2160（4K）&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;829万&lt;/td&gt;&#xA;          &lt;td&gt;10-12 Mbps&lt;/td&gt;&#xA;          &lt;td&gt;5-8Mbps&lt;/td&gt;&#xA;          &lt;td&gt;超高清监控、专业视频制作&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;2560×1440（2K）&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;368万&lt;/td&gt;&#xA;          &lt;td&gt;6-10 Mbps&lt;/td&gt;&#xA;          &lt;td&gt;3-5Mbps&lt;/td&gt;&#xA;          &lt;td&gt;高画质流媒体、安防监控&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;1920×1080（FHD）&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;207万&lt;/td&gt;&#xA;          &lt;td&gt;4-6 Mbps&lt;/td&gt;&#xA;          &lt;td&gt;2-3Mbps&lt;/td&gt;&#xA;          &lt;td&gt;蓝光视频、视频会议&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;1280×720（HD）&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;92万&lt;/td&gt;&#xA;          &lt;td&gt;2-4 Mbps&lt;/td&gt;&#xA;          &lt;td&gt;1-2Mbps&lt;/td&gt;&#xA;          &lt;td&gt;网络直播、移动端播放&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;704×576（D1）&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;40万&lt;/td&gt;&#xA;          &lt;td&gt;0.5-1 Mbps&lt;/td&gt;&#xA;          &lt;td&gt;0.5-1Mbps&lt;/td&gt;&#xA;          &lt;td&gt;传统监控、标清传输&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;H264 编码帧常规大小: GOP 50下：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;常规I帧一帧大小1024字节到1518字节&lt;/li&gt;&#xA;&lt;li&gt;常规一帧P帧大小128字节到256字节&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;音频常规码率&#34;&gt;音频常规码率&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;格式&lt;/th&gt;&#xA;          &lt;th&gt;码率范围（kbps）&lt;/th&gt;&#xA;          &lt;th&gt;特点与应用场景&lt;/th&gt;&#xA;          &lt;th&gt;来源&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;MP3&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;32–320&lt;/td&gt;&#xA;          &lt;td&gt;普及率高，128kbps为流媒体标准音质&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;AAC&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;24–384&lt;/td&gt;&#xA;          &lt;td&gt;效率优于MP3，96kbps即接近CD音质&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;WAV&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;1411+&lt;/td&gt;&#xA;          &lt;td&gt;未压缩，CD级无损音质&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;FLAC&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;800–2500&lt;/td&gt;&#xA;          &lt;td&gt;无损压缩，保留原始细节&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;WMA&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;128–320&lt;/td&gt;&#xA;          &lt;td&gt;微软格式，适合低带宽环境&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;APE&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;700–1411&lt;/td&gt;&#xA;          &lt;td&gt;无损压缩，体积较大&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;44.1kHZ 下 每帧数据约23.22ms&#xA;&lt;ul&gt;&#xA;&lt;li&gt;PCM 原始数据 =位深* 声道数 * 采样精度  约  4096字节&lt;/li&gt;&#xA;&lt;li&gt;G.711 数据约2048字节（典型压缩倍速2倍）&lt;/li&gt;&#xA;&lt;li&gt;AAC 一帧数据：根据质量分别位 46字节-185字节，到240字节-400字节 （典型压缩倍速 20-50倍）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;qos&#34;&gt;QOS&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;延迟 (Latency)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>主流流媒体框架</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/%E4%B8%BB%E6%B5%81%E6%B5%81%E5%AA%92%E4%BD%93%E6%A1%86%E6%9E%B6/</guid>
+      <description>&lt;h2 id=&#34;播放器&#34;&gt;播放器：&lt;/h2&gt;&#xA;&lt;h3 id=&#34;jessibuca&#34;&gt;Jessibuca&lt;/h3&gt;&#xA;&lt;h3 id=&#34;ffmpeg&#34;&gt;ffmpeg&lt;/h3&gt;&#xA;&lt;h2 id=&#34;流媒体&#34;&gt;流媒体：&lt;/h2&gt;&#xA;&lt;h3 id=&#34;zlm&#34;&gt;ZLM&lt;/h3&gt;&#xA;&lt;h3 id=&#34;srs&#34;&gt;SRS&lt;/h3&gt;&#xA;&lt;h3 id=&#34;mediasoap&#34;&gt;MediaSoap&lt;/h3&gt;&#xA;&lt;h3 id=&#34;ffmpeg-1&#34;&gt;ffmpeg&lt;/h3&gt;&#xA;&lt;h2 id=&#34;编解码&#34;&gt;编解码&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ffmpeg-2&#34;&gt;ffmpeg&lt;/h3&gt;&#xA;&lt;h2 id=&#34;ai&#34;&gt;AI&lt;/h2&gt;&#xA;&lt;h3 id=&#34;yolo&#34;&gt;YOLO&lt;/h3&gt;&#xA;&lt;h3 id=&#34;opencv&#34;&gt;opencv&lt;/h3&gt;&#xA;&lt;h2 id=&#34;渲染&#34;&gt;渲染&lt;/h2&gt;&#xA;&lt;h3 id=&#34;vlkan&#34;&gt;vlkan&lt;/h3&gt;&#xA;&lt;h3 id=&#34;opengl&#34;&gt;opengl&lt;/h3&gt;&#xA;&lt;h3 id=&#34;d3d&#34;&gt;D3D&lt;/h3&gt;</description>
+    </item>
+  </channel>
+</rss>

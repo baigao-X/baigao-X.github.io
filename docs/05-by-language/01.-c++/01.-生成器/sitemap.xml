@@ -1,1 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/01.-cmake/</loc><lastmod>2026-03-18T00:00:14+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/</loc><lastmod>2026-03-18T00:00:14+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/</loc><lastmod>2026-03-18T00:00:14+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/configure/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/jamfile/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/01.-cmake/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/01.-cmake/%E7%8E%B0%E4%BB%A3cmake%E7%9A%84%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/%E8%AF%AD%E6%B3%95/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/%E6%88%90%E6%9E%9C%E7%89%A9%E6%96%87%E4%BB%B6/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/%E7%AC%A6%E5%8F%B7%E4%B8%8E%E9%93%BE%E6%8E%A5/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/%E5%B7%A5%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/01.-cmake/</loc>
+      <lastmod>2026-03-18T00:00:14+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/</loc>
+      <lastmod>2026-03-18T00:00:14+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/05-by-language/01.-c++/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/</loc>
+      <lastmod>2026-03-18T00:00:14+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/configure/</loc>
+      <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/jamfile/</loc>
+      <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/01.-cmake/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%85%8D%E7%BD%AE/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/01.-cmake/%E7%8E%B0%E4%BB%A3cmake%E7%9A%84%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/03.-gn/%E8%AF%AD%E6%B3%95/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/%E6%88%90%E6%9E%9C%E7%89%A9%E6%96%87%E4%BB%B6/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/%E7%AC%A6%E5%8F%B7%E4%B8%8E%E9%93%BE%E6%8E%A5/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/05-by-language/01.-c-/01.-%E7%94%9F%E6%88%90%E5%99%A8/02.-visual-studio/%E5%B7%A5%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      </urlset>

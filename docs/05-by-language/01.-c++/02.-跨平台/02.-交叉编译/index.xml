@@ -1,23 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>交叉编译 on My Docs</title><link>/docs/05-by-language/01.-c++/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/</link><description>Recent content in 交叉编译 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/05-by-language/01.-c++/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/index.xml" rel="self" type="application/rss+xml"/><item><title>交叉编译器的命名规则</title><link>/docs/05-by-language/01.-c-/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/01.-c-/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/</guid><description>&lt;h1 id="1-命名规则"&gt;1. 命名规则&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;arch [-vendor] [-os] [-(gnu)[eabi|abi]] [-gcc]&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;arch&lt;/code&gt; - 体系架构，如arm，mips&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;vendor&lt;/code&gt; - 工具链提供商&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;os&lt;/code&gt; - 目标操作系统&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;abi|eabi&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;abi&lt;/code&gt; - (Application Binary Interface for the ARM Architecture) 二进制应用程序接口。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;eabi&lt;/code&gt; - 嵌入式应用二进制接口(Embedded Application Binary Interface). 指定了文件格式、数据类型和寄存器使用标准约定。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="111-notice"&gt;1.1.1. NOTICE：&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;没有vendor时，用nonedaiti&lt;/li&gt;
-&lt;li&gt;没有os支持是，也用none代替&lt;/li&gt;
-&lt;li&gt;同时没有vendor和os支持时，只用一个none代替即可&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="2-实例"&gt;2. 实例&lt;/h1&gt;
-&lt;h2 id="21-arm-none-eabi-gcc"&gt;2.1. arm-none-eabi-gcc&lt;/h2&gt;
-&lt;p&gt;用于编译ARM架构的逻辑操作系统（适用于编译ARM的boot、kernel,不使用编译Linux应用,因为没有操作系统支持）。
-一般适用于ARM7、Cortex-M、Cortex-R架构的芯片使用。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>交叉编译 on My Docs</title>
+    <link>http://localhost:1313/docs/05-by-language/01.-c&#43;&#43;/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/</link>
+    <description>Recent content in 交叉编译 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/05-by-language/01.-c++/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>交叉编译器的命名规则</title>
+      <link>http://localhost:1313/docs/05-by-language/01.-c-/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/05-by-language/01.-c-/02.-%E8%B7%A8%E5%B9%B3%E5%8F%B0/02.-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/</guid>
+      <description>&lt;h1 id=&#34;1-命名规则&#34;&gt;1. 命名规则&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;code&gt;arch [-vendor] [-os] [-(gnu)[eabi|abi]] [-gcc]&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;arch&lt;/code&gt;  - 体系架构，如arm，mips&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;vendor&lt;/code&gt; - 工具链提供商&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;os&lt;/code&gt; - 目标操作系统&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;abi|eabi&lt;/code&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;abi&lt;/code&gt; - (Application Binary Interface for the ARM Architecture) 二进制应用程序接口。&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;eabi&lt;/code&gt; - 嵌入式应用二进制接口(Embedded Application Binary Interface). 指定了文件格式、数据类型和寄存器使用标准约定。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;111-notice&#34;&gt;1.1.1. NOTICE：&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;没有vendor时，用nonedaiti&lt;/li&gt;&#xA;&lt;li&gt;没有os支持是，也用none代替&lt;/li&gt;&#xA;&lt;li&gt;同时没有vendor和os支持时，只用一个none代替即可&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;2-实例&#34;&gt;2. 实例&lt;/h1&gt;&#xA;&lt;h2 id=&#34;21-arm-none-eabi-gcc&#34;&gt;2.1. arm-none-eabi-gcc&lt;/h2&gt;&#xA;&lt;p&gt;用于编译ARM架构的逻辑操作系统（适用于编译ARM的boot、kernel,不使用编译Linux应用,因为没有操作系统支持）。&#xA;一般适用于ARM7、Cortex-M、Cortex-R架构的芯片使用。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

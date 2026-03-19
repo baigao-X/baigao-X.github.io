@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>流媒体 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/</link><description>Recent content in 流媒体 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/index.xml" rel="self" type="application/rss+xml"/><item><title>协议总览</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/</guid><description>&lt;ul&gt;
-&lt;li&gt;GameStream Nivida ：
-&lt;ul&gt;
-&lt;li&gt;Sunshine 一个开源的游戏流媒体服务器&lt;/li&gt;
-&lt;li&gt;MoonLight（之前称为LimeLight） 一个开源的NVIDIA GameStream 客户端&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;NDI (Network Device Interface) , NewTek公司, 局域网内适用，可以达到帧级别的延时&lt;/li&gt;
-&lt;li&gt;ZeroTier ZeroTier是一种基于软件定义的网络技术，提供在全球范围内创建虚拟网络的能力。这些虚拟网络允许设备无视物理位置连接在同一个网络中。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="1-基于flv封装的"&gt;1. 基于FLV封装的&lt;/h1&gt;
-&lt;h2 id="11-rtmp"&gt;1.1. RTMP&lt;/h2&gt;
-&lt;p&gt;基于TCP
-基于FLV封装，一般用于直播源推流，直播内流数据传递
-既可以推流，也可以拉流
-rtmp://
-因为浏览器摈弃了Flash播放器，所以没法做浏览器观看
-封装音视频数据强制切片，每个包不会太大，失败重发成本不大，有一定弱网抵抗能力，但是服务端需要合并切片，会加大CPU压力
-低延迟(1-3s)&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>流媒体 on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/</link>
+    <description>Recent content in 流媒体 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>协议总览</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/%E5%8D%8F%E8%AE%AE%E6%80%BB%E8%A7%88/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;GameStream Nivida ：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sunshine 一个开源的游戏流媒体服务器&lt;/li&gt;&#xA;&lt;li&gt;MoonLight（之前称为LimeLight） 一个开源的NVIDIA GameStream 客户端&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;NDI (Network Device Interface) , NewTek公司, 局域网内适用，可以达到帧级别的延时&lt;/li&gt;&#xA;&lt;li&gt;ZeroTier ZeroTier是一种基于软件定义的网络技术，提供在全球范围内创建虚拟网络的能力。这些虚拟网络允许设备无视物理位置连接在同一个网络中。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;1-基于flv封装的&#34;&gt;1. 基于FLV封装的&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-rtmp&#34;&gt;1.1. RTMP&lt;/h2&gt;&#xA;&lt;p&gt;基于TCP&#xA;基于FLV封装，一般用于直播源推流，直播内流数据传递&#xA;既可以推流，也可以拉流&#xA;rtmp://&#xA;因为浏览器摈弃了Flash播放器，所以没法做浏览器观看&#xA;封装音视频数据强制切片，每个包不会太大，失败重发成本不大，有一定弱网抵抗能力，但是服务端需要合并切片，会加大CPU压力&#xA;低延迟(1-3s)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

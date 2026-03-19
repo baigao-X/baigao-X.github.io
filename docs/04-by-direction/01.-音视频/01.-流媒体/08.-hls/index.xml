@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HLS on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/</link><description>Recent content in HLS on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/index.xml" rel="self" type="application/rss+xml"/><item><title>Hls（M3U8） 协议解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p&gt;&lt;strong&gt;HTTP Live Streaming&lt;/strong&gt;
-由苹果公司推出的基于HTTP的能自适应的流媒体传输协议， 支持直播和点播，在Android、iOS常用。
-本质是服务端将视频流切成一个个小的媒体文件（一般是ts文件或者fmp4文件）。然后将这些媒体文件的播放地址按照播放顺序罗列到一个索引文件中。然后使用http下载的方式下载。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;标准文档： https://datatracker.ietf.org/doc/html/draft-pantos-http-live-streaming-23
-与MPEG-DASH国际标准大致相同，只是细节存在差异&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="1-m3u8文件"&gt;1. m3u8文件&lt;/h1&gt;
-&lt;p&gt;即索引文件。&lt;/p&gt;
-&lt;h2 id="11-格式说明"&gt;1.1. 格式说明&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;必须以 UTF-8[RFC-3629]编码，不能包含BOM(Byte Order Mark)字节序。不能包含 UTF-8 控制字符（U+0000 到 U+001F 和 U+007F 至 U+009F)，CR (U+000D) 和 LF 除外(U+000A)。&lt;/li&gt;
-&lt;li&gt;每行内容只能是以下三种之一
-&lt;ul&gt;
-&lt;li&gt;URI&lt;/li&gt;
-&lt;li&gt;空行。除了明确指定的元素之外不能有空格的存在。&lt;/li&gt;
-&lt;li&gt;以#开头的字符串，表示注释或者标签。标签以#EXT开头，大小写敏感。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="111-属性列表"&gt;1.1.1. 属性列表&lt;/h3&gt;
-&lt;p&gt;某些特定的标签的值是一个属性列表。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HLS on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/</link>
+    <description>Recent content in HLS on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hls（M3U8） 协议解读</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/08.-hls/hlsm3u8-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;HTTP Live Streaming&lt;/strong&gt;&#xA;由苹果公司推出的基于HTTP的能自适应的流媒体传输协议， 支持直播和点播，在Android、iOS常用。&#xA;本质是服务端将视频流切成一个个小的媒体文件（一般是ts文件或者fmp4文件）。然后将这些媒体文件的播放地址按照播放顺序罗列到一个索引文件中。然后使用http下载的方式下载。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;标准文档： https://datatracker.ietf.org/doc/html/draft-pantos-http-live-streaming-23&#xA;与MPEG-DASH国际标准大致相同，只是细节存在差异&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;1-m3u8文件&#34;&gt;1. m3u8文件&lt;/h1&gt;&#xA;&lt;p&gt;即索引文件。&lt;/p&gt;&#xA;&lt;h2 id=&#34;11-格式说明&#34;&gt;1.1. 格式说明&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;必须以 UTF-8[RFC-3629]编码，不能包含BOM(Byte Order Mark)字节序。不能包含 UTF-8 控制字符（U+0000 到 U+001F 和 U+007F 至 U+009F)，CR (U+000D) 和 LF 除外(U+000A)。&lt;/li&gt;&#xA;&lt;li&gt;每行内容只能是以下三种之一&#xA;&lt;ul&gt;&#xA;&lt;li&gt;URI&lt;/li&gt;&#xA;&lt;li&gt;空行。除了明确指定的元素之外不能有空格的存在。&lt;/li&gt;&#xA;&lt;li&gt;以#开头的字符串，表示注释或者标签。标签以#EXT开头，大小写敏感。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;111-属性列表&#34;&gt;1.1.1. 属性列表&lt;/h3&gt;&#xA;&lt;p&gt;某些特定的标签的值是一个属性列表。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

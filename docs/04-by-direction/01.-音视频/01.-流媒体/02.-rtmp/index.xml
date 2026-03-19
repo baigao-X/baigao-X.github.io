@@ -1,28 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RTMP on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/</link><description>Recent content in RTMP on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/index.xml" rel="self" type="application/rss+xml"/><item><title>Rtmp 协议解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p&gt;Real Time Message Protocol(实时信息传输协议)
-默认TCP::1935
-一个会话通过一条socket通道通信。
-RTSP 将数据格式化为RTMP Message，实际传输时会将Message划分为带MessageID的chunk发送。&lt;/p&gt;
-&lt;h1 id="1-时序图"&gt;1. 时序图&lt;/h1&gt;
-&lt;pre class="mermaid"&gt;
- 
-sequenceDiagram
-
-Client -&amp;gt;&amp;gt; Server: C0,C1
-Server -&amp;gt;&amp;gt; Client: S0,S1,S2
-Client -&amp;gt;&amp;gt; Server: C2
-
-Client -&amp;gt;&amp;gt; Server: connect
-Server -&amp;gt;&amp;gt; Client: NetConnection.Connect.Success
-
-Client -&amp;gt;&amp;gt; Server: createStream
-Server -&amp;gt;&amp;gt; Client: createSream response
-
-Client -&amp;gt;&amp;gt; Server: play
-Server -&amp;gt;&amp;gt; Client: SetChunkSize
-Server -&amp;gt;&amp;gt; Client: StreamBegin
-Server -&amp;gt;&amp;gt; Client: NetStream.Play.Start
-Server -&amp;gt;&amp;gt; Client: Audio or Video Data
-Server -) Client: NetStream.Play.Stop
-&lt;/pre&gt;
-
-&lt;p&gt;协议规定播放流媒体的两个前提步骤：&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RTMP on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/</link>
+    <description>Recent content in RTMP on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rtmp 协议解读</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/02.-rtmp/rtmp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;p&gt;Real Time Message Protocol(实时信息传输协议)&#xA;默认TCP::1935&#xA;一个会话通过一条socket通道通信。&#xA;RTSP 将数据格式化为RTMP Message，实际传输时会将Message划分为带MessageID的chunk发送。&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-时序图&#34;&gt;1. 时序图&lt;/h1&gt;&#xA;&lt;pre class=&#34;mermaid&#34;&gt;&#xD;&#xA;  &#xA;sequenceDiagram&#xA;&#xA;Client -&amp;gt;&amp;gt; Server: C0,C1&#xA;Server -&amp;gt;&amp;gt; Client: S0,S1,S2&#xA;Client -&amp;gt;&amp;gt; Server: C2&#xA;&#xA;Client -&amp;gt;&amp;gt; Server: connect&#xA;Server -&amp;gt;&amp;gt; Client: NetConnection.Connect.Success&#xA;&#xA;Client -&amp;gt;&amp;gt; Server: createStream&#xA;Server -&amp;gt;&amp;gt; Client: createSream response&#xA;&#xA;Client -&amp;gt;&amp;gt; Server: play&#xA;Server -&amp;gt;&amp;gt; Client: SetChunkSize&#xA;Server -&amp;gt;&amp;gt; Client: StreamBegin&#xA;Server -&amp;gt;&amp;gt; Client: NetStream.Play.Start&#xA;Server -&amp;gt;&amp;gt; Client: Audio or Video Data&#xA;Server -) Client: NetStream.Play.Stop&#xD;&#xA;&lt;/pre&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;协议规定播放流媒体的两个前提步骤：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

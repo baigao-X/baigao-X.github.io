@@ -1,59 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UE on My Docs</title><link>/docs/04-by-direction/05.-ue/</link><description>Recent content in UE on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/05.-ue/index.xml" rel="self" type="application/rss+xml"/><item><title>开发关键技术</title><link>/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</guid><description>&lt;h2 id="key"&gt;key&lt;/h2&gt;
-&lt;h3 id="ur开发"&gt;UR开发&lt;/h3&gt;
-&lt;h4 id="如何连接串流"&gt;如何连接串流&lt;/h4&gt;
-&lt;h4 id="playmode模式进行操纵手柄控制"&gt;PlayMode模式进行操纵手柄控制&lt;/h4&gt;
-&lt;h3 id="视频流控制"&gt;视频流控制&lt;/h3&gt;
-&lt;h4 id="invideo-插件支持拉取一个rtsp流并显示"&gt;InVideo 插件支持拉取一个rtsp流并显示&lt;/h4&gt;
-&lt;h4 id="ffmpeg-封装拉流创建纹理"&gt;ffmpeg 封装拉流创建纹理&lt;/h4&gt;
-&lt;h5 id="ffmpeg-拉流解码"&gt;ffmpeg 拉流解码&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;创建Windwos共享内存 (&lt;em&gt;通过&lt;code&gt;CreateFileMapping&lt;/code&gt;和&lt;code&gt;MapViewOfFile&lt;/code&gt;实现跨进程数据传输&lt;/em&gt;)
-&lt;ul&gt;
-&lt;li&gt;DX11/12纹理跨进程共享 提升传输效率&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DXGI共享表面&lt;/strong&gt;- 结合DXGI接口（如&lt;code&gt;IDXGISurface&lt;/code&gt;）实现跨进程纹理共享，需与上述DirectX机制配&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;拉流解码H264-&amp;gt;YUV或RGB具体格式见UE要求&lt;/li&gt;
-&lt;li&gt;通过sws_scale函数转换为RGB或RGBA以适应UE纹理标准&lt;/li&gt;
-&lt;li&gt;数据放置到共享内存（注意帧同步）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="ue-纹理显示"&gt;UE 纹理显示&lt;/h5&gt;
-&lt;h6 id="纹理创建和内存映射"&gt;纹理创建和内存映射&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;创建&lt;strong&gt;UTexture2D对象&lt;/strong&gt;，并分配内存&lt;/li&gt;
-&lt;li&gt;创建Windwos共享内存 (&lt;em&gt;通过&lt;code&gt;CreateFileMapping&lt;/code&gt;和&lt;code&gt;MapViewOfFile&lt;/code&gt;实现跨进程数据传输&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;UE内存接口锁定纹理内存并写入数据(注意帧同步)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id="纹理渲染那和显示"&gt;纹理渲染那和显示&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;材质绑定
-&lt;ul&gt;
-&lt;li&gt;创建UE材质，将动态纹理作为TextureSample节点输入&lt;/li&gt;
-&lt;li&gt;在蓝图中通过SetTextureParameter Value 动态更新纹理材质纹理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;渲染到UI或3D对象
-&lt;ul&gt;
-&lt;li&gt;UI显示:将材质应用于UImage空间，通过Slate或UMG系统渲染到屏幕&lt;/li&gt;
-&lt;li&gt;3D对象显示： 将材质赋给StaticMesh或Actor ，实现视频在场景中的动态播放&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="调试"&gt;调试&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;调试工具​&lt;/strong&gt;​：使用UE的&lt;code&gt;RenderDoc&lt;/code&gt;插件检查纹理数据是否正确写入。&lt;/p&gt;</description></item><item><title>主流插件</title><link>/docs/04-by-direction/05.-ue/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/05.-ue/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/</guid><description>&lt;p&gt;Pixel Streaming： &lt;strong&gt;像素流送插件&lt;/strong&gt;：
-&lt;strong&gt;功能​&lt;/strong&gt;​：UE内置的流媒体解决方案，通过WebRTC协议将渲染内容实时传输到浏览器，支持交互式操作（键盘/鼠标/触控输入）。&lt;/p&gt;
-&lt;p&gt;VLC 插件： VLC框架支持RTMP/HTTP/RTSP协议
-&lt;code&gt;Media Framework&lt;/code&gt;插件解析视频帧
- ​&lt;strong&gt;​LarkXR 实时云渲染平台​&lt;/strong&gt;​
-​&lt;strong&gt;​InVideo 插件​&lt;/strong&gt;： 专注于RTSP/RTP监控视频流的集成，支持H.264/H.265编码及5.1环绕声​
-https://github.com/inveta/InVideo
-基于opencv库实现&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h4 id="ffmpegmedia插件"&gt;&lt;strong&gt;FFMPEGMedia插件&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;https://github.com/bakjos/FFMPEGMedia
-UnrealFFmpeg&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UE on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/05.-ue/</link>
+    <description>Recent content in UE on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/05.-ue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发关键技术</title>
+      <link>http://localhost:1313/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</guid>
+      <description>&lt;h2 id=&#34;key&#34;&gt;key&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ur开发&#34;&gt;UR开发&lt;/h3&gt;&#xA;&lt;h4 id=&#34;如何连接串流&#34;&gt;如何连接串流&lt;/h4&gt;&#xA;&lt;h4 id=&#34;playmode模式进行操纵手柄控制&#34;&gt;PlayMode模式进行操纵手柄控制&lt;/h4&gt;&#xA;&lt;h3 id=&#34;视频流控制&#34;&gt;视频流控制&lt;/h3&gt;&#xA;&lt;h4 id=&#34;invideo-插件支持拉取一个rtsp流并显示&#34;&gt;InVideo 插件支持拉取一个rtsp流并显示&lt;/h4&gt;&#xA;&lt;h4 id=&#34;ffmpeg-封装拉流创建纹理&#34;&gt;ffmpeg 封装拉流创建纹理&lt;/h4&gt;&#xA;&lt;h5 id=&#34;ffmpeg-拉流解码&#34;&gt;ffmpeg 拉流解码&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;创建Windwos共享内存 (&lt;em&gt;通过&lt;code&gt;CreateFileMapping&lt;/code&gt;和&lt;code&gt;MapViewOfFile&lt;/code&gt;实现跨进程数据传输&lt;/em&gt;)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;DX11/12纹理跨进程共享 提升传输效率&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;DXGI共享表面&lt;/strong&gt;- 结合DXGI接口（如&lt;code&gt;IDXGISurface&lt;/code&gt;）实现跨进程纹理共享，需与上述DirectX机制配&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;拉流解码H264-&amp;gt;YUV或RGB具体格式见UE要求&lt;/li&gt;&#xA;&lt;li&gt;通过sws_scale函数转换为RGB或RGBA以适应UE纹理标准&lt;/li&gt;&#xA;&lt;li&gt;数据放置到共享内存（注意帧同步）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;ue-纹理显示&#34;&gt;UE 纹理显示&lt;/h5&gt;&#xA;&lt;h6 id=&#34;纹理创建和内存映射&#34;&gt;纹理创建和内存映射&lt;/h6&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;创建&lt;strong&gt;UTexture2D对象&lt;/strong&gt;，并分配内存&lt;/li&gt;&#xA;&lt;li&gt;创建Windwos共享内存 (&lt;em&gt;通过&lt;code&gt;CreateFileMapping&lt;/code&gt;和&lt;code&gt;MapViewOfFile&lt;/code&gt;实现跨进程数据传输&lt;/em&gt;)&lt;/li&gt;&#xA;&lt;li&gt;UE内存接口锁定纹理内存并写入数据(注意帧同步)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h6 id=&#34;纹理渲染那和显示&#34;&gt;纹理渲染那和显示&lt;/h6&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;材质绑定&#xA;&lt;ul&gt;&#xA;&lt;li&gt;创建UE材质，将动态纹理作为TextureSample节点输入&lt;/li&gt;&#xA;&lt;li&gt;在蓝图中通过SetTextureParameter Value 动态更新纹理材质纹理&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;渲染到UI或3D对象&#xA;&lt;ul&gt;&#xA;&lt;li&gt;UI显示:将材质应用于UImage空间，通过Slate或UMG系统渲染到屏幕&lt;/li&gt;&#xA;&lt;li&gt;3D对象显示： 将材质赋给StaticMesh或Actor ，实现视频在场景中的动态播放&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;调试&#34;&gt;调试&lt;/h5&gt;&#xA;&lt;p&gt;&lt;strong&gt;调试工具​&lt;/strong&gt;​：使用UE的&lt;code&gt;RenderDoc&lt;/code&gt;插件检查纹理数据是否正确写入。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>主流插件</title>
+      <link>http://localhost:1313/docs/04-by-direction/05.-ue/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/05.-ue/%E4%B8%BB%E6%B5%81%E6%8F%92%E4%BB%B6/</guid>
+      <description>&lt;p&gt;Pixel Streaming：  &lt;strong&gt;像素流送插件&lt;/strong&gt;：&#xA;&lt;strong&gt;功能​&lt;/strong&gt;​：UE内置的流媒体解决方案，通过WebRTC协议将渲染内容实时传输到浏览器，支持交互式操作（键盘/鼠标/触控输入）。&lt;/p&gt;&#xA;&lt;p&gt;VLC 插件： VLC框架支持RTMP/HTTP/RTSP协议&#xA;&lt;code&gt;Media Framework&lt;/code&gt;插件解析视频帧&#xA; ​&lt;strong&gt;​LarkXR 实时云渲染平台​&lt;/strong&gt;​&#xA;​&lt;strong&gt;​InVideo 插件​&lt;/strong&gt;： 专注于RTSP/RTP监控视频流的集成，支持H.264/H.265编码及5.1环绕声​&#xA;https://github.com/inveta/InVideo&#xA;基于opencv库实现&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;h4 id=&#34;ffmpegmedia插件&#34;&gt;&lt;strong&gt;FFMPEGMedia插件&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;https://github.com/bakjos/FFMPEGMedia&#xA;UnrealFFmpeg&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

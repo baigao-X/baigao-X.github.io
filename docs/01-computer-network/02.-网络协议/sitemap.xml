@@ -1,1 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/</loc><lastmod>2026-03-18T00:00:14+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/</loc><lastmod>2026-03-18T00:00:14+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ntp%E5%8D%8F%E8%AE%AE/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/kcp/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/ngtcp2/</loc><lastmod>2026-03-17T00:27:27+08:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/</loc>
+      <lastmod>2026-03-18T00:00:14+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/</loc>
+      <lastmod>2026-03-18T00:00:14+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ntp%E5%8D%8F%E8%AE%AE/</loc>
+      <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%87%A0%E7%A7%8Dudp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94/</loc>
+      <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E7%BD%91%E7%BB%9C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/</loc>
+      <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/02.-kcp/kcp/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/03.quic/ngtcp2/</loc>
+        <lastmod>2026-03-17T00:27:27+08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      </urlset>

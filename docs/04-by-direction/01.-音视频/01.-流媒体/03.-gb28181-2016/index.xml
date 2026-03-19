@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GB28181-2016 on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/</link><description>Recent content in GB28181-2016 on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/index.xml" rel="self" type="application/rss+xml"/><item><title>Gb28181 Rtp 协议解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid><description>&lt;p&gt;1)、视频关键帧的封装 &lt;code&gt;RTP + PS header + PS system header + PS system Map + PES header +h264 data&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;2)、视频非关键帧的封装 &lt;code&gt;RTP +PS header + PES header + h264 data&lt;/code&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GB28181-2016 on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/</link>
+    <description>Recent content in GB28181-2016 on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gb28181 Rtp 协议解读</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/03.-gb28181-2016/gb28181-rtp-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;p&gt;1)、视频关键帧的封装 &lt;code&gt;RTP + PS header + PS system header + PS system Map + PES header +h264 data&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;2)、视频非关键帧的封装 &lt;code&gt;RTP +PS header + PES header + h264 data&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

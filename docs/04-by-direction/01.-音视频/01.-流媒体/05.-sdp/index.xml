@@ -1,27 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SDP on My Docs</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/</link><description>Recent content in SDP on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/index.xml" rel="self" type="application/rss+xml"/><item><title>Sdp协议解读</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid><description>&lt;pre&gt;&lt;code&gt;SDP（Session Description Protocol）全称是会话描述协议。主要用于两个会话实体之间的媒体协商。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id="概述"&gt;概述&lt;/h2&gt;
-&lt;p&gt;标准SDP结构由一个&lt;strong&gt;会话级描述&lt;/strong&gt;和多个&lt;strong&gt;媒体级描述&lt;/strong&gt;组成，通常SDP中都会包含一个$音频媒体$描述和一
-$视频媒体$描述。&lt;/p&gt;
-&lt;p&gt;每条描述信息都是 &lt;strong&gt;&amp;lt;type&amp;gt; = &amp;lt;value&amp;gt;&lt;/strong&gt; 的形式(&amp;quot;=&amp;quot; 两侧不允许有空格存在。)。其中，&amp;lt;type&amp;gt;是描述的目标，它由单个字符构成；&amp;lt;value&amp;gt;是对&amp;lt;\type&amp;gt;的解释或约束。会话和媒体都有各自的&amp;lt;type&amp;gt;，另外还有一些公共的&amp;lt;type&amp;gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;会话级&lt;/strong&gt; 字段&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;pre tabindex="0"&gt;&lt;code class="language-sdp" data-lang="sdp"&gt;v=(protocol version,协议版本)
-o=(owener/creator and session identifier,会话的创建者)
-s=(session name,会话名称)
-t=(time the session is active,会话存活时间)&lt;/code&gt;&lt;/pre&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&amp;lt;network type&amp;gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SDP on My Docs</title>
+    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/</link>
+    <description>Recent content in SDP on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sdp协议解读</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/05.-sdp/sdp%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;SDP（Session Description Protocol）全称是会话描述协议。主要用于两个会话实体之间的媒体协商。&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;&#xA;&lt;p&gt;标准SDP结构由一个&lt;strong&gt;会话级描述&lt;/strong&gt;和多个&lt;strong&gt;媒体级描述&lt;/strong&gt;组成，通常SDP中都会包含一个$音频媒体$描述和一&#xA;$视频媒体$描述。&lt;/p&gt;&#xA;&lt;p&gt;每条描述信息都是 &lt;strong&gt;&amp;lt;type&amp;gt; = &amp;lt;value&amp;gt;&lt;/strong&gt; 的形式(&amp;quot;=&amp;quot; 两侧不允许有空格存在。)。其中，&amp;lt;type&amp;gt;是描述的目标，它由单个字符构成；&amp;lt;value&amp;gt;是对&amp;lt;\type&amp;gt;的解释或约束。会话和媒体都有各自的&amp;lt;type&amp;gt;，另外还有一些公共的&amp;lt;type&amp;gt;。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;会话级&lt;/strong&gt; 字段&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-sdp&#34; data-lang=&#34;sdp&#34;&gt;v=(protocol version,协议版本)&#xA;o=(owener/creator and session identifier,会话的创建者)&#xA;s=(session name,会话名称)&#xA;t=(time the session is active,会话存活时间)&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&amp;lt;network type&amp;gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

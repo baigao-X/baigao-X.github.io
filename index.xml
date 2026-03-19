@@ -1,241 +1,83 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Baigao's Blog on My Docs</title><link>/</link><description>Recent content in Baigao's Blog on My Docs</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 Baigao</copyright><lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Example Post</title><link>/blog/example-post/</link><pubDate>Mon, 16 Feb 2026 16:31:32 +0100</pubDate><guid>/blog/example-post/</guid><description>Use blog posts to communicate product updates and new features in a clear and consistent format.</description></item><item><title>Guides</title><link>/docs/guides/</link><pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate><guid>/docs/guides/</guid><description/></item><item><title>00 Markdown基础语法</title><link>/docs/05-by-language/02.-markdown/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/02.-markdown/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid><description>&lt;h2 id="表格"&gt;表格&lt;/h2&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| 表头 | 表头 |
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| ---- | ---- |
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| 单元格 | 单元格 |
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| 单元格 | 单元格 |&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;</description></item><item><title>01 . Gmock 遇到的问题与解决方案</title><link>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid><description>&lt;h2 id="1--对于异步回调的测试"&gt;1. 对于异步回调的测试&lt;/h2&gt;
-&lt;p&gt;可以在mock中改为同步的方法，用于测试回调接口的正常调用&lt;/p&gt;
-&lt;h2 id="2-无法mock-static-类型的函数"&gt;2. 无法mock static 类型的函数&lt;/h2&gt;
-&lt;p&gt;google是这么回答的： 如果你需要mock一个静态函数，说明你的程序模块过于紧耦合(灵活性不够、重用性不够、可测试性不够)。
-可采用的方法是定一个小接口，然后通过这个接口来调用static函数&lt;/p&gt;
-&lt;h2 id="3-无法mock非虚函数"&gt;3. 无法mock非虚函数&lt;/h2&gt;
-&lt;h3 id="方案一-模板类"&gt;方案一： 模板类&lt;/h3&gt;
-&lt;p&gt;
-
-&lt;a class="link link--text" href="https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md" rel="external"&gt;官方示例 &lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;缺点： 需要改造生产代码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="方案二"&gt;方案二：&lt;/h3&gt;
-&lt;p&gt;重新定义一个mock类B,该类不继承被测类，但是在mock类B中，需要实现和A中同样的函数接口。在测试代码中通过mock类B对象，来达到测试目的。
--缺点： 需要维护一套专门的测试代码。&lt;/p&gt;</description></item><item><title>01 工具集合</title><link>/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</guid><description>&lt;h1 id="大模型列表"&gt;大模型列表&lt;/h1&gt;
-&lt;h2 id="llm"&gt;LLM&lt;/h2&gt;
-&lt;h3 id="gpt"&gt;GPT&lt;/h3&gt;
-&lt;p&gt;openai 开发的大语言模型&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;版本列表
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;GPT-3&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;175B&lt;/li&gt;
-&lt;li&gt;4096 token&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GPT-3.5&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;175B + 6B&lt;/li&gt;
-&lt;li&gt;4096 token&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GPT-4&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;1T-1.5T&lt;/li&gt;
-&lt;li&gt;8K-32K token&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GPT-4o&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="claude"&gt;Claude&lt;/h3&gt;
-&lt;p&gt;由&lt;strong&gt;Anthropic公司&lt;/strong&gt;创始团队来自OpenAI创建的LLM，&lt;/p&gt;</description></item><item><title>0X. 桥接模式</title><link>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</guid><description>&lt;h2 id="pimpl惯用法"&gt;Pimpl惯用法&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;pointer to implementation”（指向实现的指针）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;由于C++语言特性，如果对外开放一个类，即使是private成员，也需要声明在公有头文件中。
-使用该惯用法可以在公有接口中完全隐藏内部细节。支持将私有成员数据和方法，从.h转移到.cpp文件。&lt;/p&gt;
-&lt;pre class="mermaid"&gt;
- classDiagram
-
-
-class Interface {
-	- IMpl *impl //可以优化成智能指针
-	+ Function1() void
-}
-
-class Impl {
-	- int privateData
-	- privateFunctiont1() void
-}
-
-Interface &amp;#34;1&amp;#34; *-- &amp;#34;1&amp;#34; Impl : Composition
-&lt;/pre&gt;
-
-&lt;h3 id="优点"&gt;优点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;信息隐藏
-只显示需要的公有属性，让使用者更容易查看，同时降低了耦合，带来了更好的二进制兼容性&lt;/p&gt;</description></item><item><title>Aac</title><link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</guid><description>&lt;h2 id="01-概述"&gt;0.1. 概述&lt;/h2&gt;
-&lt;p&gt;AAC（Advanced Audio Coding），被认为是MP3的继任者，相对MP3有更高的压缩效率。
-由Fraunhofer IIS、杜比实验室、AT&amp;amp;T、Sony（索尼）等公司共同开发。
-1997年由MPEG正式宣布为国际标准，
-MPEG-2标准的第7部分-
-
-&lt;a class="link link--text" href="https://www.iso.org/standard/25040.html" rel="external"&gt;ISO/IEC 13818-7:1997&lt;/a&gt;。
-MPEG-4标准中，AAC音频流部分在
-
-&lt;a class="link link--text" href="https://www.iso.org/standard/76383.html" rel="external"&gt;ISO/IEC 14496-3 (subpart 4)&lt;/a&gt;中规定。&lt;/p&gt;
-&lt;h2 id="02-帧格式"&gt;0.2. 帧格式&lt;/h2&gt;
-&lt;p&gt;AAC音频格式有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ADIF(Audio Data Interchage Format)&lt;/code&gt;，音频数据交换格式：只有一个统一的头，必须得到所有数据后解码，适用于本地文件。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ADTS(Audio Data Transport Stream)&lt;/code&gt;，音视数据传输流：每一帧都有头信息，任意帧解码，适用于传输流。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="03-adts-格式"&gt;0.3. ADTS 格式&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20230712142111.png]]&lt;/p&gt;</description></item><item><title>Boot</title><link>/docs/03-os/02.-inux/boot/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/03-os/02.-inux/boot/</guid><description>&lt;pre&gt;&lt;code&gt;boot 使用的是as86汇编， 生成的是 16 位代码。 语法类似于 NASM、MASM
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start="0"&gt;
-&lt;li&gt;
-&lt;p&gt;CPU自动进入实模式，并从0xFFFF0地址开始执行程序代码(ROM-BIOS) BIOS执行硬件检测诊断后，将物理地址处初始化为中断向量&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;boot加载&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;boot程序大小512字节，放置在软盘映像文件的第一个扇区，&lt;/li&gt;
-&lt;li&gt;ROM BIOS 先按启动盘启动顺序依次查询第一个扇区，如果第一个扇区最后两个字节(即第510、511字节)为0x55AA，则代表该启动盘可以启动
-则将启动盘第一个扇区加载到物理地址0x7c00(31k)位置，然后从0x7c00开始运行。
-PS: 最早的个人PC芯片8088,搭配的操作系统是
-
-&lt;a class="link link--text" href="https://en.wikipedia.org/wiki/86-DOS" rel="external"&gt;86-DOS&lt;/a&gt;。这个操作系统需要的内存最少是32KB(0x0000~0x7FFFF),8088芯片本身需要占用&lt;code&gt;0x0000～0x03FF&lt;/code&gt;，用来保存
-
-&lt;a class="link link--text" href="https://en.wikipedia.org/wiki/BIOS_interrupt_call" rel="external"&gt;各种中断处理程序&lt;/a&gt;的储存位置。（主引导记录本身就是中断信号INT 19h的处理程序。）所以，内存只剩下&lt;code&gt;0x0400～0x7FFF&lt;/code&gt;可以使用。为了把尽量多的连续内存留给操作系统，主引导记录就被放到了内存地址的尾部。由于一个扇区是512字节，主引导记录本身也会产生数据，需要另外留出512字节保存。所以，它的预留位置就变成 &lt;code&gt;0x7FFF - 512 - 512 + 1 = 0x7C00&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;boot 加载kernel&lt;/p&gt;</description></item><item><title>Boot</title><link>/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/03-os/02.-inux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/</guid><description>&lt;h1 id="1-rom-bios"&gt;1. ROM BIOS&lt;/h1&gt;
-&lt;p&gt;会将引导扇区 bootsect加载到0x7C00，并从该地址开始运行&lt;/p&gt;
-&lt;h1 id="2-bootsects"&gt;2. bootsect.S&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;1.将自己搬移到0x90000地址
-2.将磁盘第二个扇区开始的4个扇区包含的setup模块代码加载到0x90200地址
-3.使用BIOS终端0x13获取磁盘当前引导盘参数
- 4.在屏幕中显示“Loading system”
- 5.将setup内存搬移到0x10000
- 6.确定根文件系统的设备号（root_dev,即引导块的508地址处）,设备号=(主设备号&amp;lt;&amp;lt;8)+次设备号
-（主设备号： 1-内存,2-磁盘,3-硬盘,4-ttyx,5-tty,6-并行口,7-非命名管道）
-	0x300 /dev/hd0 - 代表整个第 1 个硬盘； 
-	0x301 - /dev/hd1 - 第 1 个盘的第 1 个分区
-	0x304 - /dev/hd4 - 第 1 个盘的第 4 个分区
-	0x305 - /dev/hd5 - 代表整个第 2 个硬盘 
-	0x306 - /dev/hd6 - 第 2 个盘的第 1 个分区
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;运行时所在物理地址： 0x90000-0x90200&lt;/p&gt;</description></item><item><title>C++ 20 协程实现 Coroutine</title><link>/docs/05-by-language/01.-c-/00.-stl/01.%E5%8D%8F%E7%A8%8B/c-20-%E5%8D%8F%E7%A8%8B%E5%AE%9E%E7%8E%B0-coroutine/</link><pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate><guid>/docs/05-by-language/01.-c-/00.-stl/01.%E5%8D%8F%E7%A8%8B/c-20-%E5%8D%8F%E7%A8%8B%E5%AE%9E%E7%8E%B0-coroutine/</guid><description>&lt;p&gt;协程就是一段可以&lt;strong&gt;挂起(suspend)&lt;/strong&gt; 和 &lt;strong&gt;恢复(resume)&lt;/strong&gt; 的程序(函数)
-c++20以上推荐阿里的雅兰亭库(yalantinglibs)&lt;/p&gt;
-&lt;h1 id="1-例程"&gt;1. 例程&lt;/h1&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#define __cpp_lib_coroutine
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;coroutine&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;future&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;chrono&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;thread&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;chrono_literals&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Fun&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;Result&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;promise_type&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;suspend_never&lt;/span&gt; &lt;span class="n"&gt;initial_suspend&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;suspend_never&lt;/span&gt; &lt;span class="n"&gt;final_suspend&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;noexcept&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Result&lt;/span&gt; &lt;span class="nf"&gt;get_return_object&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;return_void&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// void return_value(int value) {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// }
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;unhandled_exception&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;Awaiter&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;await_ready&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;await_suspend&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;coroutine_handle&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;coroutine_handle&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;](){&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;this_thread&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;sleep_for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;coroutine_handle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resume&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;await_resume&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Result&lt;/span&gt; &lt;span class="nf"&gt;Coroutine&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="k"&gt;co_await&lt;/span&gt; &lt;span class="n"&gt;Awaiter&lt;/span&gt;&lt;span class="p"&gt;{.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;co_await&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;suspend_always&lt;/span&gt;&lt;span class="p"&gt;{};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;co_return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//Result Coroutine(int start_value) {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// std::cout &amp;lt;&amp;lt; start_value &amp;lt;&amp;lt; std::endl;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// co_await std::suspend_always{};
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// std::cout &amp;lt;&amp;lt; start_value + 1 &amp;lt;&amp;lt; std::endl;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// co_return 100;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//};
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Coroutine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h1 id="2-协程的返回值类型"&gt;2. 协程的返回值类型&lt;/h1&gt;
-&lt;p&gt;如果一个函数的返回值满足协程的规则(即能够实例化模板类型 &lt;strong&gt;_Coroutine_traits&lt;/strong&gt; )，就会被编译成协程。
-可以参见[[#1. 例程 | 例程]]中Result的定义&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baigao&#39;s Blog on My Docs</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Baigao&#39;s Blog on My Docs</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2020-2026 Baigao</copyright>
+    <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Post</title>
+      <link>http://localhost:1313/blog/example-post/</link>
+      <pubDate>Mon, 16 Feb 2026 16:31:32 +0100</pubDate>
+      <guid>http://localhost:1313/blog/example-post/</guid>
+      <description>Use blog posts to communicate product updates and new features in a clear and consistent format.</description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>http://localhost:1313/docs/08-vibe-code/claude/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/docs/08-vibe-code/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guides</title>
+      <link>http://localhost:1313/docs/guides/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/docs/guides/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skills List</title>
+      <link>http://localhost:1313/docs/08-vibe-code/skills/skills-list/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/docs/08-vibe-code/skills/skills-list/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>00 Markdown基础语法</title>
+      <link>http://localhost:1313/docs/05-by-language/02.-markdown/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/05-by-language/02.-markdown/00-markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+      <description>&lt;h2 id=&#34;表格&#34;&gt;表格&lt;/h2&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|  表头   | 表头  |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|  ----  | ----  |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 单元格  | 单元格 |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 单元格  | 单元格 |&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>01 . Gmock 遇到的问题与解决方案</title>
+      <link>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;h2 id=&#34;1--对于异步回调的测试&#34;&gt;1.  对于异步回调的测试&lt;/h2&gt;&#xA;&lt;p&gt;可以在mock中改为同步的方法，用于测试回调接口的正常调用&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-无法mock-static-类型的函数&#34;&gt;2. 无法mock static 类型的函数&lt;/h2&gt;&#xA;&lt;p&gt;google是这么回答的： 如果你需要mock一个静态函数，说明你的程序模块过于紧耦合(灵活性不够、重用性不够、可测试性不够)。&#xA;可采用的方法是定一个小接口，然后通过这个接口来调用static函数&lt;/p&gt;&#xA;&lt;h2 id=&#34;3-无法mock非虚函数&#34;&gt;3. 无法mock非虚函数&lt;/h2&gt;&#xA;&lt;h3 id=&#34;方案一-模板类&#34;&gt;方案一： 模板类&lt;/h3&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md&#34; rel=&#34;external&#34;&gt;官方示例 &lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;缺点： 需要改造生产代码&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;方案二&#34;&gt;方案二：&lt;/h3&gt;&#xA;&lt;p&gt;重新定义一个mock类B,该类不继承被测类，但是在mock类B中，需要实现和A中同样的函数接口。在测试代码中通过mock类B对象，来达到测试目的。&#xA;-缺点： 需要维护一套专门的测试代码。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>01 工具集合</title>
+      <link>http://localhost:1313/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</guid>
+      <description>&lt;h1 id=&#34;大模型列表&#34;&gt;大模型列表&lt;/h1&gt;&#xA;&lt;h2 id=&#34;llm&#34;&gt;LLM&lt;/h2&gt;&#xA;&lt;h3 id=&#34;gpt&#34;&gt;GPT&lt;/h3&gt;&#xA;&lt;p&gt;openai 开发的大语言模型&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;版本列表&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-3&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;175B&lt;/li&gt;&#xA;&lt;li&gt;4096 token&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-3.5&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;175B + 6B&lt;/li&gt;&#xA;&lt;li&gt;4096 token&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-4&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1T-1.5T&lt;/li&gt;&#xA;&lt;li&gt;8K-32K token&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-4o&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;claude&#34;&gt;Claude&lt;/h3&gt;&#xA;&lt;p&gt;由&lt;strong&gt;Anthropic公司&lt;/strong&gt;创始团队来自OpenAI创建的LLM，&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>0X.  桥接模式</title>
+      <link>http://localhost:1313/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0x.-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</guid>
+      <description>&lt;h2 id=&#34;pimpl惯用法&#34;&gt;Pimpl惯用法&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;pointer to implementation”（指向实现的指针）&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;由于C++语言特性，如果对外开放一个类，即使是private成员，也需要声明在公有头文件中。&#xA;使用该惯用法可以在公有接口中完全隐藏内部细节。支持将私有成员数据和方法，从.h转移到.cpp文件。&lt;/p&gt;&#xA;&lt;pre class=&#34;mermaid&#34;&gt;&#xD;&#xA;  classDiagram&#xA;&#xA;&#xA;class Interface {&#xA;&#x9;- IMpl *impl //可以优化成智能指针&#xA;&#x9;+ Function1() void&#xA;}&#xA;&#xA;class Impl {&#xA;&#x9;- int privateData&#xA;&#x9;- privateFunctiont1() void&#xA;}&#xA;&#xA;Interface &amp;#34;1&amp;#34; *-- &amp;#34;1&amp;#34; Impl : Composition&#xD;&#xA;&lt;/pre&gt;&#xD;&#xA;&#xD;&#xA;&lt;h3 id=&#34;优点&#34;&gt;优点&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;信息隐藏&#xA;只显示需要的公有属性，让使用者更容易查看，同时降低了耦合，带来了更好的二进制兼容性&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aac</title>
+      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/01.-%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81/aac/</guid>
+      <description>&lt;h2 id=&#34;01-概述&#34;&gt;0.1. 概述&lt;/h2&gt;&#xA;&lt;p&gt;AAC（Advanced Audio Coding），被认为是MP3的继任者，相对MP3有更高的压缩效率。&#xA;由Fraunhofer IIS、杜比实验室、AT&amp;amp;T、Sony（索尼）等公司共同开发。&#xA;1997年由MPEG正式宣布为国际标准，&#xA;MPEG-2标准的第7部分-&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://www.iso.org/standard/25040.html&#34; rel=&#34;external&#34;&gt;ISO/IEC 13818-7:1997&lt;/a&gt;。&#xA;MPEG-4标准中，AAC音频流部分在&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://www.iso.org/standard/76383.html&#34; rel=&#34;external&#34;&gt;ISO/IEC 14496-3 (subpart 4)&lt;/a&gt;中规定。&lt;/p&gt;&#xA;&lt;h2 id=&#34;02-帧格式&#34;&gt;0.2. 帧格式&lt;/h2&gt;&#xA;&lt;p&gt;AAC音频格式有：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;ADIF(Audio Data Interchage Format)&lt;/code&gt;，音频数据交换格式：只有一个统一的头，必须得到所有数据后解码，适用于本地文件。&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;ADTS(Audio Data Transport Stream)&lt;/code&gt;，音视数据传输流：每一帧都有头信息，任意帧解码，适用于传输流。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;03-adts-格式&#34;&gt;0.3. ADTS 格式&lt;/h2&gt;&#xA;&lt;p&gt;![[Pasted image 20230712142111.png]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Boot</title>
+      <link>http://localhost:1313/docs/03-os/02.-linux/boot/</link>
+      <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/docs/03-os/02.-linux/boot/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;boot 使用的是as86汇编， 生成的是 16 位代码。 语法类似于 NASM、MASM&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ol start=&#34;0&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;CPU自动进入实模式，并从0xFFFF0地址开始执行程序代码(ROM-BIOS) BIOS执行硬件检测诊断后，将物理地址处初始化为中断向量&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;boot加载&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;boot程序大小512字节，放置在软盘映像文件的第一个扇区，&lt;/li&gt;&#xA;&lt;li&gt;ROM BIOS 先按启动盘启动顺序依次查询第一个扇区，如果第一个扇区最后两个字节(即第510、511字节)为0x55AA，则代表该启动盘可以启动&#xA;则将启动盘第一个扇区加载到物理地址0x7c00(31k)位置，然后从0x7c00开始运行。&#xA;PS: 最早的个人PC芯片8088,搭配的操作系统是&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://en.wikipedia.org/wiki/86-DOS&#34; rel=&#34;external&#34;&gt;86-DOS&lt;/a&gt;。这个操作系统需要的内存最少是32KB(0x0000~0x7FFFF),8088芯片本身需要占用&lt;code&gt;0x0000～0x03FF&lt;/code&gt;，用来保存&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://en.wikipedia.org/wiki/BIOS_interrupt_call&#34; rel=&#34;external&#34;&gt;各种中断处理程序&lt;/a&gt;的储存位置。（主引导记录本身就是中断信号INT 19h的处理程序。）所以，内存只剩下&lt;code&gt;0x0400～0x7FFF&lt;/code&gt;可以使用。为了把尽量多的连续内存留给操作系统，主引导记录就被放到了内存地址的尾部。由于一个扇区是512字节，主引导记录本身也会产生数据，需要另外留出512字节保存。所以，它的预留位置就变成 &lt;code&gt;0x7FFF - 512 - 512 + 1 = 0x7C00&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;boot 加载kernel&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

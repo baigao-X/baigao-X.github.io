@@ -1,3 +1,3 @@
 # 物理硬件接口<no value>
 
-![[Pasted image 20251206171302.png]]
+![物理硬件接口](./images/物理硬件接口.png)
