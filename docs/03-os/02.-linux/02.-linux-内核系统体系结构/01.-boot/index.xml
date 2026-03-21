@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>boot on My Docs</title>
-    <link>http://localhost:1313/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/</link>
+    <link>/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/</link>
     <description>Recent content in boot on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Boot</title>
-      <link>http://localhost:1313/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/</link>
+      <link>/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/</guid>
+      <guid>/docs/03-os/02.-linux/02.-linux-%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/01.-boot/boot/</guid>
       <description>&lt;h1 id=&#34;1-rom-bios&#34;&gt;1. ROM BIOS&lt;/h1&gt;&#xA;&lt;p&gt;会将引导扇区 bootsect加载到0x7C00，并从该地址开始运行&lt;/p&gt;&#xA;&lt;h1 id=&#34;2-bootsects&#34;&gt;2. bootsect.S&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;1.将自己搬移到0x90000地址&#xA;2.将磁盘第二个扇区开始的4个扇区包含的setup模块代码加载到0x90200地址&#xA;3.使用BIOS终端0x13获取磁盘当前引导盘参数&#xA; 4.在屏幕中显示“Loading system”&#xA; 5.将setup内存搬移到0x10000&#xA; 6.确定根文件系统的设备号（root_dev,即引导块的508地址处）,设备号=(主设备号&amp;lt;&amp;lt;8)+次设备号&#xA;（主设备号： 1-内存,2-磁盘,3-硬盘,4-ttyx,5-tty,6-并行口,7-非命名管道）&#xA;&#x9;0x300 /dev/hd0 - 代表整个第 1 个硬盘； &#xA;&#x9;0x301 - /dev/hd1 - 第 1 个盘的第 1 个分区&#xA;&#x9;0x304 - /dev/hd4 - 第 1 个盘的第 4 个分区&#xA;&#x9;0x305 - /dev/hd5 - 代表整个第 2 个硬盘 &#xA;&#x9;0x306 - /dev/hd6 - 第 2 个盘的第 1 个分区&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;运行时所在物理地址： 0x90000-0x90200&lt;/p&gt;</description>
     </item>
   </channel>

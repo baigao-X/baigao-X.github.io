@@ -2,291 +2,291 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/docs/guides/</loc>
+      <loc>/docs/guides/</loc>
       <lastmod>2023-09-07T16:04:48+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/02-code-better-sleep-better/</loc>
+      <loc>/docs/02-code-better-sleep-better/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/08-vibe-code/</loc>
+      <loc>/docs/08-vibe-code/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/04-by-direction/</loc>
+      <loc>/docs/04-by-direction/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/05-by-language/</loc>
+      <loc>/docs/05-by-language/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/03-os/</loc>
+      <loc>/docs/03-os/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/01-computer-network/</loc>
+      <loc>/docs/01-computer-network/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/06-database/</loc>
+      <loc>/docs/06-database/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/07-ops/</loc>
+      <loc>/docs/07-ops/</loc>
       <lastmod>2026-03-17T00:00:00+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
+        <loc>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/</loc>
+        <loc>/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/05.-%E8%8C%83%E5%BC%8F-%E6%83%AF%E7%94%A8%E6%B3%95/</loc>
+        <loc>/docs/02-code-better-sleep-better/05.-%E8%8C%83%E5%BC%8F-%E6%83%AF%E7%94%A8%E6%B3%95/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+        <loc>/docs/02-code-better-sleep-better/02.-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</loc>
+        <loc>/docs/02-code-better-sleep-better/01.-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/</loc>
+        <loc>/docs/02-code-better-sleep-better/00.-%E6%9C%AF%E8%AF%AD/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/04.-%E7%AE%97%E6%B3%95/</loc>
+        <loc>/docs/02-code-better-sleep-better/04.-%E7%AE%97%E6%B3%95/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/</loc>
+        <loc>/docs/02-code-better-sleep-better/07.-%E6%80%A7%E8%83%BD/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/</loc>
+        <loc>/docs/02-code-better-sleep-better/mikado%E9%87%8D%E6%9E%84%E6%B3%95/</loc>
         <lastmod>2026-03-17T00:27:27+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/08-vibe-code/claude/</loc>
+        <loc>/docs/08-vibe-code/claude/</loc>
         <lastmod>2023-09-07T16:04:48+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/08-vibe-code/skills/</loc>
+        <loc>/docs/08-vibe-code/skills/</loc>
         <lastmod>2026-03-17T00:00:00+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/04-by-direction/00.-ai/</loc>
+        <loc>/docs/04-by-direction/00.-ai/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/04-by-direction/02.-gui/</loc>
+        <loc>/docs/04-by-direction/02.-gui/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/04-by-direction/05.-ue/</loc>
+        <loc>/docs/04-by-direction/05.-ue/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/04-by-direction/04.-%E5%AE%89%E9%98%B2/</loc>
+        <loc>/docs/04-by-direction/04.-%E5%AE%89%E9%98%B2/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/04-by-direction/03.-%E5%AE%89%E5%85%A8/</loc>
+        <loc>/docs/04-by-direction/03.-%E5%AE%89%E5%85%A8/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
+        <loc>/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/</loc>
+        <loc>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/05-by-language/01.-c++/</loc>
+        <loc>/docs/05-by-language/01.-c++/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/05-by-language/06.-go/</loc>
+        <loc>/docs/05-by-language/06.-go/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/05-by-language/02.-markdown/</loc>
+        <loc>/docs/05-by-language/02.-markdown/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/05-by-language/04.-python/</loc>
+        <loc>/docs/05-by-language/04.-python/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/03-os/02.-linux/</loc>
+        <loc>/docs/03-os/02.-linux/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/03-os/03.-windows/</loc>
+        <loc>/docs/03-os/03.-windows/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
+        <loc>/docs/03-os/00.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/</loc>
+        <loc>/docs/03-os/01.-%E7%B3%BB%E7%BB%9Fio/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/03-os/04.-%E6%80%A7%E8%83%BD/</loc>
+        <loc>/docs/03-os/04.-%E6%80%A7%E8%83%BD/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/01-computer-network/03.-linux%E5%86%85%E6%A0%B8%E7%BD%91%E7%BB%9C/</loc>
+        <loc>/docs/01-computer-network/03.-linux%E5%86%85%E6%A0%B8%E7%BD%91%E7%BB%9C/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/</loc>
+        <loc>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/</loc>
+        <loc>/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</loc>
+        <loc>/docs/01-computer-network/02.-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/01-computer-network/iproute2/</loc>
+        <loc>/docs/01-computer-network/iproute2/</loc>
         <lastmod>2026-03-17T00:27:27+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/01-computer-network/%E5%BC%B1%E7%BD%91/</loc>
+        <loc>/docs/01-computer-network/%E5%BC%B1%E7%BD%91/</loc>
         <lastmod>2026-03-17T00:27:27+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</loc>
+        <loc>/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</loc>
         <lastmod>2026-03-17T00:27:27+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/06-database/sql/</loc>
+        <loc>/docs/06-database/sql/</loc>
         <lastmod>2026-03-17T00:27:27+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/07-ops/02.headscale/</loc>
+        <loc>/docs/07-ops/02.headscale/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/07-ops/01.-kubernetes/</loc>
+        <loc>/docs/07-ops/01.-kubernetes/</loc>
         <lastmod>2026-03-18T00:00:14+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
+        <loc>/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
         <lastmod>2026-03-17T00:27:27+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

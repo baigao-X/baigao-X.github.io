@@ -2,34 +2,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/</loc>
+      <loc>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/</loc>
       <lastmod>2026-03-18T00:00:14+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/</loc>
+      <loc>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/</loc>
+      <loc>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/</loc>
+      <loc>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/%E7%BD%91%E7%BB%9C/</loc>
+        <loc>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/%E7%BD%91%E7%BB%9C/</loc>
         <lastmod>2026-03-17T00:27:27+08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

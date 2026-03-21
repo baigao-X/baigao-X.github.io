@@ -2,14 +2,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</loc>
+      <loc>/docs/04-by-direction/00.-ai/01-%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/04-by-direction/00.-ai/%E6%9C%AF%E8%AF%AD/</loc>
+      <loc>/docs/04-by-direction/00.-ai/%E6%9C%AF%E8%AF%AD/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

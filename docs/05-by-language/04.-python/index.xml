@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on My Docs</title>
-    <link>http://localhost:1313/docs/05-by-language/04.-python/</link>
+    <link>/docs/05-by-language/04.-python/</link>
     <description>Recent content in python on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/05-by-language/04.-python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/05-by-language/04.-python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python3</title>
-      <link>http://localhost:1313/docs/05-by-language/04.-python/python3/</link>
+      <link>/docs/05-by-language/04.-python/python3/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/05-by-language/04.-python/python3/</guid>
+      <guid>/docs/05-by-language/04.-python/python3/</guid>
       <description></description>
     </item>
   </channel>

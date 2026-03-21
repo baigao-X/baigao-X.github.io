@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wireshark on My Docs</title>
-    <link>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/</link>
+    <link>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/</link>
     <description>Recent content in wireshark on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>网络</title>
-      <link>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/%E7%BD%91%E7%BB%9C/</link>
+      <link>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/%E7%BD%91%E7%BB%9C/</guid>
+      <guid>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/01.-wireshark/%E7%BD%91%E7%BB%9C/</guid>
       <description>&lt;h1 id=&#34;1-常用过滤语法&#34;&gt;1. 常用过滤语法&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;eth[0] &amp;amp; 1 过滤出组播包和广播包&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;2-包类型&#34;&gt;2. 包类型：&lt;/h1&gt;&#xA;&lt;h2 id=&#34;21-以太网fcs错误ethernet-frame-check-sequence-incorrect-&#34;&gt;2.1. 以太网FCS错误（ETHERNET FRAME CHECK SEQUENCE INCORRECT） ：&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;以太网计算出的校验码与接收到的不一致&#xA;  说明出现错包，硬件故障？&#xA;过滤条件： eth.fcs_bad (wireshark 默认不显示FCS错包，需要配置)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;22-fragmented-网络层分片包&#34;&gt;2.2. Fragmented 网络层分片包&lt;/h2&gt;&#xA;&lt;p&gt;同个包的分片 IP.Identification 字段具有相同ID&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on My Docs</title>
-    <link>http://localhost:1313/docs/05-by-language/06.-go/</link>
+    <link>/docs/05-by-language/06.-go/</link>
     <description>Recent content in go on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/05-by-language/06.-go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/05-by-language/06.-go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Mod</title>
-      <link>http://localhost:1313/docs/05-by-language/06.-go/go-mod/</link>
+      <link>/docs/05-by-language/06.-go/go-mod/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/05-by-language/06.-go/go-mod/</guid>
+      <guid>/docs/05-by-language/06.-go/go-mod/</guid>
       <description>&lt;p&gt;golang V1.1.1 之后引入的包管理工具&lt;/p&gt;</description>
     </item>
   </channel>

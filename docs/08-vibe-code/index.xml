@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vibe Code on My Docs</title>
-    <link>http://localhost:1313/docs/08-vibe-code/</link>
+    <link>/docs/08-vibe-code/</link>
     <description>Recent content in Vibe Code on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Thu, 07 Sep 2023 16:04:48 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/08-vibe-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/08-vibe-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude</title>
-      <link>http://localhost:1313/docs/08-vibe-code/claude/</link>
+      <link>/docs/08-vibe-code/claude/</link>
       <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/08-vibe-code/claude/</guid>
+      <guid>/docs/08-vibe-code/claude/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>栈回溯 on My Docs</title>
-    <link>http://localhost:1313/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/</link>
+    <link>/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/</link>
     <description>Recent content in 栈回溯 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>概述</title>
-      <link>http://localhost:1313/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/%E6%A6%82%E8%BF%B0/</link>
+      <link>/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/%E6%A6%82%E8%BF%B0/</guid>
+      <guid>/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/01.-%E6%A0%88%E5%9B%9E%E6%BA%AF/%E6%A6%82%E8%BF%B0/</guid>
       <description>&lt;pre&gt;&lt;code&gt; 以下栈回溯基于C进程而言&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h1 id=&#34;1-跟踪tracing-&#34;&gt;1. 跟踪(Tracing) :&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;Tracing功能的基础是符号(symbols), 即目标文件中的函数信息。&#xA;但是显示的时符号，非直接函数名&#xA; 若无符号会直接提示没法tracing&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;11-符号symbols&#34;&gt;1.1. 符号（symbols）&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;符号可以在目标文件中，也可以存放在单独的文件中&#xA;symbols 的存在不需要 -g参数，默认编译不strip就会有&#xA; 一般发行进程会单独提供一个符号文件搭配运行进程用于调试。&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;.dynsym 动态符号表&lt;/li&gt;&#xA;&lt;li&gt;.symtab 局部(local)符号表 (本地符号常常会被剥离以减少大小)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;2-栈展开stack-unwinding&#34;&gt;2. 栈展开(stack unwinding)&lt;/h1&gt;&#xA;&lt;p&gt;有两种方式：&lt;/p&gt;</description>
     </item>
   </channel>

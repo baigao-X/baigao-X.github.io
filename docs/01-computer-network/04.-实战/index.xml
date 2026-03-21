@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>实战 on My Docs</title>
-    <link>http://localhost:1313/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/</link>
+    <link>/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/</link>
     <description>Recent content in 实战 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>实战</title>
-      <link>http://localhost:1313/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/</link>
+      <link>/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/</guid>
+      <guid>/docs/01-computer-network/04.-%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;arp 欺骗：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;工具 arpspoof&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;mac 地址欺骗&#xA;&lt;ul&gt;&#xA;&lt;li&gt;工具 macchanger&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;mac 地址泛洪&#xA;&lt;ul&gt;&#xA;&lt;li&gt;macof&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;STP 操作 生成树协议 （基于BPDU报文）&lt;/li&gt;&#xA;&lt;li&gt;网络风暴&lt;/li&gt;&#xA;&lt;li&gt;TCP&#xA;&lt;ul&gt;&#xA;&lt;li&gt;SYN 泛洪&#xA;&lt;ul&gt;&#xA;&lt;li&gt;hping3cc1&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;命令行工具&#xA;&lt;ul&gt;&#xA;&lt;li&gt;tshark - wireshark的命令行工具&lt;/li&gt;&#xA;&lt;li&gt;dumpcap- wireshark的抓包引擎，只做抓包所以资源消耗更小&lt;/li&gt;&#xA;&lt;li&gt;tcpdump&lt;/li&gt;&#xA;&lt;li&gt;editcap 编辑工具&lt;/li&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

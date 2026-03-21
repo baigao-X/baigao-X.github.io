@@ -2,21 +2,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h264-avc/</loc>
+      <loc>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h264-avc/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h265-hevc/</loc>
+      <loc>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/h265-hevc/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/yuv/</loc>
+      <loc>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/03.-%E7%BC%96%E8%A7%A3%E7%A0%81/02.-%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/yuv/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

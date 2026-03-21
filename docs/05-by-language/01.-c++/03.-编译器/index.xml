@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编译器 on My Docs</title>
-    <link>http://localhost:1313/docs/05-by-language/01.-c&#43;&#43;/03.-%E7%BC%96%E8%AF%91%E5%99%A8/</link>
+    <link>/docs/05-by-language/01.-c&#43;&#43;/03.-%E7%BC%96%E8%AF%91%E5%99%A8/</link>
     <description>Recent content in 编译器 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/05-by-language/01.-c++/03.-%E7%BC%96%E8%AF%91%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/05-by-language/01.-c++/03.-%E7%BC%96%E8%AF%91%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emscripten</title>
-      <link>http://localhost:1313/docs/05-by-language/01.-c-/03.-%E7%BC%96%E8%AF%91%E5%99%A8/emscripten/</link>
+      <link>/docs/05-by-language/01.-c-/03.-%E7%BC%96%E8%AF%91%E5%99%A8/emscripten/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/05-by-language/01.-c-/03.-%E7%BC%96%E8%AF%91%E5%99%A8/emscripten/</guid>
+      <guid>/docs/05-by-language/01.-c-/03.-%E7%BC%96%E8%AF%91%E5%99%A8/emscripten/</guid>
       <description>&lt;p&gt;&lt;code&gt;Emscripten&lt;/code&gt; 是一个 &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://github.com/emscripten-core/emscripten/tree/master&#34; rel=&#34;external&#34;&gt;开源的编译器&lt;/a&gt; ，该编译器可以将 C/C++ 的代码编译成 &lt;code&gt;JavaScript&lt;/code&gt; 胶水代码。 &lt;code&gt;Emscripten&lt;/code&gt; 可以将 C/C++ 代码编译为 &lt;code&gt;WebAssembly&lt;/code&gt; 编程语言的代码。&#xA;&lt;code&gt;Emscripten&lt;/code&gt; 的底层是基于 &lt;code&gt;LLVM&lt;/code&gt; 编译器的，可以查看其开源的 &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://github.com/emscripten-core/emscripten-fastcomp&#34; rel=&#34;external&#34;&gt;emscripten llvm&lt;/a&gt; 和 &#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://github.com/emscripten-core/emscripten-fastcomp-clang&#34; rel=&#34;external&#34;&gt;emscripten clang&lt;/a&gt; &lt;/p&gt;</description>
     </item>
   </channel>

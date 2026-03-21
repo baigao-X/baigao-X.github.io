@@ -1,23 +1,23 @@
 <!doctype html>
 <html lang="zh-CN" data-bs-theme="auto">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <script 
-  src="/js/color-mode.5c1949ea57ce2075eb442a32bb404b638413499fe06b4610198b84697a0d2a89.js"
-  integrity="sha256-XBlJ6lfOIHXrRCoyu0BLY4QTSZ/ga0YQGYuEaXoNKok=">
+  src="/js/color-mode.7d9843fe8d06b487f08000f3dfc783b2c283d303e738a3e80bd25a903243b9aa.js"
+  integrity="sha256-fZhD/o0GtIfwgADz38eDssKD0wPnOKPoC9JakDJDuao=">
 </script>
 
 
-<link rel="stylesheet" href="/main.19600983e5ae8fa82236e066dd225cbc20862127d09947c2a69f305203133d4c51fc56ee9735bdcca8bea86ab5836a50ffe065769406fd24e47c2347f1e7d2db.css" integrity="sha512-GWAJg&#43;Wuj6giNuBm3SJcvCCGISfQmUfCpp8wUgMTPUxR/FbulzW9zKi&#43;qGq1g2pQ/&#43;BldpQG/STkfCNH8efS2w==" crossorigin="anonymous">
+<link rel="stylesheet" href="/main.81e3c1604a48b322077a1c1838f899dbe49dc3cfdd704a5843db025d7ef94dd3106db30c449b49622a1c103063bfd218e6019db44ca641ddbc35975650112017.css" integrity="sha512-gePBYEpIsyIHehwYOPiZ2+Sdw8/dcEpYQ9sCXX75TdMQbbMMRJtJYiocEDBjv9IY5gGdtEymQd28NZdWUBEgFw==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">
 
-  <link rel="canonical" href="http://localhost:1313/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">
-<link rel="alternate" type="text/markdown" href="http://localhost:1313/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/index.md" title="开发关键技术 | My Docs">
+  <link rel="canonical" href="/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">
+<link rel="alternate" type="text/markdown" href="/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/index.md" title="开发关键技术 | My Docs">
 
 <title>开发关键技术 | My Docs</title>
 <meta name="description" content="key UR开发 如何连接串流 PlayMode模式进行操纵手柄控制 视频流控制 InVideo 插件支持拉取一个rtsp流并显示 ffmpeg 封装拉流创建纹理 ffmpeg 拉流解码 创建Windwos共享内存 (通过CreateFileMapping和MapViewOfFile实现跨进程数据传输) DX11/12纹理跨进程共享 提升传输效率 DXGI共享表面- 结合DXGI接口（如IDXGISurface）实现跨进程纹理共享，需与上述DirectX机制配 拉流解码H264-&gt;YUV或RGB具体格式见UE要求 通过sws_scale函数转换为RGB或RGBA以适应UE纹理标准 数据放置到共享内存（注意帧同步） UE 纹理显示 纹理创建和内存映射 创建UTexture2D对象，并分配内存 创建Windwos共享内存 (通过CreateFileMapping和MapViewOfFile实现跨进程数据传输) UE内存接口锁定纹理内存并写入数据(注意帧同步) 纹理渲染那和显示 材质绑定 创建UE材质，将动态纹理作为TextureSample节点输入 在蓝图中通过SetTextureParameter Value 动态更新纹理材质纹理 渲染到UI或3D对象 UI显示:将材质应用于UImage空间，通过Slate或UMG系统渲染到屏幕 3D对象显示： 将材质赋给StaticMesh或Actor ，实现视频在场景中的动态播放 调试 调试工具​​：使用UE的RenderDoc插件检查纹理数据是否正确写入。
@@ -49,7 +49,7 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 
-<meta property="og:url" content="http://localhost:1313/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">
+<meta property="og:url" content="/docs/04-by-direction/05.-ue/%E5%BC%80%E5%8F%91%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/">
   <meta property="og:site_name" content="My Docs">
   <meta property="og:title" content="开发关键技术">
   <meta property="og:description" content="key UR开发 如何连接串流 PlayMode模式进行操纵手柄控制 视频流控制 InVideo 插件支持拉取一个rtsp流并显示 ffmpeg 封装拉流创建纹理 ffmpeg 拉流解码 创建Windwos共享内存 (通过CreateFileMapping和MapViewOfFile实现跨进程数据传输) DX11/12纹理跨进程共享 提升传输效率 DXGI共享表面- 结合DXGI接口（如IDXGISurface）实现跨进程纹理共享，需与上述DirectX机制配 拉流解码H264-&gt;YUV或RGB具体格式见UE要求 通过sws_scale函数转换为RGB或RGBA以适应UE纹理标准 数据放置到共享内存（注意帧同步） UE 纹理显示 纹理创建和内存映射 创建UTexture2D对象，并分配内存 创建Windwos共享内存 (通过CreateFileMapping和MapViewOfFile实现跨进程数据传输) UE内存接口锁定纹理内存并写入数据(注意帧同步) 纹理渲染那和显示 材质绑定 创建UE材质，将动态纹理作为TextureSample节点输入 在蓝图中通过SetTextureParameter Value 动态更新纹理材质纹理 渲染到UI或3D对象 UI显示:将材质应用于UImage空间，通过Slate或UMG系统渲染到屏幕 3D对象显示： 将材质赋给StaticMesh或Actor ，实现视频在场景中的动态播放 调试 调试工具​​：使用UE的RenderDoc插件检查纹理数据是否正确写入。">
@@ -58,10 +58,10 @@
     <meta property="article:section" content="docs">
     <meta property="article:published_time" content="2026-03-17T00:27:27+08:00">
     <meta property="article:modified_time" content="2026-03-17T00:27:27+08:00">
-    <meta property="og:image" content="http://localhost:1313/cover.png">
+    <meta property="og:image" content="/cover.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/cover.png">
+  <meta name="twitter:image" content="/cover.png">
   <meta name="twitter:title" content="开发关键技术">
   <meta name="twitter:description" content="key UR开发 如何连接串流 PlayMode模式进行操纵手柄控制 视频流控制 InVideo 插件支持拉取一个rtsp流并显示 ffmpeg 封装拉流创建纹理 ffmpeg 拉流解码 创建Windwos共享内存 (通过CreateFileMapping和MapViewOfFile实现跨进程数据传输) DX11/12纹理跨进程共享 提升传输效率 DXGI共享表面- 结合DXGI接口（如IDXGISurface）实现跨进程纹理共享，需与上述DirectX机制配 拉流解码H264-&gt;YUV或RGB具体格式见UE要求 通过sws_scale函数转换为RGB或RGBA以适应UE纹理标准 数据放置到共享内存（注意帧同步） UE 纹理显示 纹理创建和内存映射 创建UTexture2D对象，并分配内存 创建Windwos共享内存 (通过CreateFileMapping和MapViewOfFile实现跨进程数据传输) UE内存接口锁定纹理内存并写入数据(注意帧同步) 纹理渲染那和显示 材质绑定 创建UE材质，将动态纹理作为TextureSample节点输入 在蓝图中通过SetTextureParameter Value 动态更新纹理材质纹理 渲染到UI或3D对象 UI显示:将材质应用于UImage空间，通过Slate或UMG系统渲染到屏幕 3D对象显示： 将材质赋给StaticMesh或Actor ，实现视频在场景中的动态播放 调试 调试工具​​：使用UE的RenderDoc插件检查纹理数据是否正确写入。">
       <meta name="twitter:site" content="@getdoks">
@@ -76,25 +76,25 @@
    "itemListElement": [
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/",
+       "item": "/",
        "name": "Baigao's Blog",
        "position": 1
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/docs/",
+       "item": "/docs/",
        "name": "Docs",
        "position": 2
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/docs/04-by-direction/",
+       "item": "/docs/04-by-direction/",
        "name": "按方向",
        "position": 3
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/docs/04-by-direction/05.-ue/",
+       "item": "/docs/04-by-direction/05.-ue/",
        "name": "Ue",
        "position": 4
      },
@@ -1576,10 +1576,10 @@
       
       <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
         <ul class="navbar-nav flex-grow-1"><li class="nav-item">
-                <a class="nav-link active" href="http://localhost:1313/docs/guides/" aria-current="true">Docs</a>
+                <a class="nav-link active" href="/docs/guides/" aria-current="true">Docs</a>
               </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/blog/">Blog</a>
+                <a class="nav-link" href="/blog/">Blog</a>
               </li>
             </ul>
 
@@ -3124,19 +3124,19 @@
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
     <li>
-      <a class="dropdown-item" href="https://chatgpt.com/?hints=search&q=Read+http%3A%2F%2Flocalhost%3A1313%2Fdocs%2F04-by-direction%2F05.-ue%2F%25E5%25BC%2580%25E5%258F%2591%25E5%2585%25B3%25E9%2594%25AE%25E6%258A%2580%25E6%259C%25AF%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
+      <a class="dropdown-item" href="https://chatgpt.com/?hints=search&q=Read+%2Fdocs%2F04-by-direction%2F05.-ue%2F%25E5%25BC%2580%25E5%258F%2591%25E5%2585%25B3%25E9%2594%25AE%25E6%258A%2580%25E6%259C%25AF%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
         <svg fill="currentColor" fill-rule="evenodd" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg" class="mb-1 me-1"><title>OpenAI</title><path d="M21.55 10.004a5.416 5.416 0 00-.478-4.501c-1.217-2.09-3.662-3.166-6.05-2.66A5.59 5.59 0 0010.831 1C8.39.995 6.224 2.546 5.473 4.838A5.553 5.553 0 001.76 7.496a5.487 5.487 0 00.691 6.5 5.416 5.416 0 00.477 4.502c1.217 2.09 3.662 3.165 6.05 2.66A5.586 5.586 0 0013.168 23c2.443.006 4.61-1.546 5.361-3.84a5.553 5.553 0 003.715-2.66 5.488 5.488 0 00-.693-6.497v.001zm-8.381 11.558a4.199 4.199 0 01-2.675-.954c.034-.018.093-.05.132-.074l4.44-2.53a.71.71 0 00.364-.623v-6.176l1.877 1.069c.02.01.033.029.036.05v5.115c-.003 2.274-1.87 4.118-4.174 4.123zM4.192 17.78a4.059 4.059 0 01-.498-2.763c.032.02.09.055.131.078l4.44 2.53c.225.13.504.13.73 0l5.42-3.088v2.138a.068.068 0 01-.027.057L9.9 19.288c-1.999 1.136-4.552.46-5.707-1.51h-.001zM3.023 8.216A4.15 4.15 0 015.198 6.41l-.002.151v5.06a.711.711 0 00.364.624l5.42 3.087-1.876 1.07a.067.067 0 01-.063.005l-4.489-2.559c-1.995-1.14-2.679-3.658-1.53-5.63h.001zm15.417 3.54l-5.42-3.088L14.896 7.6a.067.067 0 01.063-.006l4.489 2.557c1.998 1.14 2.683 3.662 1.529 5.633a4.163 4.163 0 01-2.174 1.807V12.38a.71.71 0 00-.363-.623zm1.867-2.773a6.04 6.04 0 00-.132-.078l-4.44-2.53a.731.731 0 00-.729 0l-5.42 3.088V7.325a.068.068 0 01.027-.057L14.1 4.713c2-1.137 4.555-.46 5.707 1.513.487.833.664 1.809.499 2.757h.001zm-11.741 3.81l-1.877-1.068a.065.065 0 01-.036-.051V6.559c.001-2.277 1.873-4.122 4.181-4.12.976 0 1.92.338 2.671.954-.034.018-.092.05-.131.073l-4.44 2.53a.71.71 0 00-.365.623l-.003 6.173v.002zm1.02-2.168L12 9.25l2.414 1.375v2.75L12 14.75l-2.415-1.375v-2.75z"></path></svg>
         Open in ChatGPT
       </a>
     </li>
     <li>
-      <a class="dropdown-item" href="https://claude.ai/new?q=Read+http%3A%2F%2Flocalhost%3A1313%2Fdocs%2F04-by-direction%2F05.-ue%2F%25E5%25BC%2580%25E5%258F%2591%25E5%2585%25B3%25E9%2594%25AE%25E6%258A%2580%25E6%259C%25AF%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
+      <a class="dropdown-item" href="https://claude.ai/new?q=Read+%2Fdocs%2F04-by-direction%2F05.-ue%2F%25E5%25BC%2580%25E5%258F%2591%25E5%2585%25B3%25E9%2594%25AE%25E6%258A%2580%25E6%259C%25AF%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
         <svg fill="currentColor" fill-rule="evenodd" height="16" viewBox="0 0 256 257" width="16" xmlns="http://www.w3.org/2000/svg" class="mb-1 me-1" preserveAspectRatio="xMidYMid"><title>Anthropic</title><path d="m50.228 170.321 50.357-28.257.843-2.463-.843-1.361h-2.462l-8.426-.518-28.775-.778-24.952-1.037-24.175-1.296-6.092-1.297L0 125.796l.583-3.759 5.12-3.434 7.324.648 16.202 1.101 24.304 1.685 17.629 1.037 26.118 2.722h4.148l.583-1.685-1.426-1.037-1.101-1.037-25.147-17.045-27.22-18.017-14.258-10.37-7.713-5.25-3.888-4.925-1.685-10.758 7-7.713 9.397.649 2.398.648 9.527 7.323 20.35 15.75L94.817 91.9l3.889 3.24 1.555-1.102.195-.777-1.75-2.917-14.453-26.118-15.425-26.572-6.87-11.018-1.814-6.61c-.648-2.723-1.102-4.991-1.102-7.778l7.972-10.823L71.42 0 82.05 1.426l4.472 3.888 6.61 15.101 10.694 23.786 16.591 32.34 4.861 9.592 2.592 8.879.973 2.722h1.685v-1.556l1.36-18.211 2.528-22.36 2.463-28.776.843-8.1 4.018-9.722 7.971-5.25 6.222 2.981 5.12 7.324-.713 4.73-3.046 19.768-5.962 30.98-3.889 20.739h2.268l2.593-2.593 10.499-13.934 17.628-22.036 7.778-8.749 9.073-9.657 5.833-4.601h11.018l8.1 12.055-3.628 12.443-11.342 14.388-9.398 12.184-13.48 18.147-8.426 14.518.778 1.166 2.01-.194 30.46-6.481 16.462-2.982 19.637-3.37 8.88 4.148.971 4.213-3.5 8.62-20.998 5.184-24.628 4.926-36.682 8.685-.454.324.519.648 16.526 1.555 7.065.389h17.304l32.21 2.398 8.426 5.574 5.055 6.805-.843 5.184-12.962 6.611-17.498-4.148-40.83-9.721-14-3.5h-1.944v1.167l11.666 11.406 21.387 19.314 26.767 24.887 1.36 6.157-3.434 4.86-3.63-.518-23.526-17.693-9.073-7.972-20.545-17.304h-1.36v1.814l4.73 6.935 25.017 37.59 1.296 11.536-1.814 3.76-6.481 2.268-7.13-1.297-14.647-20.544-15.1-23.138-12.185-20.739-1.49.843-7.194 77.448-3.37 3.953-7.778 2.981-6.48-4.925-3.436-7.972 3.435-15.749 4.148-20.544 3.37-16.333 3.046-20.285 1.815-6.74-.13-.454-1.49.194-15.295 20.999-23.267 31.433-18.406 19.702-4.407 1.75-7.648-3.954.713-7.064 4.277-6.286 25.47-32.405 15.36-20.092 9.917-11.6-.065-1.686h-.583L44.07 198.125l-12.055 1.555-5.185-4.86.648-7.972 2.463-2.593 20.35-13.999-.064.065Z"></path></svg>
         Open in Claude
       </a>
     </li>
     <li>
-      <a class="dropdown-item" href="https://www.perplexity.ai/search/?q=Read+http%3A%2F%2Flocalhost%3A1313%2Fdocs%2F04-by-direction%2F05.-ue%2F%25E5%25BC%2580%25E5%258F%2591%25E5%2585%25B3%25E9%2594%25AE%25E6%258A%2580%25E6%259C%25AF%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
+      <a class="dropdown-item" href="https://www.perplexity.ai/search/?q=Read+%2Fdocs%2F04-by-direction%2F05.-ue%2F%25E5%25BC%2580%25E5%258F%2591%25E5%2585%25B3%25E9%2594%25AE%25E6%258A%2580%25E6%259C%25AF%2F%2C+I+want+to+ask+questions+about+it." target="_blank">
         <svg fill="currentColor" height="16" viewBox="0 0 34 38" width="16" xmlns="http://www.w3.org/2000/svg" class="mb-1 me-1"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.12114 0.0400391L15.919 9.98864V9.98636V0.062995H18.0209V10.0332L28.8671 0.0400391V11.3829H33.3202V27.744H28.8808V37.8442L18.0209 28.303V37.9538H15.919V28.4604L5.13338 37.96V27.744H0.680176V11.3829H5.12114V0.0400391ZM14.3344 13.4592H2.78208V25.6677H5.13074V21.8167L14.3344 13.4592ZM7.23518 22.7379V33.3271L15.919 25.6786V14.8506L7.23518 22.7379ZM18.0814 25.5775V14.8404L26.7677 22.7282V27.744H26.7789V33.219L18.0814 25.5775ZM28.8808 25.6677H31.2183V13.4592H19.752L28.8808 21.7302V25.6677ZM26.7652 11.3829V4.81584L19.6374 11.3829H26.7652ZM14.3507 11.3829H7.22306V4.81584L14.3507 11.3829Z" fill="currentColor"></path></svg>
         Open in Perplexity
       </a>
@@ -3270,8 +3270,8 @@
     
 
 <script async
-  src="/js/app.55d761f8934656de9adbcb9ccd57bffb40e7f4aaabb3f0288bb97209e92399d3.js"
-  integrity="sha256-Vddh&#43;JNGVt6a28uczVe/&#43;0Dn9Kqrs/Aoi7lyCekjmdM=">
+  src="/js/app.aa15a776eaa37b498066d6ec1f461e41e79224e165dafa2368d39cd13410d985.js"
+  integrity="sha256-qhWnduqje0mAZtbsH0YeQeeSJOFl2vojaNOc0TQQ2YU=">
 </script>
 
 
@@ -3279,12 +3279,12 @@
 
 
 <script async
-  src="/js/flexsearch.cf522a3a968d921d569c9a5a1386809a47d2d4669b3cf6917322eb332c65225a.js"
-  integrity="sha256-z1IqOpaNkh1WnJpaE4aAmkfS1GabPPaRcyLrMyxlIlo=">
+  src="/js/flexsearch.113b7edaabeb04644a4b0da964854226f135a5e10d3341884f25bd0ad1ee4def.js"
+  integrity="sha256-ETt&#43;2qvrBGRKSw2pZIVCJvE1peENM0GITyW9CtHuTe8=">
 </script>
 <script async
-  src="/js/search-modal.528eaefc659b474d1169fee994a193a6392817acb93034b4f28c55350b697e28.js"
-  integrity="sha256-Uo6u/GWbR00Raf7plKGTpjkoF6y5MDS08oxVNQtpfig=">
+  src="/js/search-modal.96e662d8f691fe25c859a3437074b485f2d7bed0bca612725028c6cf4322e2f2.js"
+  integrity="sha256-luZi2PaR/iXIWaNDcHS0hfLXvtC8phJyUCjGz0Mi4vI=">
 </script>
 
 

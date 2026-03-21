@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rtcp on My Docs</title>
-    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/</link>
+    <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/</link>
     <description>Recent content in rtcp on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rtcp包结构</title>
-      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/</link>
+      <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/</guid>
+      <guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/01.-rtp/02.-rtcp/rtcp%E5%8C%85%E7%BB%93%E6%9E%84/</guid>
       <description>&lt;h3 id=&#34;rtcp-包类型&#34;&gt;RTCP 包类型&lt;/h3&gt;&#xA;&lt;h4 id=&#34;rtcp_sr&#34;&gt;RTCP_SR&lt;/h4&gt;&#xA;&lt;h4 id=&#34;rtcp_rr&#34;&gt;RTCP_RR&lt;/h4&gt;&#xA;&lt;h4 id=&#34;rtcp_bye&#34;&gt;RTCP_BYE&lt;/h4&gt;&#xA;&lt;h4 id=&#34;rtcp_psfb&#34;&gt;RTCP_PSFB:&lt;/h4&gt;&#xA;&lt;h4 id=&#34;rtcp_rtpfb&#34;&gt;RTCP_RTPFB&lt;/h4&gt;&#xA;&lt;h5 id=&#34;rtcp_rtpfb_nack&#34;&gt;RTCP_RTPFB_NACK&lt;/h5&gt;&#xA;&lt;h4 id=&#34;rtcp_xr&#34;&gt;RTCP_XR&lt;/h4&gt;</description>
     </item>
   </channel>

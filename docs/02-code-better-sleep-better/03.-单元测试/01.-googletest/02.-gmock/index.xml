@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gmock on My Docs</title>
-    <link>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/</link>
+    <link>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/</link>
     <description>Recent content in gmock on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 . Gmock 遇到的问题与解决方案</title>
-      <link>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <link>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <guid>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/01.-googletest/02.-gmock/01-.-gmock-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
       <description>&lt;h2 id=&#34;1--对于异步回调的测试&#34;&gt;1.  对于异步回调的测试&lt;/h2&gt;&#xA;&lt;p&gt;可以在mock中改为同步的方法，用于测试回调接口的正常调用&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-无法mock-static-类型的函数&#34;&gt;2. 无法mock static 类型的函数&lt;/h2&gt;&#xA;&lt;p&gt;google是这么回答的： 如果你需要mock一个静态函数，说明你的程序模块过于紧耦合(灵活性不够、重用性不够、可测试性不够)。&#xA;可采用的方法是定一个小接口，然后通过这个接口来调用static函数&lt;/p&gt;&#xA;&lt;h2 id=&#34;3-无法mock非虚函数&#34;&gt;3. 无法mock非虚函数&lt;/h2&gt;&#xA;&lt;h3 id=&#34;方案一-模板类&#34;&gt;方案一： 模板类&lt;/h3&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md&#34; rel=&#34;external&#34;&gt;官方示例 &lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;缺点： 需要改造生产代码&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;方案二&#34;&gt;方案二：&lt;/h3&gt;&#xA;&lt;p&gt;重新定义一个mock类B,该类不继承被测类，但是在mock类B中，需要实现和A中同样的函数接口。在测试代码中通过mock类B对象，来达到测试目的。&#xA;-缺点： 需要维护一套专门的测试代码。&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>调试定位 on My Docs</title>
-    <link>http://localhost:1313/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/</link>
+    <link>/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/</link>
     <description>Recent content in 调试定位 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/02-code-better-sleep-better/06.-%E8%B0%83%E8%AF%95%E5%AE%9A%E4%BD%8D/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

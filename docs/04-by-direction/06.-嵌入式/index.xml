@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>嵌入式 on My Docs</title>
-    <link>http://localhost:1313/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/</link>
+    <link>/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/</link>
     <description>Recent content in 嵌入式 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>物理硬件接口</title>
-      <link>http://localhost:1313/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/</link>
+      <link>/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/</guid>
-      <description>&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;http://localhost:1313/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/images/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3_hu_24b8d5feddde2f74.webp&#34;&#xD;&#xA;  width=&#34;939&#34;&#xD;&#xA;  height=&#34;1170&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;物理硬件接口&#34;&#xD;&#xA;  id=&#34;h-rh-i-0&#34;&#xD;&#xA;&gt;&lt;/p&gt;</description>
+      <guid>/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3/</guid>
+      <description>&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;/docs/04-by-direction/06.-%E5%B5%8C%E5%85%A5%E5%BC%8F/images/%E7%89%A9%E7%90%86%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3_hu_24b8d5feddde2f74.webp&#34;&#xD;&#xA;  width=&#34;939&#34;&#xD;&#xA;  height=&#34;1170&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;物理硬件接口&#34;&#xD;&#xA;  id=&#34;h-rh-i-0&#34;&#xD;&#xA;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

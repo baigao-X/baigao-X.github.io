@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SRT on My Docs</title>
-    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/</link>
+    <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/</link>
     <description>Recent content in SRT on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Srt 协议解读</title>
-      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
+      <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
+      <guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/01.-%E6%B5%81%E5%AA%92%E4%BD%93/09.-srt/srt-%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/</guid>
       <description>&lt;pre&gt;&lt;code&gt;Secure Reliable Transport&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;简单理解为 基于UDP的封装协议，针对流媒体传输实现了前向纠错来实现&#xA;haivision wowza  两个流媒体服务商一起创造, SRT是基于UDT的协议（UDT协议是基于UDP的传输协议，在IETF已经提交了4个版本）&lt;/p&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://blog.csdn.net/sweibd/article/details/105622218&#34; rel=&#34;external&#34;&gt;协议文档中文版&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;开源实现&#34;&gt;开源实现&lt;/h3&gt;&#xA;&lt;h4 id=&#34;haivisionsrt&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://github.com/Haivision/srt&#34; rel=&#34;external&#34;&gt;Haivision/srt&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;pre&gt;&lt;code&gt;https://github.com/Haivision/srt/blob/master/docs/API/API-socket-options.md#list-of-options&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h4 id=&#34;srs&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://ossrs.net/lts/zh-cn/docs/v6/doc/srt&#34; rel=&#34;external&#34;&gt;srs&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;h3 id=&#34;握手模式&#34;&gt;握手模式&lt;/h3&gt;&#xA;&lt;h4 id=&#34;caller-listener&#34;&gt;Caller-Listener&lt;/h4&gt;&#xA;&lt;p&gt;其中一端等待另一端发起连接&#xA;Initiator （发起方） 和 Responder （响应方） 角色是根据连接模式分配的。&#xA;对于 Caller-Listener 连接：Caller 是 Initiator， 侦听器是响应者。&lt;/p&gt;</description>
     </item>
   </channel>

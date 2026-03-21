@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on My Docs</title>
-    <link>http://localhost:1313/docs/07-ops/01.-kubernetes/</link>
+    <link>/docs/07-ops/01.-kubernetes/</link>
     <description>Recent content in Kubernetes on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/07-ops/01.-kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/07-ops/01.-kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8S</title>
-      <link>http://localhost:1313/docs/07-ops/01.-kubernetes/k8s/</link>
+      <link>/docs/07-ops/01.-kubernetes/k8s/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/07-ops/01.-kubernetes/k8s/</guid>
+      <guid>/docs/07-ops/01.-kubernetes/k8s/</guid>
       <description>&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pod&lt;/strong&gt;: Kubernetes 中最小的部署單元。一個 Pod 包含一個或多個緊密關聯的容器，它們共享網絡和存儲。你可以把它想像成一個獨立的“虛擬主機”。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt;: 這是我們主要使用的對象。它是一個控制器，用來管理 Pod 的生命週期。它確保你指定數量的 Pod 副本（Replicas）一直處於運行狀態。當你需要更新應用或回滾時，也是通過操作 Deployment 來完成的。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service&lt;/strong&gt;: Pod 的生命週期是短暫的，它們可能會被銷毀和重建，每次重建 IP 地址都可能改變。Service 提供了一個穩定的網絡端點（固定的 IP 地址和 DNS 名稱），用於訪問一組功能相同的 Pod。它充當了 Pod 前面的“負載均衡器”。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ingress&lt;/strong&gt;: 调度nigix的负载均衡器&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Namespace&lt;/strong&gt;: 用於在一個物理集群中創建多個“虛擬集群”。它可以將資源進行邏輯上的隔離，適用於多團隊、多環境（開發、測試、生產）的場景。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;&#xA;&lt;p&gt;用一个YAML文件声明&lt;/p&gt;</description>
     </item>
   </channel>

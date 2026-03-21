@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on My Docs</title>
-    <link>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/</link>
+    <link>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Iperf, Iperf3</title>
-      <link>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/</link>
+      <link>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/</guid>
+      <guid>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iperf-iperf3/</guid>
       <description>&lt;p&gt;测速工具&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-iperf&#34;&gt;1. iperf&lt;/h1&gt;&#xA;&lt;p&gt;server端：&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame is-terminal not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iperf -s -p &lt;span class=&#34;m&#34;&gt;25001&lt;/span&gt; -B 192.168.33.103 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-u&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- s  指定server端&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- p 指定端口（要和客户端一致）&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- B 绑定ip地址 &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- u  udp协议，，默认是tcp协议&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;client端：&lt;/p&gt;</description>
     </item>
     <item>
       <title>Iputils</title>
-      <link>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/</link>
+      <link>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/</guid>
+      <guid>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/iputils/</guid>
       <description></description>
     </item>
     <item>
       <title>Net Tools</title>
-      <link>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/</link>
+      <link>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/</guid>
+      <guid>/docs/01-computer-network/01.-%E5%B7%A5%E5%85%B7/net-tools/</guid>
       <description></description>
     </item>
   </channel>

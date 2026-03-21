@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>运维 on My Docs</title>
-    <link>http://localhost:1313/docs/07-ops/</link>
+    <link>/docs/07-ops/</link>
     <description>Recent content in 运维 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/07-ops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/07-ops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>分布式</title>
-      <link>http://localhost:1313/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/</link>
+      <link>/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/</guid>
+      <guid>/docs/07-ops/%E5%88%86%E5%B8%83%E5%BC%8F/</guid>
       <description>&lt;h1 id=&#34;组件&#34;&gt;组件&lt;/h1&gt;&#xA;&lt;h2 id=&#34;分布式存储&#34;&gt;分布式存储&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Apache Hadoop (HDFS):&lt;/strong&gt; 作为大数据领域的基石，HDFS（Hadoop Distributed File System）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nosql数据库&#34;&gt;NoSQL数据库&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Redis:&lt;/strong&gt; 一个基于内存的高性能键值存储，通常用作缓存、消息队列和会话存储，能够显著提升应用性能&lt;/p&gt;&#xA;&lt;h2 id=&#34;newsql数据库&#34;&gt;NewSQL数据库&lt;/h2&gt;&#xA;&lt;p&gt;兼具传统关系型数据库的ACID特性和NoSQL数据库的扩展性&lt;/p&gt;&#xA;&lt;h2 id=&#34;消息队列&#34;&gt;消息队列&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Apache Kafka:&lt;/strong&gt; 一个高吞吐量、分布式的发布订阅消息系统，广泛应用于实时数据管道、流处理和日志聚合等场景。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;RabbitMQ:&lt;/strong&gt; 一个实现了AMQP（高级消息队列协议）的开源消息代理软件，以其可靠性、灵活性和丰富的功能而著称。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;RocketMQ:&lt;/strong&gt; 由阿里巴巴开源的分布式消息中间件，具有高吞吐量、高可用性和可扩展性等特点，在中国互联网公司中得到了广泛应用&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;服务调度&#34;&gt;服务调度&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Apache ZooKeeper:&lt;/strong&gt; 一个为分布式应用提供一致性服务的软件，常用于配置管理、命名服务、分布式锁和集群管理等场景&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Dubbo:&lt;/strong&gt; 一个高性能的Java RPC（远程过程调用）框架，提供了服务注册、发现、负载均衡和容错等核心功能，是构建微服务架构的重要选择&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;监控运维&#34;&gt;监控运维&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Zabbix:&lt;/strong&gt; 一款企业级的开源监控解决方案，能够监控网络参数、服务器健康状况和应用程序等。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;OpenFalcon:&lt;/strong&gt; 由小米开源的企业级监控系统，提供了完善的监控指标和灵活的告警机制，在国内互联网公司中颇受欢迎。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;CAT&lt;/strong&gt;: 由大众点评开源的实时应用监控平台，提供分钟级的监控、告警和应用分析，帮助开发者快速定位线上问题&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;负载均衡&#34;&gt;负载均衡&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;DNS 层面负载均衡： 由DNS服务商提供&lt;/li&gt;&#xA;&lt;li&gt;服务器端负载均衡&#xA;&lt;ul&gt;&#xA;&lt;li&gt;L4-传输层:  IP Port 转发&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LVS (Linux Virtual Server) :&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;L7-应用层： HTTP/URL,Header,Cookie&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nginx :&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;应用内负载均衡&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dubbo、gRPC： 内置服务发现和负载均衡能力&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

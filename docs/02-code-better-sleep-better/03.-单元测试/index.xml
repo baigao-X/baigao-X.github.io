@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>单元测试 on My Docs</title>
-    <link>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
+    <link>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
     <description>Recent content in 单元测试 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>单元测试</title>
-      <link>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
+      <link>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
+      <guid>/docs/02-code-better-sleep-better/03.-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
       <description>&lt;h2 id=&#34;术语&#34;&gt;术语&lt;/h2&gt;&#xA;&lt;h4 id=&#34;tddtest-driven-development-&#34;&gt;TDD(Test-Driven-Development) :&lt;/h4&gt;&#xA;&lt;p&gt;测试驱动开发，测试先行&lt;/p&gt;&#xA;&lt;h4 id=&#34;tadtest-after-development&#34;&gt;TAD(Test-After-Development):&lt;/h4&gt;&#xA;&lt;p&gt;测试用例建立再编码之后&lt;/p&gt;&#xA;&lt;h4 id=&#34;hamcrest风格的断言&#34;&gt;Hamcrest风格的断言&lt;/h4&gt;&#xA;&lt;p&gt;建议使用Hamcrest风格的断言， 有改善错误信息的提示。注意期望值和时机值的顺序&lt;/p&gt;&#xA;&lt;h4 id=&#34;测试列表&#34;&gt;测试列表：&lt;/h4&gt;&#xA;&lt;p&gt;用于梳理需要创建的测试用例，相当于一个TODOlist。包含测试的名称,或在需要做代码清理时提示，可以把测试列表作为初始设计的一部分。它能帮助说明你认为自己需要构建什么。&lt;/p&gt;&#xA;&lt;h4 id=&#34;测试用例test-case&#34;&gt;测试用例(test case)&lt;/h4&gt;&#xA;&lt;p&gt;是一些能共享数据和子程序的测试集合。 (这个术语在这里被复用了,对于有些人而言,一个测试用例代表一 种情境）&lt;/p&gt;&#xA;&lt;h4 id=&#34;测试夹具test-fixture&#34;&gt;测试夹具(test fixture)&lt;/h4&gt;&#xA;&lt;p&gt;可以理解为测试用例的分组。&lt;/p&gt;&#xA;&lt;h4 id=&#34;测试替身test-double&#34;&gt;测试替身(test double):&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;依赖注入(Dependency Injection,DI)&lt;/strong&gt; 技术(可以是&lt;strong&gt;构造函数注入&lt;/strong&gt;或&lt;strong&gt;setter注入&lt;/strong&gt;)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;覆写工厂方法&lt;/strong&gt;/&lt;strong&gt;覆写getter&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;存根桩stub&#34;&gt;存根/桩(stub)：&lt;/h5&gt;&#xA;&lt;p&gt;:一个返回硬编码值的测试替身&lt;/p&gt;</description>
     </item>
   </channel>

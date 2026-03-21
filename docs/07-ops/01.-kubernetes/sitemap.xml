@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/docs/07-ops/01.-kubernetes/k8s/</loc>
+      <loc>/docs/07-ops/01.-kubernetes/k8s/</loc>
       <lastmod>2026-03-17T00:27:27+08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

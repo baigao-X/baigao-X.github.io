@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MP4 on My Docs</title>
-    <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/</link>
+    <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/</link>
     <description>Recent content in MP4 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fmp4标准解读</title>
-      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</link>
+      <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</guid>
+      <guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/fmp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</guid>
       <description>&lt;p&gt;fMP4 跟普通 mp4 基本文件结构是一样的。普通mp4用于点播场景，fmp4通常用于直播场景。&#xA;它们有以下差别：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;普通mp4的时长、内容通常是固定的。fMP4 时长、内容通常不固定，可以边生成边播放；&lt;/li&gt;&#xA;&lt;li&gt;普通mp4完整的metadata都在moov里，需要加载完moov box后，才能对mdat中的媒体数据进行解码渲染；&lt;/li&gt;&#xA;&lt;li&gt;fMP4中，媒体数据的metadata在moof box中，moof 跟 mdat （通常）结对出现。moof 中包含了sample duration、sample size等信息，因此，fMP4可以边生成边播放；&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;1-标准&#34;&gt;1. 标准&lt;/h1&gt;&#xA;&lt;p&gt;![[Pasted image 20240327113233.png]]&#xA;![[Pasted image 20240327140903.png]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>Http Fmp4 &amp; Websocket Fmp4</title>
-      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/</link>
+      <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/</guid>
+      <guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/http-fmp4-websocket-fmp4/</guid>
       <description></description>
     </item>
     <item>
       <title>Mp4标准解读</title>
-      <link>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</link>
+      <link>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</guid>
+      <guid>/docs/04-by-direction/01.-%E9%9F%B3%E8%A7%86%E9%A2%91/02.-%E5%B0%81%E8%A3%85/03.-mp4/mp4%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BB/</guid>
       <description>&lt;h1 id=&#34;1-标准&#34;&gt;1. 标准&lt;/h1&gt;&#xA;&lt;p&gt;ISO-14496 Part 12&#xA;ISO-14496 Part 14&#xA;MP4文件的格式主要由 MPEG-4 Part 12、MPEG-4 Part 14 两部分进行定义。&#xA;其中，MPEG-4 Part 12 定义了ISO基础媒体文件格式，用来存储基于时间的媒体内容。&#xA;MPEG-4 Part 14 实际定义了MP4文件格式，在MPEG-4 Part 12的基础上进行扩展。&lt;/p&gt;</description>
     </item>
   </channel>

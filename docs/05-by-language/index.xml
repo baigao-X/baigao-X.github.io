@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>按语言 on My Docs</title>
-    <link>http://localhost:1313/docs/05-by-language/</link>
+    <link>/docs/05-by-language/</link>
     <description>Recent content in 按语言 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/05-by-language/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/05-by-language/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

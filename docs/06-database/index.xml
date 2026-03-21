@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据库 on My Docs</title>
-    <link>http://localhost:1313/docs/06-database/</link>
+    <link>/docs/06-database/</link>
     <description>Recent content in 数据库 on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/06-database/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/06-database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Orm(Object Relational Mapping) 对象映射关系</title>
-      <link>http://localhost:1313/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</link>
+      <link>/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</guid>
+      <guid>/docs/06-database/ormobject-relational-mapping-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</guid>
       <description>&lt;p&gt;是一种程序设计技术，用于实现面向对象编程语言里不同类型系统的资料之间的转换。从效果上说，它其实是创建了一个可在编程语言里使用的“虚拟对象数据库”。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;数据库的表（table） &amp;ndash;&amp;gt; 类（class）&lt;/li&gt;&#xA;&lt;li&gt;记录（record，行数据）&amp;ndash;&amp;gt; 对象（object）&lt;/li&gt;&#xA;&lt;li&gt;字段（field）&amp;ndash;&amp;gt; 对象的属性（attribute）&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Sql</title>
-      <link>http://localhost:1313/docs/06-database/sql/</link>
+      <link>/docs/06-database/sql/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/06-database/sql/</guid>
+      <guid>/docs/06-database/sql/</guid>
       <description>&lt;h2 id=&#34;表设计&#34;&gt;表设计&lt;/h2&gt;&#xA;&lt;h3 id=&#34;属性&#34;&gt;属性&lt;/h3&gt;&#xA;&lt;h4 id=&#34;候选码&#34;&gt;候选码&lt;/h4&gt;&#xA;&lt;p&gt;能决定唯一一行记录的属性组&lt;/p&gt;&#xA;&lt;h4 id=&#34;主键-主属性&#34;&gt;主键 (主属性)&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;primary key&lt;/strong&gt;&#xA;从候选码中挑选出来，主键可以是一列或者多列组成的，只要能够根据主键，马上能精确到特定的一行数据即可。&#xA;主键内存之不能为空，一个表只能有一个主键&#xA;选取主键的一个基本原则是：&lt;strong&gt;不使用任何业务相关的字段作为主键&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;外键&#34;&gt;外键&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;foreign key&lt;/strong&gt;&#xA;外键约束会降低数据库的性能，大部分互联网应用程序为了追求速度，并不设置外键约束，而是仅靠应用程序自身来保证逻辑的正确性&lt;/p&gt;&#xA;&lt;h3 id=&#34;关系&#34;&gt;关系&lt;/h3&gt;&#xA;&lt;h6 id=&#34;函数依赖&#34;&gt;函数依赖&lt;/h6&gt;&#xA;&lt;p&gt;如果在一张表中，只要X属性的值确定，那么就能确定Y属性，那么称为Y依赖于X，记作&lt;strong&gt;X→Y&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;部分函数依赖&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;指一个非主属性依赖于&lt;strong&gt;符合主键&lt;/strong&gt;的一部分，而不是整个符合主键。&lt;/li&gt;&#xA;&lt;li&gt;假设一个学生成绩表，其中主键由 &amp;ldquo;学号&amp;rdquo; 和&amp;quot;课程ID&amp;quot;两个字段组成，如果”学生姓名“只依赖于“学号”而不依赖于“课程ID”，就是部分依赖&lt;/li&gt;&#xA;&lt;li&gt;记作&lt;strong&gt;X F→ Y&lt;/strong&gt;: 如 （学号，课程ID） P→ 学生姓名&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;完全函数依赖&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;完全依赖是指一个非主属性依赖于整个复合主键，而不是仅依赖于主键的一部分。&lt;/li&gt;&#xA;&lt;li&gt;假设一个学生成绩表，其中主键由 &amp;ldquo;学号&amp;rdquo; 和&amp;quot;课程ID&amp;quot;两个字段组成，如果”成绩“依赖于“学号”和依赖于“课程ID”，就是完全依赖&lt;/li&gt;&#xA;&lt;li&gt;记作&lt;strong&gt;X F→ Y&lt;/strong&gt;: 如 （学号，课程ID） F→ 成绩&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;传递函数依赖&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;假如 Z 函数依赖于 Y，且 Y 函数依赖于 X ，那么我们就称 Z 传递函数依赖于 X&lt;/li&gt;&#xA;&lt;li&gt;记作 &lt;strong&gt;X T→ Z&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;设计原则&#34;&gt;设计原则&lt;/h3&gt;&#xA;&lt;h4 id=&#34;范式&#34;&gt;范式&lt;/h4&gt;&#xA;&lt;p&gt;遵循范式设计的表有以下优点：&lt;/p&gt;</description>
     </item>
   </channel>

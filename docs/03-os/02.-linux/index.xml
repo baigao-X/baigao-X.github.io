@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on My Docs</title>
-    <link>http://localhost:1313/docs/03-os/02.-linux/</link>
+    <link>/docs/03-os/02.-linux/</link>
     <description>Recent content in Linux on My Docs</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2020-2026 Baigao</copyright>
     <lastBuildDate>Tue, 17 Mar 2026 00:27:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/03-os/02.-linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/docs/03-os/02.-linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Boot</title>
-      <link>http://localhost:1313/docs/03-os/02.-linux/boot/</link>
+      <link>/docs/03-os/02.-linux/boot/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/03-os/02.-linux/boot/</guid>
+      <guid>/docs/03-os/02.-linux/boot/</guid>
       <description>&lt;pre&gt;&lt;code&gt;boot 使用的是as86汇编， 生成的是 16 位代码。 语法类似于 NASM、MASM&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ol start=&#34;0&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;CPU自动进入实模式，并从0xFFFF0地址开始执行程序代码(ROM-BIOS) BIOS执行硬件检测诊断后，将物理地址处初始化为中断向量&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;boot加载&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;boot程序大小512字节，放置在软盘映像文件的第一个扇区，&lt;/li&gt;&#xA;&lt;li&gt;ROM BIOS 先按启动盘启动顺序依次查询第一个扇区，如果第一个扇区最后两个字节(即第510、511字节)为0x55AA，则代表该启动盘可以启动&#xA;则将启动盘第一个扇区加载到物理地址0x7c00(31k)位置，然后从0x7c00开始运行。&#xA;PS: 最早的个人PC芯片8088,搭配的操作系统是&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://en.wikipedia.org/wiki/86-DOS&#34; rel=&#34;external&#34;&gt;86-DOS&lt;/a&gt;。这个操作系统需要的内存最少是32KB(0x0000~0x7FFFF),8088芯片本身需要占用&lt;code&gt;0x0000～0x03FF&lt;/code&gt;，用来保存&#xD;&#xA;&#xD;&#xA;&lt;a class=&#34;link link--text&#34; href=&#34;https://en.wikipedia.org/wiki/BIOS_interrupt_call&#34; rel=&#34;external&#34;&gt;各种中断处理程序&lt;/a&gt;的储存位置。（主引导记录本身就是中断信号INT 19h的处理程序。）所以，内存只剩下&lt;code&gt;0x0400～0x7FFF&lt;/code&gt;可以使用。为了把尽量多的连续内存留给操作系统，主引导记录就被放到了内存地址的尾部。由于一个扇区是512字节，主引导记录本身也会产生数据，需要另外留出512字节保存。所以，它的预留位置就变成 &lt;code&gt;0x7FFF - 512 - 512 + 1 = 0x7C00&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;boot 加载kernel&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kernel</title>
-      <link>http://localhost:1313/docs/03-os/02.-linux/kernel/</link>
+      <link>/docs/03-os/02.-linux/kernel/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/03-os/02.-linux/kernel/</guid>
+      <guid>/docs/03-os/02.-linux/kernel/</guid>
       <description>&lt;pre&gt;&lt;code&gt;kernel 使用的是GNU as 汇编,采用 AT&amp;amp;T 语法，与as86汇编有点区别&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h1 id=&#34;1-基本启动顺序&#34;&gt;1. 基本启动顺序&lt;/h1&gt;&#xA;&lt;h1 id=&#34;2-内存管理&#34;&gt;2. 内存管理&lt;/h1&gt;&#xA;&lt;p&gt;简单的多任务段结构&#xA;![[Pasted image 20240716085458.png]]&lt;/p&gt;&#xA;&lt;h2 id=&#34;21-寄存器&#34;&gt;2.1. 寄存器&lt;/h2&gt;&#xA;&lt;h3 id=&#34;211-内存管理寄存器&#34;&gt;2.1.1. 内存管理寄存器&lt;/h3&gt;&#xA;&lt;p&gt;-有4个基地址寄存器 GDTR、LDTR、IDTR、TR&#xA;![[Pasted image 20240709090159.png]]&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linux 内核完全注释 实验操作环境</title>
-      <link>http://localhost:1313/docs/03-os/02.-linux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/</link>
+      <link>/docs/03-os/02.-linux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/03-os/02.-linux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/</guid>
+      <guid>/docs/03-os/02.-linux/linux-%E5%86%85%E6%A0%B8%E5%AE%8C%E5%85%A8%E6%B3%A8%E9%87%8A-%E5%AE%9E%E9%AA%8C%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/</guid>
       <description>&lt;h2 id=&#34;01-bochs&#34;&gt;0.1. bochs&lt;/h2&gt;&#xA;&lt;p&gt;仿真软件(虚拟机)&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-参考教程&#34;&gt;1. 参考教程&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;使用bochs启动一个镜像教程 https://blog.csdn.net/weixin_42492218/article/details/127675912&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>汇编 With 8086(X86)</title>
-      <link>http://localhost:1313/docs/03-os/02.-linux/%E6%B1%87%E7%BC%96-with-8086x86/</link>
+      <link>/docs/03-os/02.-linux/%E6%B1%87%E7%BC%96-with-8086x86/</link>
       <pubDate>Tue, 17 Mar 2026 00:27:27 +0800</pubDate>
-      <guid>http://localhost:1313/docs/03-os/02.-linux/%E6%B1%87%E7%BC%96-with-8086x86/</guid>
+      <guid>/docs/03-os/02.-linux/%E6%B1%87%E7%BC%96-with-8086x86/</guid>
       <description>&lt;pre&gt;&lt;code&gt;GNU as 汇编,采用 AT&amp;amp;T 语法，与as86汇编有点区别&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;01-三类指令&#34;&gt;0.1. 三类指令&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;汇编指令： 机器码的助计符。&lt;/li&gt;&#xA;&lt;li&gt;伪指令： 没有对应机器码，由编译器执行，计算器不执行&lt;/li&gt;&#xA;&lt;li&gt;其他符号： 如 +、-、*、/ 等，由编译器识别，没有对应机器码&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;1-存储单元&#34;&gt;1. 存储单元&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;1Byte&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;11-寄存器&#34;&gt;1.1. 寄存器&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;以8086为例&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;111-通用寄存器&#34;&gt;1.1.1. 通用寄存器&lt;/h3&gt;&#xA;&lt;p&gt;用于存放一般性数据。16bit。&lt;/p&gt;</description>
     </item>
   </channel>
